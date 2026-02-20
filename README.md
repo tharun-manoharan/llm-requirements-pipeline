@@ -29,54 +29,53 @@ conversation.txt
 ```
 
 In `--llm` mode, stages 2+3 are replaced by a single semantic extraction call
-(`pipeline/extract.py`) that sends the full conversation to the LLM — bypassing
+(`pipeline/extract.py`) that sends the full conversation to the LLM - bypassing
 keyword matching entirely. This catches requirements that keyword matching misses
 (business rules stated as facts, implicit permissions, procedural language, etc.).
 
 | Stage | Module | Naive | LLM |
 |-------|--------|-------|-----|
-| 1. Ingest | `pipeline/ingest.py` | Regex parser | — |
-| 2+3. Extract | `pipeline/extract.py` | — | Llama 3.3 70B (Groq) |
+| 1. Ingest | `pipeline/ingest.py` | Regex parser | - |
+| 2+3. Extract | `pipeline/extract.py` | - | Llama 3.3 70B (Groq) |
 | 2. Segment | `pipeline/segment.py` | Keyword matching | (replaced by extract) |
 | 3. Detect | `pipeline/detect.py` | Sentence split + classify | (replaced by extract) |
 | 4. Rewrite | `pipeline/rewrite.py` | Regex rules | Llama 3.3 70B (Groq) |
-| 5. Structure | `pipeline/structure.py` | ID assignment | — |
-| Shared | `pipeline/llm_client.py` | — | Groq client factory |
+| 5. Structure | `pipeline/structure.py` | ID assignment | - |
+| Shared | `pipeline/llm_client.py` | - | Groq client factory |
 
 ## Progress and Results
 
-Evaluated against **41 manually curated ground-truth requirements** from a real
-IFA (Israel Football Association) stakeholder interview transcript
+Evaluated against **41 manually curated ground-truth requirements** from a real stakeholder interview transcript
 (`examples/conversation_02.txt`).
 
 ### Comparison across versions
 
 | Metric | v1.0 Naive | v1.1 LLM 7B | v1.2 LLM 7B+Ctx | v2.0 LLM 70B |
 |---|---|---|---|---|
-| Model | — | Qwen 7B (HF) | Qwen 7B (HF) | **Llama 3.3 70B (Groq)** |
-| LLM stages | — | Stage 4 only | Stage 4 only | **Stage 4 only** |
+| Model | - | Qwen 7B (HF) | Qwen 7B (HF) | **Llama 3.3 70B (Groq)** |
+| LLM stages | - | Stage 4 only | Stage 4 only | **Stage 4 only** |
 | Output count | 67 | 41 | 31 | **23** |
 | **Precision** | 40.3% | 75.6% | 80.6% | **91.3%** |
 | **Recall** | 65.9% | **70.7%** | 61.0% | 53.7% |
 | **F1 Score** | 0.500 | **0.731** | 0.694 | 0.676 |
 | Usable outputs | 0% | 61% | 81% | **91%** |
-| Priority accuracy | — | — | 34% | **57%** |
+| Priority accuracy | - | - | 34% | **57%** |
 | False positives | 40 | 10 | 6 | **2** |
 | False negatives | 14 | 12 | 16 | 19 |
 | Speed (67 candidates) | instant | ~3-5 min | ~3-5 min | **~10 sec** |
 
-### v3.0 — LLM Stages 2+3 (in progress)
+### v3.0 - LLM Stages 2+3 (in progress)
 
 The latest version upgrades stages 2-3 from keyword matching to LLM-based
 semantic extraction. Instead of matching 24 keywords, the LLM reads the full
-conversation and identifies requirements by meaning — catching business rules
+conversation and identifies requirements by meaning - catching business rules
 stated as facts, implicit permissions, procedural language, and other patterns
 that keyword matching misses.
 
 **What changed:**
-- New `pipeline/extract.py` — single LLM call replaces stages 2+3 in `--llm` mode
-- New `pipeline/llm_client.py` — shared Groq client used by both extract and rewrite
-- `pipeline/run.py` — branches to LLM extraction when `--llm` flag is set
+- New `pipeline/extract.py` - single LLM call replaces stages 2+3 in `--llm` mode
+- New `pipeline/llm_client.py` - shared Groq client used by both extract and rewrite
+- `pipeline/run.py` - branches to LLM extraction when `--llm` flag is set
 - Recall-biased extraction prompt (include borderline items; Stage 4 filters)
 - Robust error handling: per-minute rate limit retries, daily token limit
   detection, automatic fallback to naive mode
@@ -91,37 +90,37 @@ that keyword matching misses.
 
 - **v1.0 (Naive baseline)**: Keyword matching finds many candidates but has
   extremely high noise (40 false positives) and 0% of outputs are usable
-  requirements — the regex rewriter just prepends "The system shall" to raw
+  requirements - the regex rewriter just prepends "The system shall" to raw
   conversational text.
 
-- **v1.1 (LLM rewrite — Qwen 7B)**: Adding a 7B LLM to Stage 4 nearly doubled
+- **v1.1 (LLM rewrite - Qwen 7B)**: Adding a 7B LLM to Stage 4 nearly doubled
   precision (40% -> 76%) and took usable output from 0% to 61%. The LLM serves
   dual purpose: rewriting and filtering non-requirements. **Best F1 (0.731).**
 
-- **v1.2 (LLM + context window — Qwen 7B)**: Passing 2 surrounding turns as
+- **v1.2 (LLM + context window - Qwen 7B)**: Passing 2 surrounding turns as
   context improved precision further (81%) and output quality (81% usable), but
   the 7B model became too aggressive at filtering, dropping recall to 61%.
   Priority classification non-functional (34% accuracy, model defaults to
   "preferred").
 
 - **v2.0 (Groq / Llama 3.3 70B)**: Upgrading to a 10x larger model dramatically
-  improved output quality — **91% precision, 91% usable, zero poor rewrites, and
+  improved output quality - **91% precision, 91% usable, zero poor rewrites, and
   57% priority accuracy**. The 70B model is a much better rewriter and filter,
   but it is also more aggressive, dropping recall to 54%. Speed improved from
   minutes to seconds thanks to Groq's hardware-accelerated inference.
 
-- **v3.0 (LLM Stages 2+3)**: Addresses the #1 recall bottleneck — 8+ false
+- **v3.0 (LLM Stages 2+3)**: Addresses the #1 recall bottleneck - 8+ false
   negatives caused by keyword matching never finding certain requirements.
   Replaces keyword matching with semantic LLM extraction. Initial run shows 72%
   more candidates extracted. Full evaluation pending.
 
 ### What's next
 
-1. **Complete v3.0 evaluation** — run full pipeline and evaluate against ground
+1. **Complete v3.0 evaluation** - run full pipeline and evaluate against ground
    truth once Groq daily token budget resets.
-2. **Fix type classification** — functional vs non-functional labels still have
+2. **Fix type classification** - functional vs non-functional labels still have
    ~24% error rate across all versions.
-3. **Improve priority** — the 70B model never uses "preferred" (treats everything
+3. **Improve priority** - the 70B model never uses "preferred" (treats everything
    as essential or optional). Few-shot examples could fix this.
 
 ## Output Format
@@ -182,7 +181,7 @@ python -m pipeline.run --llm --trace examples/conversation_02.txt
 
 ### Quick demo sequence
 
-For a supervisor demo, run these in order:
+For a demo, run these in order:
 
 ```bash
 # Step 1: Show naive baseline (instant, no API)
@@ -195,11 +194,11 @@ python -m pipeline.run examples/conversation_02.txt
 python -m pipeline.run --llm examples/conversation_02.txt
 
 # Step 4: Compare outputs side by side
-#   examples/naive_output_02.json    — 67 items, 0% usable   (v1.0)
-#   examples/llm_output_02.json      — 41 items, 61% usable  (v1.1)
-#   examples/llm_output_02_v2.json   — 31 items, 81% usable  (v1.2)
-#   examples/llm_output_02_v3.json   — 23 items, 91% usable  (v2.0)
-#   examples/expected_output_02.json — 41 items ground truth
+#   examples/naive_output_02.json    - 67 items, 0% usable   (v1.0)
+#   examples/llm_output_02.json      - 41 items, 61% usable  (v1.1)
+#   examples/llm_output_02_v2.json   - 31 items, 81% usable  (v1.2)
+#   examples/llm_output_02_v3.json   - 23 items, 91% usable  (v2.0)
+#   examples/expected_output_02.json - 41 items ground truth
 
 # Step 5: Run the test suite
 python -m pytest tests/ -v
@@ -234,4 +233,4 @@ python -m pytest tests/ -v
 
 - Python 3.10+
 - `groq` and `python-dotenv` (for LLM mode only)
-- A Groq API key (free tier works — sign up at console.groq.com)
+- A Groq API key (free tier works - sign up at console.groq.com)
