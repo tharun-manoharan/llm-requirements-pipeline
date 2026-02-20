@@ -1,0 +1,289 @@
+[
+  {
+    "id": "GT-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow each team to manage its own budget (income and expenses).",
+    "source": "Turn 3 (spk_1)"
+  },
+  {
+    "id": "GT-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to monitor and audit team budgets.",
+    "source": "Turn 3, 5 (spk_1)"
+  },
+  {
+    "id": "GT-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to specify budget policies and alert on violations.",
+    "source": "Turn 5 (spk_1)"
+  },
+  {
+    "id": "GT-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow IFA administrators to view all team financial transactions.",
+    "source": "Turn 7, 29 (spk_1)"
+  },
+  {
+    "id": "GT-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall restrict budget transaction insertion to teams only, and each team shall only access its own budget data.",
+    "source": "Turn 29 (spk_1)"
+  },
+  {
+    "id": "GT-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to view all monetary information but not perform operations on the data.",
+    "source": "Turn 29 (spk_1)"
+  },
+  {
+    "id": "GT-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow referees to insert game events in real time using a mobile phone.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "GT-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall restrict game event updates to referees only (main or side referee).",
+    "source": "Turn 17, 71 (spk_1)"
+  },
+  {
+    "id": "GT-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall record game events including goals, offsides, red cards, player replacements, each with a timestamp and event-specific details.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "GT-010",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow all users, including unregistered guests, to view game data and results.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "GT-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support exporting game data (e.g. for journalists and press).",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "GT-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow team managers and team administration to view and export their own team data for offline analysis.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "GT-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support automatic scheduling of games per league per season.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "GT-014",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to define scheduling policies and constraints (e.g. home/away rotation, minimum gap between matches, day of week).",
+    "source": "Turn 31, 50, 54 (spk_1)"
+  },
+  {
+    "id": "GT-015",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide guidance for allocating referees to games based on defined policies.",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "GT-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall enforce referee scheduling policies (e.g. same referee not assigned to same team too often, equal distribution of games among referees).",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "GT-017",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow referees to input their availability and preferences (e.g. vacation dates).",
+    "source": "Turn 35 (spk_1)"
+  },
+  {
+    "id": "GT-018",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow manual adjustment of the schedule for cancellations (weather, emergencies).",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "GT-019",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow IFA representatives to override the automatic schedule, requiring a written rationale and confirmation by a second IFA representative.",
+    "source": "Turn 43, 48 (spk_1)"
+  },
+  {
+    "id": "GT-020",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall push notifications to fans who subscribe to specific games, players, or events.",
+    "source": "Turn 56, 64 (spk_1)"
+  },
+  {
+    "id": "GT-021",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow fans to register and subscribe to specific games, teams, and players to receive notifications.",
+    "source": "Turn 56, 58, 62 (spk_1)"
+  },
+  {
+    "id": "GT-022",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall notify subscribed fans in real time when game events occur (e.g. player replacement reported by referee).",
+    "source": "Turn 64 (spk_1)"
+  },
+  {
+    "id": "GT-023",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall allow fans to set custom alerts (e.g. reminder 5 minutes before a game).",
+    "source": "Turn 78 (spk_1)"
+  },
+  {
+    "id": "GT-024",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow players to manage their own social network page and post messages to fans.",
+    "source": "Turn 96 (spk_1)"
+  },
+  {
+    "id": "GT-025",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall support at least 50,000 simultaneous users.",
+    "source": "Turn 79 (spk_2)"
+  },
+  {
+    "id": "GT-026",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a response time of 1-2 seconds for fans and administrators.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "GT-027",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall provide real-time, high-priority responsiveness for the referee interface during games.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "GT-028",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a web-based interface for IFA administrators and team administration, and a mobile application for referees and fans.",
+    "source": "Turn 66 (spk_1)"
+  },
+  {
+    "id": "GT-029",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall be a unified system with different presentation layers and role-based access control for different stakeholders.",
+    "source": "Turn 68 (spk_1)"
+  },
+  {
+    "id": "GT-030",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall support localization including language, currency, and timezone adjustments.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "GT-031",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall comply with local data residency regulations (e.g. German data must stay in Germany).",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "GT-032",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall encrypt budget data to prevent leakage.",
+    "source": "Turn 93 (spk_1)"
+  },
+  {
+    "id": "GT-033",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall be hosted on cloud infrastructure with outsourced development and maintenance.",
+    "source": "Turn 87, 88 (spk_1, spk_2)"
+  },
+  {
+    "id": "GT-034",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall ensure game event data is coherent and reliable, with referees as the sole authoritative source.",
+    "source": "Turn 17, 71, 72 (spk_1)"
+  },
+  {
+    "id": "GT-035",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall retain all historical data and past season archives.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "GT-036",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall require user registration and authentication for system access; unregistered users have guest-level access only.",
+    "source": "Turn 117 (spk_1)"
+  },
+  {
+    "id": "GT-037",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support a team registration process where the team owner/manager submits documents to the IFA for approval.",
+    "source": "Turn 119 (spk_1)"
+  },
+  {
+    "id": "GT-038",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to register and invite referees to the system.",
+    "source": "Turn 123 (spk_1)"
+  },
+  {
+    "id": "GT-039",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow teams to manage their own players, coaches, stadium, and other resources.",
+    "source": "Turn 25, 123 (spk_1)"
+  },
+  {
+    "id": "GT-040",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to define leagues, seasons, and activate scheduling policies.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "GT-041",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall support automatic reminder notifications (e.g. annual budget report submission reminders).",
+    "source": "Turn 77 (spk_0)"
+  }
+]

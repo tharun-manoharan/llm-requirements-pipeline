@@ -1,0 +1,16 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow users to reset their password if they forget it.",
+    "source": "Turn 0 (stakeholder)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall send them a reset link.",
+    "source": "Turn 2 (stakeholder)"
+  }
+]

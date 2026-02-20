@@ -1,0 +1,219 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall start recording expense categories and budget information.",
+    "source": "Turn 0 (spk_0)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to specify budget policies within the system.",
+    "source": "Turn 5 (spk_1)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure that all reports, including those on games and scheduling, are as reliable as possible.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall store a timestamp, the event itself, and any additional information required for the specific event for each event.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow guest users to view the final aggregated data.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow unregistered users to view game-related data such as red cards and goals, but not budget information.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to export the aggregated data to journalists or press.",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow the team manager and team administration to view and analyze team-related data offline.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall restrict access to financial data to users within the finance department of IFA.",
+    "source": "Turn 26 (spk_2)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall consider the constraints when executing the scheduling algorithm.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide guidance for allocating referees to games.",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall facilitate the definition of policies for assigning referees to games and enable referees to set their preferences.",
+    "source": "Turn 35 (spk_1)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow manual adjustment of the schedule.",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall require approval from two IFA Schedulers for this level of automatic scheduling.",
+    "source": "Turn 47 (spk_2)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure a minimum gap of either one or two days between scheduling consecutive games.",
+    "source": "Turn 50 (spk_0)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to define scheduling parameters including a minimum number of days gap between matches based on the number of teams.",
+    "source": "Turn 52 (spk_0)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to define parameters into the system to be built.",
+    "source": "Turn 54 (spk_2)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide improved fan experience based on user feedback.",
+    "source": "Turn 55 (spk_0)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall notify registered fans when their favorite player posts a message.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure that only authorized channels can collect data about the games and prevent unauthorized data collection.",
+    "source": "Turn 70 (spk_2)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure that only referees and official channels can provide data about the games.",
+    "source": "Turn 72 (spk_2)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall enhance stakeholder communication through the incorporation of auto reminders.",
+    "source": "Turn 75 (spk_0)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall notify registered users of specific information they are interested in.",
+    "source": "Turn 76 (spk_1)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a reasonable response time.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall notify the referee of any updates immediately upon connection to the system.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize reporting events from referees during games to ensure quick notification.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-027",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure that all storage, computing, and other resources are handled by external cloud service providers after the system is up and running.",
+    "source": "Turn 88 (spk_2)"
+  },
+  {
+    "id": "REQ-028",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall adjust to local regulations and reviews as necessary.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-029",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall ensure that German data is not stored outside of Germany.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-030",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow the in-house IT team or technical team to decide what data is stored internally and what is stored in the cloud.",
+    "source": "Turn 92 (spk_2)"
+  },
+  {
+    "id": "REQ-031",
+    "type": "non-functional",
+    "priority": "optional",
+    "statement": "The system shall encrypt budget data to avoid leakage.",
+    "source": "Turn 93 (spk_1)"
+  }
+]

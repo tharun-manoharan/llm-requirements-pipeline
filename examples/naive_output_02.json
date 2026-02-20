@@ -1,0 +1,404 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "statement": "The system shall we're doing I'm *** and this is **** we are colleagues and uh we are here for the IFA system and all the requirements that we'll now be discussing with you so that we can deliver a good system to you.",
+    "source": "Turn 0 (spk_0)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "statement": "The system shall we just need to start recording because.",
+    "source": "Turn 0 (spk_0)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "statement": "The system shall for example, you need a proper budget, budgetting portal, reporting portal, scheduling portal and a fan portal for your consumers, fans, users.",
+    "source": "Turn 0 (spk_0)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "statement": "The system shall so it it should have the ability to specify policy, budget policy in the system.",
+    "source": "Turn 5 (spk_1)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "non-functional",
+    "statement": "The system shall since we would like to have the other information as reliable as possible.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "statement": "The system shall so each event will have its timestamp the event itself and maybe additional information that is required for the specific event.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "statement": "The system shall so everyone is able to see the entire data.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "statement": "The system shall even a guest to the system is able to see the final grain data, which is okay.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "statement": "The system shall even if you are not registered to the system you should be able to look into such data, not the budget but the data that refer to the game, the results.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "statement": "The system shall and you can, you can export or you want to be able to export this data to like journalists or press or whatever.",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "non-functional",
+    "statement": "The system shall and this is not available now as far as I understand.",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "non-functional",
+    "statement": "The system shall so the referee uh, data from referee is not at all confidential available very easily.",
+    "source": "Turn 24 (spk_0)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "statement": "The system shall i'm not expecting that the city will support any kind of queries or allow.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "statement": "The system shall but the system will allow the team manager, the team administration to uh look into this data and then reform its analysis offline.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "non-functional",
+    "statement": "The system shall our financial data is available to everybody inside IFA Or the finance department.",
+    "source": "Turn 26 (spk_2)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "statement": "The system shall we understand now what the requirements are with the reporting and the budget section.",
+    "source": "Turn 30 (spk_0)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "statement": "The system shall so there was a need to determine the this kind of policy.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "statement": "The system shall so this kind of constraints should be taken into account when executing the the scheduling algorithm.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "statement": "The system shall so for uh for the referee as well, the system should be uh should have some kind of uh guidance of how to allocate referees to games.",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "statement": "The system shall so I would like the system to be able to uh facilitate the definition of such policy and then based on that policy to assign the referee to the games, it might be also that the system will enable the referees to install their preferences.",
+    "source": "Turn 35 (spk_1)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "statement": "The system shall so in that sense, we need to reschedule the game.",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "statement": "The system shall so in that sense, in that case we need to allow manual adjustment of the schedule.",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "functional",
+    "statement": "The system shall so we might override the results yet you need to explicate.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "functional",
+    "statement": "The system shall you need to explain the rationale for the change.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "statement": "The system shall and then another IFA representative should confirm that change.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "statement": "The system shall and and this level of the IFA Scheduler is uh you need approval from two of them.",
+    "source": "Turn 47 (spk_2)"
+  },
+  {
+    "id": "REQ-027",
+    "type": "functional",
+    "statement": "The system shall i think we need to move to the fans.",
+    "source": "Turn 49 (spk_2)"
+  },
+  {
+    "id": "REQ-028",
+    "type": "functional",
+    "statement": "The system shall now we have a minimum we should have two days of gap before playing the next game or one day of gap before playing the next game.",
+    "source": "Turn 50 (spk_0)"
+  },
+  {
+    "id": "REQ-029",
+    "type": "functional",
+    "statement": "The system shall so you mentioned this in your own uh in the software like this is how you should schedule.",
+    "source": "Turn 52 (spk_0)"
+  },
+  {
+    "id": "REQ-030",
+    "type": "functional",
+    "statement": "The system shall and you need to be to be able to define these parameters into the system to be built.",
+    "source": "Turn 54 (spk_2)"
+  },
+  {
+    "id": "REQ-031",
+    "type": "functional",
+    "statement": "The system shall um uh it was mentioned that you need experience improvements for the fans.",
+    "source": "Turn 55 (spk_0)"
+  },
+  {
+    "id": "REQ-032",
+    "type": "functional",
+    "statement": "The system shall so currently any information the fans would like nowadays, they need to pull the information.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-033",
+    "type": "functional",
+    "statement": "The system shall you need to look for it.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-034",
+    "type": "functional",
+    "statement": "The system shall they need to look for it.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-035",
+    "type": "functional",
+    "statement": "The system shall uh If a player post a message, you should look for it and things like that.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-036",
+    "type": "functional",
+    "statement": "The system shall uh We need or we were looking for the clarification about something that was mentioned that there are there is an unauthorized data collection of events occur in the game.",
+    "source": "Turn 70 (spk_2)"
+  },
+  {
+    "id": "REQ-037",
+    "type": "non-functional",
+    "statement": "The system shall so it's, it's coherent and reliable.",
+    "source": "Turn 71 (spk_1)"
+  },
+  {
+    "id": "REQ-038",
+    "type": "functional",
+    "statement": "The system shall so, so you need the system to enable the referees and the official channels to be the only source of channel uh, of data about the games.",
+    "source": "Turn 72 (spk_2)"
+  },
+  {
+    "id": "REQ-039",
+    "type": "functional",
+    "statement": "The system shall so they don't need to look forward news portal.",
+    "source": "Turn 73 (spk_1)"
+  },
+  {
+    "id": "REQ-040",
+    "type": "non-functional",
+    "statement": "The system shall all right coming to the system performances then, um uh a there was a line in the document that said that you want to increase the stakeholder communication or enhance the stakeholder communication.",
+    "source": "Turn 75 (spk_0)"
+  },
+  {
+    "id": "REQ-041",
+    "type": "functional",
+    "statement": "The system shall mm I think this is the main issue will be unable to the fans to register to specific information that they are interested in and then we push them the information.",
+    "source": "Turn 76 (spk_1)"
+  },
+  {
+    "id": "REQ-042",
+    "type": "functional",
+    "statement": "The system shall the team manager has to support a submit a report to the IFA once a year.",
+    "source": "Turn 77 (spk_0)"
+  },
+  {
+    "id": "REQ-043",
+    "type": "functional",
+    "statement": "The system shall it was mentioned, for example, that it should be accessed by 50,000 people uh simultaneously and fast.",
+    "source": "Turn 79 (spk_2)"
+  },
+  {
+    "id": "REQ-044",
+    "type": "non-functional",
+    "statement": "The system shall yeah, first I meant a reasonable response time.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-045",
+    "type": "functional",
+    "statement": "The system shall we need to application to walk very fast in real time, meaning they should be very responsive and even get some priorities over other activities that are in the stadium, probably in the stadium.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-046",
+    "type": "functional",
+    "statement": "The system shall so when referee is connected to the system, you should get.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-047",
+    "type": "functional",
+    "statement": "The system shall when he is in a game, you should get a high priority so we can report the events as quick as possible.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-048",
+    "type": "functional",
+    "statement": "The system shall do you expect or or need a two way communication with the referee.",
+    "source": "Turn 81 (spk_2)"
+  },
+  {
+    "id": "REQ-049",
+    "type": "functional",
+    "statement": "The system shall is there any scenario where the FAA would would want to notify the referee of anything during or before or after the game.",
+    "source": "Turn 81 (spk_2)"
+  },
+  {
+    "id": "REQ-050",
+    "type": "functional",
+    "statement": "The system shall but do we need a live recording feature or something like your recording feature.",
+    "source": "Turn 83 (spk_0)"
+  },
+  {
+    "id": "REQ-051",
+    "type": "functional",
+    "statement": "The system shall and also the after the system is up and running all the storage the computing everything should be handled by an external company sources around the cloud service or some kind of service in the uh Okay.",
+    "source": "Turn 88 (spk_2)"
+  },
+  {
+    "id": "REQ-052",
+    "type": "functional",
+    "statement": "The system shall so it might be that we need uh to adjust the system to the local regulation, the local review.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-053",
+    "type": "functional",
+    "statement": "The system shall yeah, I'm not sure if whether it's in a is right for every country in europe but in Germany, you're not allowed to exactly german data outside of the country.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-054",
+    "type": "functional",
+    "statement": "The system shall uh We should take this into consideration.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-055",
+    "type": "functional",
+    "statement": "The system shall okay so should it be like uh your in house IT Team or technical team should decide what goes inside and what goes into the cloud.",
+    "source": "Turn 92 (spk_2)"
+  },
+  {
+    "id": "REQ-056",
+    "type": "functional",
+    "statement": "The system shall yeah I think it should be uh we should have we should define it as uh initiative to discuss.",
+    "source": "Turn 93 (spk_1)"
+  },
+  {
+    "id": "REQ-057",
+    "type": "non-functional",
+    "statement": "The system shall so maybe the budget data should be encrypted in some way to avoid leakage.",
+    "source": "Turn 93 (spk_1)"
+  },
+  {
+    "id": "REQ-058",
+    "type": "functional",
+    "statement": "The system shall so this should be at the first phase.",
+    "source": "Turn 103 (spk_1)"
+  },
+  {
+    "id": "REQ-059",
+    "type": "functional",
+    "statement": "The system shall okay, the officials should be.",
+    "source": "Turn 106 (spk_1)"
+  },
+  {
+    "id": "REQ-060",
+    "type": "functional",
+    "statement": "The system shall so eventually should register to the system internet so we can be able to identification.",
+    "source": "Turn 117 (spk_1)"
+  },
+  {
+    "id": "REQ-061",
+    "type": "functional",
+    "statement": "The system shall all past archives should be kept.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-062",
+    "type": "functional",
+    "statement": "The system shall the reason that it should be kept.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-063",
+    "type": "functional",
+    "statement": "The system shall it's to allow some kind of recommendation reasoning maybe for the funds that are uh involved in gambling and reason about the future by okay.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-064",
+    "type": "functional",
+    "statement": "The system shall uh So we need to keep the data.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-065",
+    "type": "functional",
+    "statement": "The system shall should be able to define the league, define the season, appoint referee or register referees, setting the various policies for the budget for the game, policy scheduling for the referee scheduling.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-066",
+    "type": "functional",
+    "statement": "The system shall uh There there is no more requirements on your side.",
+    "source": "Turn 126 (spk_2)"
+  },
+  {
+    "id": "REQ-067",
+    "type": "functional",
+    "statement": "The system shall so like with your assignment again in case you have some problems, just send me an email.",
+    "source": "Turn 130 (spk_1)"
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "statement": "The system shall allow users to specify budget policies.",
+    "source": "Turn 5 (spk_1)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "non-functional",
+    "statement": "The system shall ensure that all provided information is as reliable as possible.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "statement": "The system shall store a timestamp, the event itself, and any additional information required for the specific event.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "statement": "The system shall allow all users to view the complete dataset.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "statement": "The system shall allow guests to view final grain data.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "statement": "The system shall allow unregistered users to view data related to the game results but not the budget period.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "statement": "The system shall allow users to export data to journalists or press.",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "statement": "The system shall not support any kind of queries from the city and shall not allow such actions.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "statement": "The system shall allow the team manager and team administration to review this data and perform offline analysis.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "non-functional",
+    "statement": "The system shall grant access to financial data to all users within the IFA finance department.",
+    "source": "Turn 26 (spk_2)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "statement": "The system shall determine the appropriate policy.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "statement": "The system shall consider the specified constraints when executing the scheduling algorithm.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "statement": "The system shall provide guidance for allocating referees to games.",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "statement": "The system shall facilitate the definition of policies and based on those policies assign referees to games and enable referees to set their preferences.",
+    "source": "Turn 35 (spk_1)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "statement": "The system shall allow manual adjustment of the schedule.",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "statement": "The system shall require confirmation of the change from another IFA representative.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "statement": "The system shall require approval from two out of the IFA Scheduler levels.",
+    "source": "Turn 47 (spk_2)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "statement": "The system shall enforce a minimum gap of either two days or one day between scheduling the next game.",
+    "source": "Turn 50 (spk_0)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "statement": "The system shall allow users to define parameters.",
+    "source": "Turn 54 (spk_2)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "statement": "The system shall provide experience improvements for the fans.",
+    "source": "Turn 55 (spk_0)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "statement": "The system shall retrieve and process messages posted by players.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "statement": "The system shall log and notify administrators of any unauthorized data collection events that occur in the game.",
+    "source": "Turn 70 (spk_2)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "non-functional",
+    "statement": "The system shall ensure coherence and reliability.",
+    "source": "Turn 71 (spk_1)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "functional",
+    "statement": "The system shall ensure that only referees and official channels can be the source of data about the games.",
+    "source": "Turn 72 (spk_2)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "statement": "The system shall allow fans to register their specific areas of interest and then push them relevant information.",
+    "source": "Turn 76 (spk_1)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "statement": "The system shall support the team manager to submit a report to the IFA once a year.",
+    "source": "Turn 77 (spk_0)"
+  },
+  {
+    "id": "REQ-027",
+    "type": "functional",
+    "statement": "The system shall support simultaneous access by 50,000 people and ensure fast performance.",
+    "source": "Turn 79 (spk_2)"
+  },
+  {
+    "id": "REQ-028",
+    "type": "non-functional",
+    "statement": "The system shall provide a response within a reasonable time period.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-029",
+    "type": "functional",
+    "statement": "The system shall ensure the application responds very quickly in real time and prioritize its activities over other stadium activities.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-030",
+    "type": "functional",
+    "statement": "The system shall notify the user upon connection of the referee to the system.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-031",
+    "type": "functional",
+    "statement": "The system shall prioritize the user with high importance when they are in a game to ensure rapid event reporting.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-032",
+    "type": "functional",
+    "statement": "The system shall support two-way communication with the referee.",
+    "source": "Turn 81 (spk_2)"
+  },
+  {
+    "id": "REQ-033",
+    "type": "functional",
+    "statement": "The system shall notify the referee of any FAA-related information during or before or after the game.",
+    "source": "Turn 81 (spk_2)"
+  },
+  {
+    "id": "REQ-034",
+    "type": "functional",
+    "statement": "The system shall delegate all storage and computing to external cloud service providers.",
+    "source": "Turn 88 (spk_2)"
+  },
+  {
+    "id": "REQ-035",
+    "type": "functional",
+    "statement": "The system shall adjust to local regulations and reviews.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-036",
+    "type": "functional",
+    "statement": "The system shall ensure that German data is not transferred outside the country in Germany.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-037",
+    "type": "functional",
+    "statement": "The system shall register users for internet access to enable identification.",
+    "source": "Turn 117 (spk_1)"
+  },
+  {
+    "id": "REQ-038",
+    "type": "functional",
+    "statement": "The system shall retain all past archives.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-039",
+    "type": "functional",
+    "statement": "The system shall implement a recommendation engine for funds involved in gambling to reason about future outcomes.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-040",
+    "type": "functional",
+    "statement": "The system shall store the data.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-041",
+    "type": "functional",
+    "statement": "The system shall allow users to define the league, define the season, appoint a referee or register referees, set policies for the game budget, and schedule referee assignments.",
+    "source": "Turn 121 (spk_1)"
+  }
+]

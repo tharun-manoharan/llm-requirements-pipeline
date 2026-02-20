@@ -1,0 +1,3 @@
+Stakeholder: Users should be able to reset their password if they forget it.
+Developer: Should that be via email?
+Stakeholder: Yes, send them a reset link.
