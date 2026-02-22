@@ -1,4 +1,4 @@
-"""Pipeline orchestrator — chains all 5 stages and provides a CLI entry point."""
+"""Pipeline orchestrator - chains all 5 stages and provides a CLI entry point."""
 
 import json
 import sys

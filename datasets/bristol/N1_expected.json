@@ -1,0 +1,114 @@
+[
+  {
+    "id": "GT-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall automatically enter a safe mode and halt movement when a commanded joint speed exceeds safe operating parameters.",
+    "source": "Turn 15 (participant)"
+  },
+  {
+    "id": "GT-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enforce configurable joint range limits through software-level soft stops and hardware-level hard stops.",
+    "source": "Turn 17 (participant)"
+  },
+  {
+    "id": "GT-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall display the current position of each joint within its operating range on the operator interface.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "GT-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide colour-coded visual feedback on the operator interface when any joint is approaching its operating limit.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "GT-005",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall present operator feedback in a minimal, non-intrusive manner, avoiding information overload during active operations.",
+    "source": "Turn 23 (participant)"
+  },
+  {
+    "id": "GT-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support pre-programmed waypoint navigation, allowing the robot to move autonomously to a specified position on command while the operator monitors.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "GT-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide one-button recall to predefined home or tool-storage positions.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "GT-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide at least one fixed camera view that remains stationary throughout an operation to give the operator a constant spatial reference.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "GT-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide at least one variable camera viewpoint that the operator can reposition during operation.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "GT-010",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall support adaptive camera zoom that narrows as the end-effector approaches the target.",
+    "source": "Turn 56 (participant)"
+  },
+  {
+    "id": "GT-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide an augmented reality alignment overlay on the camera view to indicate target position and required alignment angle, particularly for new tasks.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "GT-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display a ghost preview showing the predicted end position of a commanded movement before execution, to give the operator confidence before committing.",
+    "source": "Turn 78 (participant)"
+  },
+  {
+    "id": "GT-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enforce configurable no-go zones that physically prevent the robot from entering areas where it would damage equipment or the environment.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "GT-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall emit an audible alarm when the robot approaches or enters a defined no-go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "GT-015",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force or haptic feedback to the operator, with adjustable sensitivity, so that resistance or misalignment during precision tasks is perceptible.",
+    "source": "Turn 50, 76 (participant)"
+  },
+  {
+    "id": "GT-016",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritise image resolution over frame rate in camera streams used for precision manipulation tasks.",
+    "source": "Turn 72, 74 (participant)"
+  }
+]

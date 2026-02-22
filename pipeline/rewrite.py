@@ -1,4 +1,4 @@
-"""Stage 4: Requirement Rewriting / Normalisation — convert to 'The system shall …' form.
+"""Stage 4: Requirement Rewriting / Normalisation - convert to 'The system shall …' form.
 
 Supports two modes:
   - naive:  regex-based rewrite rules (no external dependencies)
@@ -11,7 +11,7 @@ import time
 from pipeline.llm_client import get_llm_client, LLM_MODEL
 
 # ---------------------------------------------------------------------------
-# Naive (regex) rewriter — kept as fallback
+# Naive (regex) rewriter - kept as fallback
 # ---------------------------------------------------------------------------
 
 REWRITE_RULES = [
@@ -66,7 +66,7 @@ def _apply_rules(sentence: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# LLM rewriter — Groq API (Llama 3.3 70B)
+# LLM rewriter - Groq API (Llama 3.3 70B)
 # ---------------------------------------------------------------------------
 
 _LLM_MODEL = LLM_MODEL
@@ -81,25 +81,25 @@ Output format (exactly one line):
   PRIORITY | The system shall ...
 
 Where PRIORITY is one of:
-- essential — core functionality the stakeholder explicitly demands, repeats, \
+- essential - core functionality the stakeholder explicitly demands, repeats, \
 or emphasises (strong language like "must", "need", "only X can", "critical")
-- preferred — clearly desired but the system could work without it
-- optional — briefly mentioned, uncertain ("maybe", "might", "could"), or \
+- preferred - clearly desired but the system could work without it
+- optional - briefly mentioned, uncertain ("maybe", "might", "could"), or \
 agreed to without strong conviction
 
-Use the surrounding context to judge priority — look for emphasis, repetition, \
+Use the surrounding context to judge priority - look for emphasis, repetition, \
 and strength of language. Do NOT default to preferred; make a real judgement.
 
 Rules:
 - Output ONLY the priority and rewritten requirement in the format above.
 - Remove all filler words (uh, um, okay, so, yeah, you know, like, etc.).
 - Remove conversational artefacts and false starts.
-- Keep the technical meaning intact — do not invent features not mentioned.
+- Keep the technical meaning intact - do not invent features not mentioned.
 - Use clear, professional English.
 - The requirement must start with "The system shall" and end with a period.
 - If the sentence is NOT actually a system requirement, respond with exactly: NOT_A_REQUIREMENT
 
-The following are NOT system requirements — respond NOT_A_REQUIREMENT for these:
+The following are NOT system requirements - respond NOT_A_REQUIREMENT for these:
 - Greetings or introductions
 - Questions from developers or stakeholders
 - Conversational navigation ("let us move on to...", "we covered this...")
@@ -148,7 +148,7 @@ def _rewrite_with_llm(sentence: str, context: str = "") -> tuple[str, str] | Non
         if priority not in _VALID_PRIORITIES:
             priority = "preferred"  # safe default
     else:
-        # LLM didn't follow format — treat whole response as statement
+        # LLM didn't follow format - treat whole response as statement
         statement = _ensure_period(result)
         priority = "preferred"
 
@@ -171,7 +171,7 @@ def rewrite_requirements(candidates: list[dict], mode: str = "naive",
     if mode == "llm":
         return _rewrite_llm_batch(candidates, turns or [])
 
-    # Default: naive regex rewriter (always assigns "preferred" — no signal)
+    # Default: naive regex rewriter (always assigns "preferred" - no signal)
     result = []
     for candidate in candidates:
         normalised = _apply_rules(candidate["sentence"])
@@ -215,7 +215,7 @@ def _rewrite_llm_batch(candidates: list[dict], turns: list[dict]) -> list[dict]:
                     normalised = _apply_rules(remaining["sentence"])
                     result.append({**remaining, "normalised": normalised, "priority": "preferred"})
                 return result
-            # Per-minute rate limit — wait and retry
+            # Per-minute rate limit - wait and retry
             print(f"[rate limited, waiting 60s...]", end=" ", flush=True)
             time.sleep(60)
             try:
@@ -227,7 +227,7 @@ def _rewrite_llm_batch(candidates: list[dict], turns: list[dict]) -> list[dict]:
                 continue
 
         if llm_result is None:
-            print("[filtered — not a requirement]")
+            print("[filtered - not a requirement]")
             continue
 
         priority, normalised = llm_result

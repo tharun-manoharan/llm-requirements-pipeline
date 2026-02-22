@@ -28,9 +28,9 @@ def test_full_pipeline():
 
 
 def test_golden_file():
-    examples_dir = os.path.join(os.path.dirname(__file__), "..", "examples")
-    conversation_path = os.path.join(examples_dir, "conversation_01.txt")
-    expected_path = os.path.join(examples_dir, "expected_output_01.json")
+    test_dir = os.path.join(os.path.dirname(__file__), "..", "datasets", "test")
+    conversation_path = os.path.join(test_dir, "conversation.txt")
+    expected_path = os.path.join(test_dir, "expected.json")
 
     with open(conversation_path, "r") as f:
         raw = f.read()

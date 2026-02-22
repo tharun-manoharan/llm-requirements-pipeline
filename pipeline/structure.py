@@ -1,4 +1,4 @@
-"""Stage 5: Structuring — assign IDs and emit final JSON-ready list."""
+"""Stage 5: Structuring - assign IDs and emit final JSON-ready list."""
 
 
 def structure_requirements(

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have you spoke to someone else, has my colleague filled you in with- We are trying to use newer technologies.",
+    "source": "Turn 1 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall we're sending a team out there in at the end of this month actually to see how they're getting on with that project.",
+    "source": "Turn 3 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall yeah, so I mean, to do a comparison, it's it's, it's literally just newer technology.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall like I say this technology has bridged two companies so it is super similar even where you mount the hoist, having the wrist cameras.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall and I think they're trying to you know upgrading again and then we should have a baseline system and then if a project needs to have longer arms on it or it needs to lift more or it needs to be waterproof.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall that's when you need to start looking to variants of what [this system] is, but essentially it's the baseline thing and then it would be adapted to see wherever customer, right.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall not exactly like if you had a colleague and you knew what they were able to do then, you know, you wouldn't you wouldn't push them beyond their capabilities.",
+    "source": "Turn 16 (interviewer)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall i mean not that you would but somebody might if you're almost where you need to be you might want to try and strain and stretch and that's where you could put pressure on the tendons.",
+    "source": "Turn 17 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall but the kit, the kit itself is very, very reliable.",
+    "source": "Turn 17 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall i think that will change thing that might change the display as well.",
+    "source": "Turn 21 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall it's hardly noticeable to be honest with you.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall so the last thing you need is is to put that sort of pressure on someone.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall and if that's the case, if there should be a timeframe on it, I think you should have to a time plus 50% on anyway.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall because you would, you couldn't say to someone you need to get that done in one minute because things happen and again, different levels of skill, it could take me one minute.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall it could take my colleague 30 seconds so you would need to have a time frame that would cover all abilities.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall which is why we end up putting stops or guides, to make sure that the cable stays within where you've got to stay because, what you don't want to do is for it - you do a movement and the cable bends because that's where you, you kind of, like, you need to retrieve it.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall yeah, that's exactly what you need to do <model the whole scene exactly in simulation>.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall so, basically, the operator was there in case something happens, but you basically just send the command to the arms and actually the arm went up to that position, so it was it was driven there, not by the person.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall if you need to get the bolt runner from somewhere, you'd be more than happy for someone to go.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall but yeah, but I've no issues with programming it to get you to the point of where you need to take control.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall no you wouldn't because to screw in a nut, especially when it's at the start, because you need to find out if you've cross threaded it, you need to make sure you're an alignment and that's a very common failure, actually, is when you're using screws and it and you do cross thread them and you could damage the screw and also the hole that is going into and then that causes a whole world of pain.",
+    "source": "Turn 48 (participant)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall you need to be able to feel that it's going incorrectly, like say whereas if you just programmed in it went there and it just powered in yeah you've got no idea whether you've damaged it.",
+    "source": "Turn 50 (participant)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall and that's where it should always be.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall so if you, if you had a camera view across where you're going and where you need to be, you've always got that view, whereas if you're moving forward, but your variable viewer is moving around.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall it might be fine if you're talking about a block that's 20 mil diameter that needs to go into a square hole 20.5 down.",
+    "source": "Turn 64 (participant)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall it was very rough and ready but it did give you it did give you a good idea of where you needed to be especially on a new task.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-027",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall if you once you've done it several times, you get the idea of what you needed to do.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-028",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall this is this is the angle, you need to be at so you did actually use that.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-029",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall you can tell <using force feedback> when you're supposed to be moving forward and if you're not you need to stop and have a look to see what you are doing to stop you from doing what you need to be to achieve.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-030",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall depending what environment if it was some kind of sorting manipulator it just needs a production line it needs to pick that type of thing.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-031",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall if you've got an unknown environment as well, where you can send the robot in it, it just sort of maps out and says, these are these areas.",
+    "source": "Turn 92 (interviewer)"
+  }
+]

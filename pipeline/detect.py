@@ -1,4 +1,4 @@
-"""Stage 3: Candidate Requirement Detection — extract and classify requirement sentences."""
+"""Stage 3: Candidate Requirement Detection - extract and classify requirement sentences."""
 
 import re
 

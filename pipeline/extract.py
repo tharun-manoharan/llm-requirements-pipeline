@@ -15,7 +15,7 @@ from pipeline.llm_client import get_llm_client, LLM_MODEL
 _EXTRACT_SYSTEM_PROMPT = """\
 You are a senior requirements engineer analysing a stakeholder interview \
 transcript. Your task is to identify EVERY sentence or clause that expresses \
-a software requirement — something the system-to-be-built must do, support, \
+a software requirement - something the system-to-be-built must do, support, \
 enforce, or exhibit.
 
 Requirements in stakeholder interviews are often implicit. Look for ALL of \
@@ -46,7 +46,7 @@ For each requirement found, output a JSON object with these fields:
 - "sentence": The exact or minimally cleaned text from the transcript that \
 contains the requirement. Preserve the speaker's meaning. Remove only \
 filler words (uh, um, okay so, yeah, you know). Do not rewrite into \
-formal language — that is a later stage's job.
+formal language - that is a later stage's job.
 - "source_turn": The integer turn index (0-based) where this text appears.
 - "req_type": Either "functional" or "non-functional".
   - non-functional: performance, security, encryption, availability, \
@@ -152,14 +152,14 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
         except Exception as e:
             err_msg = str(e)
             if "tokens per day" in err_msg.lower() or "tpd" in err_msg.lower():
-                print(f"  [daily token limit exhausted — falling back to naive stages 2-3]", flush=True)
+                print(f"  [daily token limit exhausted - falling back to naive stages 2-3]", flush=True)
                 from pipeline.segment import segment_turns
                 from pipeline.detect import detect_candidates
                 segmented = segment_turns(turns)
                 return detect_candidates(segmented)
             wait = 60 * (attempt + 1)  # 60s, 120s, 180s
             if attempt < 2:
-                print(f"  [rate limited, waiting {wait}s — attempt {attempt + 1}/3...]", flush=True)
+                print(f"  [rate limited, waiting {wait}s - attempt {attempt + 1}/3...]", flush=True)
                 time.sleep(wait)
             else:
                 print("  [still failing after 3 attempts, falling back to naive stages 2-3]", flush=True)

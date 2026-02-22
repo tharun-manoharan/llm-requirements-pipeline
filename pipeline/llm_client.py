@@ -1,4 +1,4 @@
-"""Shared Groq LLM client — used by extract.py and rewrite.py."""
+"""Shared Groq LLM client - used by extract.py and rewrite.py."""
 
 import os
 

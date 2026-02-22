@@ -1,4 +1,4 @@
-"""Stage 2: Conversation Segmentation — tag turns as requirement-bearing or not."""
+"""Stage 2: Conversation Segmentation - tag turns as requirement-bearing or not."""
 
 import re
 

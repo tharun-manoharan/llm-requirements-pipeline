@@ -1,0 +1,114 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide predefined movements to assist users in regaining muscle memory.",
+    "source": "Turn 3 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall be able to identify and differentiate various materials.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall alert the user or prevent movement when it detects a material that is unsafe to approach.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall be able to map out an unknown environment and identify areas within it.",
+    "source": "Turn 92 (interviewer)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall display the current position of each joint within its range on the MMI screens.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall change colours when the user approaches the limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall be able to identify and differentiate various materials through visual scanning and computer vision, enabling it to determine the appropriate gripping features.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall be more durable.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have minimal latency or delay when operating.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a variable viewpoint to allow the user to look around.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide fixed camera views in addition to variable viewpoints.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide an overlay on the screen as a guide.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a no-go zone to prevent damage to surrounding objects or equipment when operating in tight environments.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall produce an alarm or noise to alert the user when they are approaching a no-go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall have a high image resolution.",
+    "source": "Turn 72 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback to indicate when the user is supposed to be moving forward and when they need to stop for further examination.",
+    "source": "Turn 76 (participant)"
+  }
+]

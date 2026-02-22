@@ -1,9 +1,10 @@
-"""Stage 1: Input Ingestion — parse raw conversation text into structured turns."""
+"""Stage 1: Input Ingestion - parse raw conversation text into structured turns."""
 
 import re
 
-# Format A: "Stakeholder: ...", "Developer: ..."
-SIMPLE_PATTERN = re.compile(r"^(Stakeholder|Developer)\s*:\s*(.+)$", re.IGNORECASE)
+# Format A: "Stakeholder: ...", "Developer: ...", "Interviewer: ...", etc.
+# Accepts any single word (or hyphenated word) as a role label.
+SIMPLE_PATTERN = re.compile(r"^([A-Za-z][\w-]{0,30})\s*:\s*(.+)$", re.IGNORECASE)
 
 # Format B: "[0:01:17] spk_1: ..." (timestamped transcript)
 TIMESTAMPED_PATTERN = re.compile(

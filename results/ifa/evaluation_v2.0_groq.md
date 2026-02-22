@@ -1,13 +1,13 @@
-# Pipeline Evaluation v2.0 (Groq / Llama 3.3 70B) — conversation_02.txt
+# Pipeline Evaluation v2.0 (Groq / Llama 3.3 70B) - conversation_02.txt
 
 ## What changed from v1.2
 
 - **Model upgrade**: Qwen/Qwen2.5-7B-Instruct (HF API) replaced with
-  **Llama 3.3 70B** via **Groq API** — a 10x larger model with hardware-
+  **Llama 3.3 70B** via **Groq API** - a 10x larger model with hardware-
   accelerated inference.
 - **Speed**: 67 candidates processed in ~10 seconds (vs 3-5 minutes on HF).
 - Context window (2 surrounding turns) and priority classification retained
-  from v1.2 — same prompt, same pipeline stages 1-3-5.
+  from v1.2 - same prompt, same pipeline stages 1-3-5.
 
 ---
 
@@ -45,7 +45,7 @@
 | Pipeline output distribution | 0 essential, 30 preferred, 1 optional | **20 essential, 0 preferred, 3 optional** |
 | Priority correct (of TPs) | ~34% | **57% (12/21)** |
 
-The 70B model now makes meaningful priority distinctions — **57% accuracy**
+The 70B model now makes meaningful priority distinctions - **57% accuracy**
 vs the 7B model's 34%. However, it over-indexes on "essential" (20/23 outputs)
 and never uses "preferred". The model treats most confirmed requirements as
 essential and only marks vague or uncertain items as optional.
@@ -58,23 +58,23 @@ essential and only marks vague or uncertain items as optional.
 
 | LLM ID | Maps to GT | Type | Priority | Rewrite quality | Notes |
 |---|---|---|---|---|---|
-| REQ-002 | GT-003 | func ✓ | essential ✓ | Acceptable | Budget policies — loses "alert on violations" |
-| REQ-003 | GT-009 | func ✓ | optional ✗ (GT: essential) | Acceptable | Event timestamps — loses specific event types |
+| REQ-002 | GT-003 | func ✓ | essential ✓ | Acceptable | Budget policies - loses "alert on violations" |
+| REQ-003 | GT-009 | func ✓ | optional ✗ (GT: essential) | Acceptable | Event timestamps - loses specific event types |
 | REQ-004 | GT-010 | func ✓ | essential ✓ | Excellent | Near-verbatim match to ground truth |
 | REQ-005 | GT-012 | func ✓ | essential ✗ (GT: preferred) | Good | Team offline analysis |
 | REQ-006 | GT-015 | func ✓ | essential ✓ | Good | Referee allocation guidance |
 | REQ-007 | GT-016/017 | func ✓ | essential ✗ (GT: preferred) | Good | Referee policy + preferences in one statement |
 | REQ-008 | GT-018 | func ✓ | essential ✓ | Good | Manual schedule adjustment |
-| REQ-009 | GT-019 | func ✓ | essential ✓ | Acceptable | Confirmation requirement — loses "written rationale" |
+| REQ-009 | GT-019 | func ✓ | essential ✓ | Acceptable | Confirmation requirement - loses "written rationale" |
 | REQ-010 | GT-019 | func ✓ | essential ✓ | Good | Duplicate of REQ-009, clearer phrasing |
-| REQ-011 | GT-014 | func ✓ | essential ✓ | Good | Specific constraint — minimum gap |
+| REQ-011 | GT-014 | func ✓ | essential ✓ | Good | Specific constraint - minimum gap |
 | REQ-013 | GT-008/034 | func ✗ (GT-034: NF) | essential ✓ | Good | Referees as sole data source |
-| REQ-014 | GT-041 | func ✓ | essential ✗ (GT: optional) | Acceptable | Annual report — loses "automatic reminder" aspect |
-| REQ-015 | GT-026 | NF ✓ | essential ✗ (GT: preferred) | Acceptable | Response time — lost "1-2 seconds" |
+| REQ-014 | GT-041 | func ✓ | essential ✗ (GT: optional) | Acceptable | Annual report - loses "automatic reminder" aspect |
+| REQ-015 | GT-026 | NF ✓ | essential ✗ (GT: preferred) | Acceptable | Response time - lost "1-2 seconds" |
 | REQ-016 | GT-027 | func ✗ (GT: NF) | essential ✓ | Good | Referee real-time priority |
-| REQ-017 | GT-027 | func ✗ (GT: NF) | essential ✓ | Good | Duplicate — event reporting priority |
+| REQ-017 | GT-027 | func ✗ (GT: NF) | essential ✓ | Good | Duplicate - event reporting priority |
 | REQ-018 | GT-033 | func ✗ (GT: NF) | essential ✗ (GT: preferred) | Good | Cloud hosting |
-| REQ-019 | GT-031 | func ✗ (GT: NF) | optional ✗ (GT: essential) | Acceptable | Local regulations — vague |
+| REQ-019 | GT-031 | func ✗ (GT: NF) | optional ✗ (GT: essential) | Acceptable | Local regulations - vague |
 | REQ-020 | GT-032 | NF ✓ | optional ✗ (GT: preferred) | Excellent | Near-verbatim: budget data encryption |
 | REQ-021 | GT-036 | func ✓ | essential ✓ | Good | User registration |
 | REQ-022 | GT-035 | func ✓ | essential ✓ | Good | Retain past archives |
@@ -84,8 +84,8 @@ essential and only marks vague or uncertain items as optional.
 
 | LLM ID | Reason |
 |---|---|
-| REQ-001 | Developer introduction from Turn 0 — describes project scope, not a stakeholder requirement |
-| REQ-012 | Too vague — "allow parameters to be defined within it" with no specifics |
+| REQ-001 | Developer introduction from Turn 0 - describes project scope, not a stakeholder requirement |
+| REQ-012 | Too vague - "allow parameters to be defined within it" with no specifics |
 
 ### False Negatives (19)
 
@@ -125,7 +125,7 @@ essential and only marks vague or uncertain items as optional.
 ### What the 70B model improved
 
 **1. Near-zero false positives (2 vs 6/10/40).** Only 2 of 23 outputs are
-invalid — a developer introduction and a vague parameter statement. This is
+invalid - a developer introduction and a vague parameter statement. This is
 the cleanest output of any version. Precision hit **91.3%**.
 
 **2. Zero poor-quality rewrites.** Every TP is usable as a requirement
@@ -141,7 +141,7 @@ The model correctly identifies most core requirements as "essential" and uses
 
 ### What got worse
 
-**1. Recall dropped to 53.7%.** The 70B model filters too aggressively —
+**1. Recall dropped to 53.7%.** The 70B model filters too aggressively -
 it rejected 11 valid requirements that stages 2-3 had correctly identified.
 This includes major features like fan notifications (GT-020/021/022), referee
 mobile input (GT-007), game scheduling (GT-013), and data export (GT-011).
@@ -149,7 +149,7 @@ mobile input (GT-007), game scheduling (GT-013), and data export (GT-011).
 **2. Over-filtering is the dominant problem.** Of 19 FNs, 11 are LLM
 over-filtering (not upstream gaps). The 70B model is better at recognising
 well-structured requirements but worse at extracting requirements from noisy
-conversational text — it classifies them as "not a requirement" instead.
+conversational text - it classifies them as "not a requirement" instead.
 
 ### Precision vs recall tradeoff across versions
 
@@ -172,7 +172,7 @@ the fewest requirements.
 | preferred | 0 | 0 | Model never uses this label |
 | optional | 0 ✓ | 3 ✗ (2 should be essential, 1 preferred) | Rare but sometimes misapplied |
 
-The 70B model treats "preferred" as if it doesn't exist — everything is either
+The 70B model treats "preferred" as if it doesn't exist - everything is either
 "essential" (strong requirement) or "optional" (uncertain). This binary thinking
 is better than the 7B model's uniform "preferred" but still misses the middle
 tier.
@@ -193,7 +193,7 @@ tier.
    candidates to the rewrite stage.
 
 4. **To fix priority**: The 70B model needs explicit few-shot examples showing
-   "preferred" items — stakeholder desires that are clearly stated but not
+   "preferred" items - stakeholder desires that are clearly stated but not
    emphasised as critical. The current prompt doesn't give enough signal for
    the middle tier.
 
@@ -203,7 +203,7 @@ tier.
 
 v2.0 demonstrates that a 10x larger model dramatically improves output quality:
 **91% precision, 91% usable, 57% priority accuracy, zero poor rewrites**.
-However, it does not improve recall — the 70B model is an even more aggressive
+However, it does not improve recall - the 70B model is an even more aggressive
 filter than the 7B model with context.
 
 The pipeline's remaining bottlenecks:
@@ -214,3 +214,31 @@ The pipeline's remaining bottlenecks:
 | 70B model over-filters | 11 FNs (Stage 4) | Better prompt / few-shot examples |
 | No "preferred" priority | 0/14 preferred items correct | Few-shot examples for middle tier |
 | Type classification | 76% correct | LLM-based classifier in Stage 3/5 |
+
+---
+
+## Cross-dataset comparison — v2.0 (same model, same prompts)
+
+The same pipeline version was also evaluated on the Bristol N1 interview
+(`datasets/bristol/N1.txt`), a semi-structured research interview about trust
+in teleoperation rather than a requirements elicitation session.
+
+| Metric | IFA (elicitation) | Bristol N1 (interview) |
+|---|---|---|
+| Ground truth requirements | 41 | 16 |
+| Pipeline outputs | 23 | 16 |
+| True positives | 21 | 9 |
+| False positives | 2 | 7 |
+| False negatives | 19 | 7 |
+| **Precision** | **91.3%** | **56.3%** |
+| **Recall** | **53.7%** | **56.3%** |
+| **F1** | **0.676** | **0.563** |
+| Usable outputs | 91% | 56% |
+
+Key difference: interview data introduces speculative/aspirational content and
+positively-endorsed existing features, both of which confuse the LLM. Precision
+drops from 91% to 56% on the interview corpus. Recall is comparable (54% vs 56%)
+because the LLM handles evaluative interview language ("is useful", "is a great
+idea") similarly to elicitation modal verbs.
+
+Full Bristol N1 evaluation: `results/bristol/evaluation_N1_v2.0_groq.md`
