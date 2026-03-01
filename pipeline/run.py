@@ -8,6 +8,7 @@ from pipeline.segment import segment_turns
 from pipeline.detect import detect_candidates
 from pipeline.extract import extract_candidates_llm
 from pipeline.rewrite import rewrite_requirements
+from pipeline.deduplicate import deduplicate_requirements
 from pipeline.structure import structure_requirements
 
 DIVIDER = "=" * 72
@@ -24,7 +25,8 @@ def run_pipeline(raw_text: str, rewrite_mode: str = "naive") -> list[dict]:
         candidates = detect_candidates(segmented)
 
     rewritten = rewrite_requirements(candidates, mode=rewrite_mode, turns=turns)
-    return structure_requirements(rewritten, turns)
+    deduped = deduplicate_requirements(rewritten, mode=rewrite_mode)
+    return structure_requirements(deduped, turns)
 
 
 def run_pipeline_trace(raw_text: str, rewrite_mode: str = "naive") -> list[dict]:
@@ -90,11 +92,23 @@ def run_pipeline_trace(raw_text: str, rewrite_mode: str = "naive") -> list[dict]
         print(f"    AFTER:  \"{after}\"")
         print()
 
+    # --- Stage 4b (LLM mode only) ---
+    if rewrite_mode == "llm":
+        print(DIVIDER)
+        print("  STAGE 4b: DEDUPLICATE  (remove semantically equivalent requirements)")
+        print(DIVIDER)
+        print()
+        deduped = deduplicate_requirements(rewritten, mode=rewrite_mode)
+        removed_count = len(rewritten) - len(deduped)
+        print(f"\n  {len(deduped)} requirements after deduplication ({removed_count} removed)\n")
+    else:
+        deduped = rewritten
+
     # --- Stage 5 ---
     print(DIVIDER)
     print("  STAGE 5: STRUCTURE  (assign IDs, final JSON)")
     print(DIVIDER)
-    result = structure_requirements(rewritten, turns)
+    result = structure_requirements(deduped, turns)
     print(json.dumps(result, indent=2))
 
     return result

@@ -2,7 +2,7 @@
 
 Supports two modes:
   - naive:  regex-based rewrite rules (no external dependencies)
-  - llm:    uses Groq API with Llama 3.3 70B to rewrite via an LLM
+  - llm:    uses Cerebras API with gpt-oss-120b to rewrite via an LLM
 """
 
 import re
@@ -87,8 +87,25 @@ or emphasises (strong language like "must", "need", "only X can", "critical")
 - optional - briefly mentioned, uncertain ("maybe", "might", "could"), or \
 agreed to without strong conviction
 
-Use the surrounding context to judge priority - look for emphasis, repetition, \
-and strength of language. Do NOT default to preferred; make a real judgement.
+Use the surrounding context to judge priority. Make a genuine judgement — \
+most requirements in a conversation are preferred, not essential. Reserve \
+essential for requirements with strong, unambiguous demand language.
+
+Examples:
+Context: [stakeholder]: The budget module is non-negotiable. Each team must \
+control their own finances, that is a hard requirement.
+TARGET: each team manages its own budget
+-> essential | The system shall allow each team to manage its own budget independently.
+
+Context: [developer]: Could teams export their data?  [stakeholder]: Yeah that \
+would be useful, good for offline analysis.
+TARGET: teams could export their data for offline work
+-> preferred | The system shall allow teams to export their data for offline analysis.
+
+Context: [stakeholder]: Oh and maybe, I don't know, some kind of reminder? \
+Like a few minutes before a game starts? Could be handy.
+TARGET: maybe a reminder a few minutes before kick-off
+-> optional | The system shall allow users to set reminder notifications before games.
 
 Rules:
 - Output ONLY the priority and rewritten requirement in the format above.
@@ -131,7 +148,7 @@ def _rewrite_with_llm(sentence: str, context: str = "") -> tuple[str, str] | Non
             {"role": "system", "content": _SYSTEM_PROMPT},
             {"role": "user", "content": user_msg},
         ],
-        max_tokens=200,
+        max_tokens=1000,
         temperature=0.1,
     )
 
@@ -234,7 +251,7 @@ def _rewrite_llm_batch(candidates: list[dict], turns: list[dict]) -> list[dict]:
         print(f"OK [{priority}]")
         result.append({**candidate, "normalised": normalised, "priority": priority})
 
-        # Throttle to stay within Groq free-tier rate limits (~30 req/min)
+        # Throttle to stay within Cerebras free-tier rate limits (~30 req/min)
         time.sleep(2)
 
     return result

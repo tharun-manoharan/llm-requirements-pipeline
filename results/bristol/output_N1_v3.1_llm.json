@@ -1,0 +1,184 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide predefined movements to assist users in regaining muscle memory.",
+    "source": "Turn 3 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a baseline configuration and support variant configurations with extended arm length, increased lifting capacity, and waterproofing as required by projects.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enter a safe mode when a movement is not programmed or when movement speed exceeds safe limits.",
+    "source": "Turn 15 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enforce hard stops in software and ensure hardware also enforces hard stops.",
+    "source": "Turn 17 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall display the joint range for each joint on the MMI screens and change the display colour when limits are approached.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allocate a time allowance for tasks equal to the estimated time plus 50 percent.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide cable stops or guides to keep the cable within defined boundaries.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall model the entire scene exactly in simulation.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support teach files that enable programming point-to-point movements without joystick control.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow programming repeatable tasks such as tool change positions and provide a home button that returns the arm to a known state.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall move autonomously close to the target and then hand over control to the operator.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide haptic feedback to the operator when motion is incorrect.",
+    "source": "Turn 50 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall provide a variable camera viewpoint in the UI to improve depth perception.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide fixed camera views that remain constant for specific tasks.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow operators to adjust the zoom level in the UI, supporting both zoomed-out and zoomed-in views.",
+    "source": "Turn 56 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide an augmented\u2011reality overlay that guides the operator when performing new tasks.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall provide the visual feed at the highest possible image resolution at all times.",
+    "source": "Turn 72 (participant)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize resolution over frame rate.",
+    "source": "Turn 74 (participant)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide force feedback to indicate when the operator is moving in the correct direction and cease the feedback when the operator is not moving in the correct direction.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall include a ghost mode that displays a predicted end position before execution.",
+    "source": "Turn 78 (participant)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display the planned trajectory and end position for pre\u2011planned movements in ghost mode.",
+    "source": "Turn 80 (participant)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall define no\u2011go zones and prevent movement into those areas.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall sound an audible alarm when the operator drifts toward a no\u2011go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall recognise different materials such as rubber, aluminium, and painted surfaces using computer vision.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall use material recognition results to create no\u2011go zones for prohibited materials.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall detect overload conditions and release the grip to prevent dropping objects.",
+    "source": "Turn 95 (participant)"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a baseline configuration and support variant configurations for extended arms, increased lift capacity, and waterproofing as required by a project.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enter safe mode when a movement not programmed to be understood is attempted or when a movement exceeds the system\u2019s capability.",
+    "source": "Turn 15 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall display the position within the range for each joint on the MMI screen and change the display colour when the joint approaches its limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow a 50% extension beyond the original timeframe for any task that has a defined timeframe.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide stops or guides to ensure the cable remains within the defined area.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall model the whole scene exactly in simulation.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support teach files that allow programming a point and automatically drive the robot to that point.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow programming of repeatable tasks and provide a home button that moves the robot to a known state.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall move the robot close to the target autonomously and then hand over control to the operator.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide subtle tactile feedback so the operator can feel when something is going incorrectly.",
+    "source": "Turn 50 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a variable viewpoint camera that can be moved around to improve depth perception.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide fixed camera views that remain constant for specific tasks.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow operators to zoom out and have the camera automatically follow their view as they move.",
+    "source": "Turn 56 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support optional 3D cameras.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize image resolution over frame rate for precision tasks.",
+    "source": "Turn 74 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide force feedback to indicate when to stop moving forward.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display a ghost mode that shows the predicted end position before the robot moves.",
+    "source": "Turn 78 (participant)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have no-go zones that prevent movement into hazardous areas.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall sound an audio alarm when the robot approaches a no-go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall use computer vision to recognize materials such as aluminium or painted surfaces, enforce no\u2011go zones based on that information, and provide visual cues.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall detect overload that causes the gripper fingers to open and provide feedback to prevent dropping objects.",
+    "source": "Turn 95 (participant)"
+  }
+]
