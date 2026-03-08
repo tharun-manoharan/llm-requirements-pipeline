@@ -1,0 +1,121 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to run pre\u2011planned movement files in a VR robot simulator to operate the manipulator.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall stop all operations within one tenth of a second when any emergency stop button is pressed.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow predefined arm moves stored in files to be triggered by pressing a button on the computer.",
+    "source": "Turn 31 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall, upon detecting an out-of-order command, either reject the input or automatically execute the next move in the expected sequence.",
+    "source": "Turn 32 (interviewer)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall be able to perform standard tasks such as aligning and screwing a nut.",
+    "source": "Turn 34 (interviewer)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the arm to insert a bolt regardless of its orientation using the Bolt Runner constraints feature.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have essentially zero perceptible delay; any millisecond of latency shall trigger a flag and halt operation.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall break long movements into intermediate stages to allow the operator to monitor progress and see the arm's trajectory.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide high-definition cameras for the operator view.",
+    "source": "Turn 55 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support up to eight camera feeds, with two primary views selectable at any time.",
+    "source": "Turn 57 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize frame rate over resolution when bandwidth is limited.",
+    "source": "Turn 60 (interviewer)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support a large shared display, such as a 75\u2011inch TV, enabling multiple operators to view the same images simultaneously.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display a ghost overlay of the planned path and warn the operator if the arm deviates from it.",
+    "source": "Turn 65 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow definition of no\u2011go zones and provide force feedback or audible alerts when the arm approaches a restricted area.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall sound a buzzer when the gripper force exceeds a safe threshold to prevent over\u2011gripping.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall include built\u2011in illumination LEDs in cameras to improve depth perception.",
+    "source": "Turn 75 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force\u2011ratio feedback or limits when handling heavy loads to reduce operator strain.",
+    "source": "Turn 79 (participant)"
+  }
+]

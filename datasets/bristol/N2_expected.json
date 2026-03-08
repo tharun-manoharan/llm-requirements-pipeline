@@ -1,0 +1,93 @@
+[
+  {
+    "id": "GT-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide multiple hardware emergency stops accessible at several positions around the operator workstation (e.g. behind the head, by the feet, by the arms).",
+    "source": "Turn 30 (participant)"
+  },
+  {
+    "id": "GT-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall automatically trip to a safe state when the arm exerts excessive force against an obstacle or resistance.",
+    "source": "Turn 30 (participant)"
+  },
+  {
+    "id": "GT-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support pre-programmed arm movements via teach files, allowing the robot to move autonomously to predefined positions on command.",
+    "source": "Turn 32 (participant)"
+  },
+  {
+    "id": "GT-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the operator to pause or immediately stop a pre-programmed arm move while it is executing.",
+    "source": "Turn 32 (participant)"
+  },
+  {
+    "id": "GT-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display a ghost preview showing the predicted end position of a commanded movement, and the intermediate waypoints along the planned path, before the move is executed.",
+    "source": "Turn 44, 46, 66 (participant)"
+  },
+  {
+    "id": "GT-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "When a large pre-programmed move is commanded, the system shall show the full routing path around obstacles, not just the final endpoint, so the operator can verify the trajectory before confirming.",
+    "source": "Turn 48 (participant)"
+  },
+  {
+    "id": "GT-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide at least two camera views simultaneously: one fixed overhead overview for global spatial reference and at least one adjustable camera for close-up work.",
+    "source": "Turn 6, 56, 58 (participant)"
+  },
+  {
+    "id": "GT-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a camera auto-follow mode that pans and tracks the arm's position during operation, configurable per operator preference.",
+    "source": "Turn 58 (participant)"
+  },
+  {
+    "id": "GT-009",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritise frame rate over resolution for camera streams used during active manipulation tasks.",
+    "source": "Turn 62 (participant)"
+  },
+  {
+    "id": "GT-010",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support configurable no-go zones defined as rectangular regions or spherical exclusion volumes that physically prevent the robot from entering.",
+    "source": "Turn 68 (participant)"
+  },
+  {
+    "id": "GT-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall emit an audible alarm when gripper force exceeds a configured threshold, to warn the operator against over-gripping.",
+    "source": "Turn 70 (participant)"
+  },
+  {
+    "id": "GT-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide adjustable force-ratio (load compensation) settings that reduce the apparent weight of heavy objects being manipulated.",
+    "source": "Turn 80 (participant)"
+  },
+  {
+    "id": "GT-013",
+    "type": "non-functional",
+    "priority": "optional",
+    "statement": "The system shall maintain haptic force feedback sensitivity independent of the force-ratio setting, so operators can handle heavy objects while retaining fine tactile perception.",
+    "source": "Turn 80 (participant)"
+  }
+]

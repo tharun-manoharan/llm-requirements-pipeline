@@ -31,16 +31,33 @@ IFA to open a new team" implies a registration workflow
 - Architectural constraints: "same system, different interfaces"
 - Procedural language: "insertion of X is done by Y" implies role-based permission
 - Scalability / capacity expectations: "50,000 users"
+- Compliance / regulatory constraints stated as background facts: \
+"German data must stay in Germany", "we follow GDPR" — these are \
+non-functional requirements even without modal verbs
+- Features of an existing system that the participant endorses as desirable \
+for the new system: "we had X and it was really useful" implies the new \
+system should have X
 
 Do NOT extract:
 - Greetings, introductions, or closing remarks
 - Questions from developers or stakeholders (sentences ending with ?)
 - Meta-conversation: "let us move on", "did that answer your question"
-- Descriptions of the CURRENT process unless they clearly state what the \
-NEW system should do differently
+- Operational context that is NOT a system feature: team sizes, shift \
+patterns, task frequencies, physical environment descriptions
+- Engineering or maintenance processes: design validation, testing \
+procedures, manufacturing steps
+- Descriptions of the current system's operational state that are NOT \
+being endorsed as features the new system should replicate (e.g. \
+"our latency is already zero" describes current performance, not a \
+new requirement; "we had five people on shift" is operational setup)
 - Vague agreement: "ok", "sure", "indeed", "right"
 - Project planning / phasing: "this should be first phase"
-- Closing remarks or pleasantries
+
+A single turn may contain multiple requirements. Extract each separately — \
+but only when they describe genuinely DIFFERENT system capabilities or \
+behaviours. Do NOT split a statement that describes two attributes or two \
+constraints of the same feature (e.g. "only teams can insert transactions \
+and each team can only see its own data" is ONE data-access requirement).
 
 For each requirement found, output a JSON object with these fields:
 - "sentence": The exact or minimally cleaned text from the transcript that \
@@ -141,7 +158,7 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
         ],
         response_format={"type": "json_object"},
         max_tokens=8192,
-        temperature=0.1,
+        temperature=0.0,
     )
 
     resp = None

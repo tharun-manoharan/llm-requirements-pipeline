@@ -1,0 +1,100 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall stop within a tenth of a second when the emergency stop button is pressed.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow execution of predefined arm movements via selectable files or a button press.",
+    "source": "Turn 31 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall include Bolt Runner constraints to prevent cross\u2011threading when tightening bolts, regardless of orientation.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have zero perceptible latency; any delay greater than one millisecond shall be flagged and cause operation to halt.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall break long movements into incremental stages so operators can monitor progress.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support extensive simulation and testing of design changes to validate failure\u2011point mitigations.",
+    "source": "Turn 53 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide high-definition camera feeds with sufficient resolution for clear operator view.",
+    "source": "Turn 55 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support up to eight camera streams and allow the operator to select primary views, such as two main, wrist, and external cameras.",
+    "source": "Turn 57 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize frame rate over resolution when bandwidth is limited to maintain a smooth view.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow simultaneous viewing of the same video feeds by up to five operators.",
+    "source": "Turn 63 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display a ghost overlay of the planned path to indicate where the machine will move.",
+    "source": "Turn 65 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall enable definition of no\u2011go zones with visual warnings, audible alarms, and haptic force\u2011feedback to prevent entry.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall include LED illumination on the end\u2011effector to cast shadows that aid depth perception.",
+    "source": "Turn 75 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall calculate and enforce force limits for heavy payload handling to prevent operator strain and equipment overload.",
+    "source": "Turn 79 (participant)"
+  }
+]
