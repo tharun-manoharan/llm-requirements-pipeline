@@ -1,0 +1,107 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow integration of new diagnostic capabilities into the existing technology.",
+    "source": "Turn 1 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall use a VR robot simulator with pre‑planned movement files to run simulations before operating the manipulator.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide emergency stop controls positioned near the head, feet, and arms so that an emergency stop is always within easy reach.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall stop the system within a tenth of a second when the emergency stop is activated.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall execute predefined arm moves from files when a button on the computer is pressed.",
+    "source": "Turn 31 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall detect out-of-sequence commands and either reject the input or automatically execute the next move in the sequence.",
+    "source": "Turn 33 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall include Bolt Runner constraints to prevent cross‑threading when tightening bolts.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall flag and avoid any perceptible delay, even as short as one millisecond.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall break pre‑programmed moves into stages with intermediate waypoints and provide progress feedback.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize frame rate over resolution to ensure a smooth refreshed view.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a ghost mode that displays a preview of the machine's planned path.",
+    "source": "Turn 65 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow pre‑programmed no‑go zones and provide visual or audible warnings when approaching them.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a buzzer alert to the operator when the gripper is over‑gripping.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a 3‑D spatial image using a camera with an integrated light to aid depth perception.",
+    "source": "Turn 75 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enforce force limits and restrict arm positions based on the weight being handled.",
+    "source": "Turn 79 (participant)"
+  }
+]

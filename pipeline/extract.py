@@ -35,8 +35,14 @@ IFA to open a new team" implies a registration workflow
 "German data must stay in Germany", "we follow GDPR" — these are \
 non-functional requirements even without modal verbs
 - Features of an existing system that the participant endorses as desirable \
-for the new system: "we had X and it was really useful" implies the new \
-system should have X
+for the new system, where the feature is directly applicable to the target \
+system itself: "we had X and it was really useful" implies the new system \
+should have X. Do NOT apply this to training tools, preparation environments, \
+or analogous systems used before deployment (e.g. a VR simulator used for \
+operator training is not a feature of the live teleoperation system)
+- Aspirational or wish-list statements about system capabilities: \
+"that would be the Holy Grail", "ideally we'd have X", "if we could have X", \
+"I wish the system could" — extract these as optional requirements
 
 Do NOT extract:
 - Greetings, introductions, or closing remarks
@@ -97,11 +103,19 @@ def _format_turns_for_llm(turns: list[dict], max_chars_per_turn: int = 500) -> s
     return "\n".join(lines)
 
 
-def _parse_extraction_response(response_text: str, max_turn_index: int) -> list[dict]:
+_INTERVIEWER_ROLES = {"interviewer", "spk_0"}
+
+
+def _parse_extraction_response(
+    response_text: str, max_turn_index: int, turns: list[dict]
+) -> list[dict]:
     """Parse and validate the LLM extraction response.
 
     Returns list of dicts with keys: sentence, source_turn, req_type.
     Silently drops malformed entries rather than crashing.
+    Drops any candidate whose source turn belongs to an interviewer/facilitator
+    role — the LLM still sees those turns as context but cannot attribute a
+    requirement to them.
     """
     data = json.loads(response_text)
 
@@ -112,6 +126,9 @@ def _parse_extraction_response(response_text: str, max_turn_index: int) -> list[
         items = data
     else:
         return []
+
+    # Build a fast turn-index → role lookup
+    role_by_index = {t["turn_index"]: t["role"].lower() for t in turns}
 
     candidates = []
     for item in items:
@@ -125,6 +142,10 @@ def _parse_extraction_response(response_text: str, max_turn_index: int) -> list[
             continue
         if req_type not in ("functional", "non-functional"):
             req_type = "functional"
+
+        # Drop candidates attributed to interviewer / facilitator turns
+        if role_by_index.get(source_turn, "") in _INTERVIEWER_ROLES:
+            continue
 
         candidates.append({
             "sentence": sentence,
@@ -186,7 +207,7 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
                 return detect_candidates(segmented)
 
     response_text = resp.choices[0].message.content.strip()
-    candidates = _parse_extraction_response(response_text, max_turn_index)
+    candidates = _parse_extraction_response(response_text, max_turn_index, turns)
 
     if not candidates:
         print("  [LLM returned 0 candidates, falling back to naive]", flush=True)

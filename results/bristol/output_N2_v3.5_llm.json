@@ -1,0 +1,86 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a front‑facing camera that looks straight down to give an overview of the user's hands, and a foldable camera arm beneath the boom that supplies a three‑dimensional view displayed on a two‑dimensional screen.",
+    "source": "Turn 5 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall respond to an emergency stop button press within one tenth of a second.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow predefined arm movements to be stored in files and enable the boom to be moved to a predetermined position by pressing a button on the computer.",
+    "source": "Turn 31 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide assistance during a tricky manoeuvre, such as placing an object between a series of tiles.",
+    "source": "Turn 33 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a Bolt Runner constraint feature that allows tightening a bolt regardless of orientation.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall detect a delay of at least one millisecond and generate a notification indicating that operation should be paused for one minute.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall break pre-programmed moves into stages, such as 20-degree increments, to allow the operator to monitor progress.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall support high refresh rates even when operating at lower resolutions.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a ghost mode that indicates where the machine is moving.",
+    "source": "Turn 65 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to preprogram virtual walls that block movement into restricted areas.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall include a camera with an integrated light to create shadows for 3D spatial perception.",
+    "source": "Turn 75 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow setting force ratios on the arms to restrict heavy loads to be picked up only in specified positions.",
+    "source": "Turn 79 (participant)"
+  }
+]

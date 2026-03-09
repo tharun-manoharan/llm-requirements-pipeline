@@ -1,0 +1,114 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a baseline configuration that can be adapted to meet project-specific requirements such as longer arms, increased lift capacity, or waterproofing.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall enter safe mode when it receives movement commands that exceed its programmed capabilities or that it cannot process at the requested speed.",
+    "source": "Turn 15 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display the position within the range for each joint and change its color when the joint approaches its limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow a timeframe to be extended by 50% as a buffer.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide stops or guides to keep the cable within designated boundaries.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow programming of go‑to positions for the robot arm using teach files, enabling the arm to move automatically to specified points.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall move the robot close to the target location and then transfer control to the operator for final positioning.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a variable viewpoint that allows users to look around to enhance depth perception.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide fixed camera views, such as a goal line camera, that remain constant for their designated task.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide cameras that automatically zoom in to follow the user.",
+    "source": "Turn 56 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall prioritize image resolution over frame rate.",
+    "source": "Turn 74 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall use force feedback to indicate when forward motion is required and stop movement if the user does not move forward.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a ghost mode that, when activated by a button press, displays the predicted final position.",
+    "source": "Turn 78 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide an alarm when the user drifts toward a no‑go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall recognize materials such as rubber, aluminium, and painted surfaces through visual scanning.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall feed material recognition into a no‑go zone and use coloured blocks as visual cues for instruction.",
+    "source": "Turn 91 (participant)"
+  }
+]
