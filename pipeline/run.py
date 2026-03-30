@@ -10,6 +10,7 @@ from pipeline.extract import extract_candidates_llm
 from pipeline.rewrite import rewrite_requirements
 from pipeline.deduplicate import deduplicate_requirements
 from pipeline.structure import structure_requirements
+from pipeline.fret import export_fret_json
 
 DIVIDER = "=" * 72
 
@@ -118,14 +119,35 @@ def main():
     """Read from a file argument or stdin, run pipeline, print JSON to stdout.
 
     Usage:
-        python -m pipeline.run <file>                Normal mode (JSON only)
-        python -m pipeline.run --trace <file>         Trace mode (every stage)
-        python -m pipeline.run --llm <file>           LLM rewrite mode
-        python -m pipeline.run --llm --trace <file>   LLM + trace
+        python -m pipeline.run <file>                     Normal mode (JSON only)
+        python -m pipeline.run --trace <file>              Trace mode (every stage)
+        python -m pipeline.run --llm <file>                LLM rewrite mode
+        python -m pipeline.run --llm --trace <file>        LLM + trace
+        python -m pipeline.run --llm --fret <file>         LLM + FRET export
+        python -m pipeline.run --fret-only <output.json>   FRET export from existing output JSON
     """
-    args = [a for a in sys.argv[1:] if not a.startswith("-")]
-    trace = "--trace" in sys.argv
-    rewrite_mode = "llm" if "--llm" in sys.argv else "naive"
+    flags = [a for a in sys.argv[1:] if a.startswith("-")]
+    args  = [a for a in sys.argv[1:] if not a.startswith("-")]
+
+    trace        = "--trace"     in flags
+    rewrite_mode = "llm"         if "--llm"       in flags else "naive"
+    fret_export  = "--fret"      in flags
+    fret_only    = "--fret-only" in flags
+
+    # --fret-only: skip pipeline, convert an existing output JSON to FRET
+    if fret_only:
+        if not args:
+            print("Usage: python -m pipeline.run --fret-only <output.json> [project_name]",
+                  file=sys.stderr)
+            sys.exit(1)
+        input_path   = args[0]
+        project_name = args[1] if len(args) > 1 else "LLM-Pipeline"
+        output_path  = input_path.replace(".json", "_fret.json")
+        with open(input_path, "r") as f:
+            requirements = json.load(f)
+        print(f"\nFRET export: {len(requirements)} requirements -> {output_path}")
+        export_fret_json(requirements, output_path, project_name=project_name)
+        return
 
     if args:
         with open(args[0], "r") as f:
@@ -134,10 +156,16 @@ def main():
         raw = sys.stdin.read()
 
     if trace:
-        run_pipeline_trace(raw, rewrite_mode=rewrite_mode)
+        result = run_pipeline_trace(raw, rewrite_mode=rewrite_mode)
     else:
         result = run_pipeline(raw, rewrite_mode=rewrite_mode)
         print(json.dumps(result, indent=2))
+
+    if fret_export and args:
+        output_path  = args[0].replace(".txt", "_fret.json")
+        project_name = args[1] if len(args) > 1 else "LLM-Pipeline"
+        print(f"\nFRET export: {len(result)} requirements -> {output_path}")
+        export_fret_json(result, output_path, project_name=project_name)
 
 
 if __name__ == "__main__":

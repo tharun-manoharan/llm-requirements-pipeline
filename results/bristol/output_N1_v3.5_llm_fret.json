@@ -1,0 +1,172 @@
+[
+  {
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a baseline configuration that can be extended with longer arms, higher lift capacity, or waterproofing as required by a project.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 13 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy extensible_baseline_configuration",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall enter safe mode when a movement command exceeds the programmed capabilities or the internal processing speed.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 15 (participant) | FRET confidence: high",
+    "fulltext": "when movement_command_exceeds_capabilities_or_speed the system shall immediately enter safe_mode",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall display the range of each joint on the MMI screens and change the display colour when a joint approaches its limits.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 19 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy joint_range_display and when joint_approaches_limit shall immediately satisfy joint_limit_warning_displayed",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide stops or guides to ensure the cable remains within the designated area.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 37 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy cable_guidance_stops_engaged",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow programming of autonomous point-to-point navigation without manual joystick control.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 43 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy autonomous_navigation_programming_enabled",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow programming the arm to move to a specified position and provide a home button that returns the arm to a predefined state.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 45 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy arm_position_programming_enabled",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall move autonomously to a position near the task and then transfer control to the operator.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 46 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall eventually satisfy autonomous_positioning_and_control_transfer",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide feedback to indicate when an operation is proceeding incorrectly.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 50 (participant) | FRET confidence: high",
+    "fulltext": "when operation_proceeding_incorrectly the system shall immediately satisfy feedback_provided",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a variable viewpoint that allows users to look around to enhance depth perception.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 52 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy variable_viewpoint_for_depth_perception",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a fixed camera view that can be selected and remain constant.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 54 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy fixed_camera_view_selected",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall prioritize resolution over frame rate.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 72 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy resolution_over_frame_rate_priority",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall use force feedback to indicate forward motion and stop movement when forward motion is not detected.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 76 (participant) | FRET confidence: medium",
+    "fulltext": "when forward_motion_detected the system shall always satisfy force_feedback_for_forward_motion",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-013",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow the user to activate ghost mode via a button to display the predicted final position of the object.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 78 (participant) | FRET confidence: high",
+    "fulltext": "when ghost_mode_activated_via_button the system shall immediately satisfy ghost_mode_predicted_position_displayed",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-014",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall prevent users from entering designated no-go zones.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 84 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy prevention_of_no_go_zone_entry",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-015",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide an alarm when drifting into a no-go zone.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 86 (participant) | FRET confidence: high",
+    "fulltext": "when drifting_into_no_go_zone the system shall immediately satisfy alarm_activated",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-016",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall recognize materials by scanning and identify rubber, aluminium, painted surfaces, and other material types.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 89 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy material_recognition_enabled",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-017",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall use material recognition to define no-go zones represented by colored blocks to assist instruction.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 91 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy material_based_no_go_zones_defined",
+    "status": "preferred",
+    "semantics": {}
+  }
+]

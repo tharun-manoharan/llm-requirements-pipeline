@@ -1,0 +1,342 @@
+[
+  {
+    "_id": "dceec64d-6665-4d83-a187-1565b4394755",
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a baseline configuration that can be extended with longer arms, higher lift capacity, or waterproofing as required by a project.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 13 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy extensible_baseline_configuration",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "extensible_baseline_configuration",
+      "response_description": "The system provides a baseline configuration that can be extended with longer arms, higher lift capacity, or waterproofing as needed for a project.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ad3574a5-733a-4cde-b22f-1191e17b5c8e",
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall enter safe mode when a movement command exceeds the programmed capabilities or the internal processing speed.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 15 (participant) | FRET confidence: high",
+    "fulltext": "when movement_command_exceeds_capabilities_or_speed the system shall immediately enter safe_mode",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "movement_command_exceeds_capabilities_or_speed",
+      "timing": "immediately",
+      "response_var": "safe_mode",
+      "response_description": "The system enters a protective state to prevent damage or erroneous operation.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "56d92798-8a02-4a74-a335-ee150032c871",
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall display the range of each joint on the MMI screens and change the display colour when a joint approaches its limits.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 19 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy joint_range_display and when joint_approaches_limit shall immediately satisfy joint_limit_warning_displayed",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "joint_approaches_limit",
+      "timing": "immediately",
+      "response_var": "joint_limit_warning_displayed",
+      "response_description": "The display colour changes to indicate that a joint is approaching its operational limits.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9328f1c7-9dd3-4c2f-8786-f97123021717",
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide stops or guides to ensure the cable remains within the designated area.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 37 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy cable_guidance_stops_engaged",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "cable_guidance_stops_engaged",
+      "response_description": "Stops or guides are in place to ensure the cable remains within the designated area.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "8dcb7fa2-dab6-482e-8912-500df4d1830b",
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow programming of autonomous point-to-point navigation without manual joystick control.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 43 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy autonomous_navigation_programming_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "autonomous_navigation_programming_enabled",
+      "response_description": "The system allows programming of autonomous point-to-point navigation without requiring manual joystick control.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9bd72d7b-9478-48e4-b27e-482b7e768acd",
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow programming the arm to move to a specified position and provide a home button that returns the arm to a predefined state.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 45 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy arm_position_programming_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "arm_position_programming_enabled",
+      "response_description": "The system allows programming the arm to move to a specified position and provides a home button to return the arm to a predefined state.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "185c1d39-8c19-467a-b829-e80044bced87",
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall move autonomously to a position near the task and then transfer control to the operator.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 46 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall eventually satisfy autonomous_positioning_and_control_transfer",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "eventually",
+      "response_var": "autonomous_positioning_and_control_transfer",
+      "response_description": "The system moves autonomously to a position near the task and then transfers control to the operator.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "15bf3561-3f85-426c-925e-4a3f91ca8e67",
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide feedback to indicate when an operation is proceeding incorrectly.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 50 (participant) | FRET confidence: high",
+    "fulltext": "when operation_proceeding_incorrectly the system shall immediately satisfy feedback_provided",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "operation_proceeding_incorrectly",
+      "timing": "immediately",
+      "response_var": "feedback_provided",
+      "response_description": "Feedback is provided to indicate that an operation is proceeding incorrectly.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "835be218-0052-4ec5-af4d-7e18f8a1cc1b",
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a variable viewpoint that allows users to look around to enhance depth perception.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 52 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy variable_viewpoint_for_depth_perception",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "variable_viewpoint_for_depth_perception",
+      "response_description": "The system provides a variable viewpoint enabling users to look around, improving their perception of depth.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "09a59029-de2a-4c21-837b-474217565bac",
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide a fixed camera view that can be selected and remain constant.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 54 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy fixed_camera_view_selected",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fixed_camera_view_selected",
+      "response_description": "A fixed camera view is selected and remains constant.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "73a2c8be-e55a-4f80-9fa4-9645e5079b94",
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall prioritize resolution over frame rate.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 72 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy resolution_over_frame_rate_priority",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "resolution_over_frame_rate_priority",
+      "response_description": "The system gives higher priority to resolution than to frame rate.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "46404b76-c6a1-4b5b-bc87-328b97fc6565",
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall use force feedback to indicate forward motion and stop movement when forward motion is not detected.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 76 (participant) | FRET confidence: medium",
+    "fulltext": "when forward_motion_detected the system shall always satisfy force_feedback_for_forward_motion",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "forward_motion_detected",
+      "timing": "always",
+      "response_var": "force_feedback_for_forward_motion",
+      "response_description": "Force feedback is provided to indicate forward motion.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "015e13ad-137f-49d8-9549-a7da473e1f8f",
+    "reqid": "REQ-013",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall allow the user to activate ghost mode via a button to display the predicted final position of the object.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 78 (participant) | FRET confidence: high",
+    "fulltext": "when ghost_mode_activated_via_button the system shall immediately satisfy ghost_mode_predicted_position_displayed",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "ghost_mode_activated_via_button",
+      "timing": "immediately",
+      "response_var": "ghost_mode_predicted_position_displayed",
+      "response_description": "The system displays the predicted final position of the object when ghost mode is activated via button.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fbfb7d5a-45d4-4df2-9dc0-9ce4423688b5",
+    "reqid": "REQ-014",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall prevent users from entering designated no-go zones.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 84 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy prevention_of_no_go_zone_entry",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "prevention_of_no_go_zone_entry",
+      "response_description": "Users are prevented from entering designated no-go zones.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "05d8734d-fbf5-47a4-a97c-493bd5d8fd06",
+    "reqid": "REQ-015",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall provide an alarm when drifting into a no-go zone.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 86 (participant) | FRET confidence: high",
+    "fulltext": "when drifting_into_no_go_zone the system shall immediately satisfy alarm_activated",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "drifting_into_no_go_zone",
+      "timing": "immediately",
+      "response_var": "alarm_activated",
+      "response_description": "An alarm has been activated in response to drifting into a no-go zone.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "e8ed994c-f8d6-4376-b2c2-47a7d40fd02b",
+    "reqid": "REQ-016",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall recognize materials by scanning and identify rubber, aluminium, painted surfaces, and other material types.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 89 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy material_recognition_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "material_recognition_enabled",
+      "response_description": "The system is capable of recognizing materials including rubber, aluminium, painted surfaces, and other material types through scanning.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c864c7dd-41b1-417b-8b6d-39a0290264aa",
+    "reqid": "REQ-017",
+    "parent_reqid": "",
+    "project": "Bristol-N1",
+    "rationale": "The system shall use material recognition to define no-go zones represented by colored blocks to assist instruction.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 91 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy material_based_no_go_zones_defined",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "material_based_no_go_zones_defined",
+      "response_description": "No-go zones are defined using material recognition and represented as colored blocks to assist instruction.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  }
+]

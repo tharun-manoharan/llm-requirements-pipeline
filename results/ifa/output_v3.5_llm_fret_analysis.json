@@ -1,0 +1,702 @@
+[
+  {
+    "_id": "4c9dce0b-5fa1-41bc-8a38-4eb884696d46",
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow each team to manage its own budget independently.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 3 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_budget_management",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_budget_management",
+      "response_description": "Each team can independently manage its own budget.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "90cb1bed-1895-46e6-8a21-a74d04d928a2",
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow the IFA to control and monitor the budget balance to ensure proper management.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 3 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_budget_control_and_monitoring",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_budget_control_and_monitoring",
+      "response_description": "The IFA can control and monitor the budget balance for proper management.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "83eab849-fa30-47d9-ad67-b11fa3b3b100",
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow specification of budget policy within the system.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 5 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy budget_policy_specification_allowed",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "budget_policy_specification_allowed",
+      "response_description": "The system permits the definition and setting of budget policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ab829fa7-de5f-45b0-8cd0-e4a905f4e827",
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall provide alerts for specified violations.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 5 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy violation_alert_provided",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "violation_alert_provided",
+      "response_description": "An alert is provided when a specified violation occurs.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "3e54ea3c-4629-42f7-8ef9-0e69663ae1e3",
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow the financial team to access financial data across teams.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 6 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy financial_team_cross_team_access",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "financial_team_cross_team_access",
+      "response_description": "The financial team can access financial data across all teams.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "3c1924d9-8731-4aec-b86e-359af5046ee8",
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow administrative users to view all transaction records.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 7 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy admin_transaction_view_access",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "admin_transaction_view_access",
+      "response_description": "Administrative users are able to view all transaction records.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4fe0bb72-46df-4c64-8a4d-98ce67c5b54d",
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow only IFA administrative personnel and teams to access the budgeting system.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 13 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy authorised_budget_access_only",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "authorised_budget_access_only",
+      "response_description": "Only IFA administrative personnel and authorised teams can access the budgeting system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "50cbc54f-ef3f-45e8-9015-92763490007d",
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow referees to insert game events in real time using a mobile phone.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 17 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy real_time_game_event_insertion_by_referees",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_game_event_insertion_by_referees",
+      "response_description": "Referees can insert game events in real time using a mobile phone.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "09553350-0d54-4a9c-9e5f-f60c0040c35e",
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall make game result data publicly viewable to unregistered guests.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 21 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy public_game_result_visibility",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "public_game_result_visibility",
+      "response_description": "Game result data is visible to unregistered guests.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "8361727a-1926-49df-9a82-410138fb3dcc",
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow export of data to journalists or press.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 22 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy data_export_to_journalists",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "data_export_to_journalists",
+      "response_description": "Data can be exported to journalists or members of the press.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "47667725-7bd1-45c7-adab-03c67bdee163",
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow team managers and team administrators to view data and perform offline analysis.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 25 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy authorised_offline_analysis_access",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "authorised_offline_analysis_access",
+      "response_description": "Team managers and team administrators can view data and perform offline analysis.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2d7fe888-1d1b-4466-8d31-5f89723a8463",
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow only teams to insert budget transactions.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 29 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy only_teams_can_insert_budget_transactions",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "only_teams_can_insert_budget_transactions",
+      "response_description": "Only team members are permitted to insert budget transactions into the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "40f81520-6148-40ad-9138-27f6c7b0be2e",
+    "reqid": "REQ-013",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall restrict data access so that each team can only access its own data.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 29 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_data_access_restriction",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_data_access_restriction",
+      "response_description": "Each team is restricted to accessing only its own data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4278c6f1-6846-4ac1-9c14-8aa0c78178d8",
+    "reqid": "REQ-014",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow IFA users to view all monetary information, request or be alerted to details, and shall prevent them from modifying monetary data.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 29 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy ifa_view_monetary_info and prevent ifa_modify_monetary_data",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_view_monetary_info",
+      "response_description": "IFA users can view all monetary information and receive alerts or details upon request.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "792ad0da-34d9-47e6-b933-ffe8ac27398e",
+    "reqid": "REQ-015",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow definition of scheduling policies.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 31 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy scheduling_policy_definition_allowed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "scheduling_policy_definition_allowed",
+      "response_description": "The system permits users to define scheduling policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a172e697-5c39-4046-9672-9e13b8a35bd5",
+    "reqid": "REQ-016",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allocate referees to games based on defined policies, ensuring that the same referee is not assigned to both teams in a match.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 33 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy referee_assignment_policy_compliance",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_assignment_policy_compliance",
+      "response_description": "Referees are assigned to games according to defined policies, including that no referee is assigned to both teams in a match.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fea7b297-67cc-443b-8756-b492a2ea8f1a",
+    "reqid": "REQ-017",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall enable referees to set preferences such as vacation and consider those preferences when scheduling.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 35 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy referee_preference_setting and referee_preference_consideration",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_preference_setting_and_consideration",
+      "response_description": "Referees can set preferences such as vacation, and the system considers those preferences when scheduling.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "cb5fd39f-2154-4dc7-a06d-2fc1f8362672",
+    "reqid": "REQ-018",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow manual adjustment of the schedule.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 41 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy manual_schedule_adjustment_allowed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "manual_schedule_adjustment_allowed",
+      "response_description": "Manual adjustment of the schedule is permitted by the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5d6a0386-a790-454d-91d8-c56f73822a25",
+    "reqid": "REQ-019",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall support schedule overrides by requiring a rationale explanation and confirmation from a second IFA representative.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 43 (spk_1) | FRET confidence: medium",
+    "fulltext": "when schedule_override_requested the system shall require rationale_explanation_and_ifa_confirmation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "schedule_override_requested",
+      "timing": null,
+      "response_var": "rationale_explanation_and_ifa_confirmation",
+      "response_description": "A rationale explanation and confirmation from a second IFA representative are required before a schedule override is permitted.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f6167545-624f-4d28-9dc0-202d5b5eebcd",
+    "reqid": "REQ-020",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall enforce minimum gap days between matches as defined in the policy.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 53 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy minimum_gap_days_enforced",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "minimum_gap_days_enforced",
+      "response_description": "The minimum gap days between matches, as specified in the policy, are enforced.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "1d1c179f-c2b8-456d-a3ae-49a4b86b9420",
+    "reqid": "REQ-021",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow fans to subscribe to games or players and receive push notifications when events occur.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 58 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy fan_subscription_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "when_event_occurs",
+      "timing": "immediately",
+      "response_var": "push_notification_sent",
+      "response_description": "A push notification is sent to fans who subscribed to games or players when an event occurs.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "21e2d76e-e425-437e-9b1a-f8d70be32545",
+    "reqid": "REQ-022",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall provide a web\u00e2\u20ac\u2018based application for teams and IFA administrators, mobile applications for referees and fans, and deliver notifications exclusively within the applications without using email.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 66 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy multi_platform_application_delivery and in_app_notifications_only",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "multi_platform_application_delivery",
+      "response_description": "The system provides a web-based application for teams and IFA administrators, and mobile applications for referees and fans.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "0e1f93c2-7dc2-48d4-8499-fc3e8269ebf6",
+    "reqid": "REQ-023",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall provide a unified system with distinct interfaces for each stakeholder role.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 68 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy unified_system_with_distinct_interfaces",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "unified_system_with_distinct_interfaces",
+      "response_description": "The system provides a unified platform with separate, role-specific interfaces for each stakeholder.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4c7d6c8f-ab61-4742-b68a-2ce0fdeaaeb5",
+    "reqid": "REQ-024",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow only referees and official channels to update game data, ensuring that all game data originates exclusively from these sources.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 73 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy authorised_game_data_source_only",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "authorised_game_data_source_only",
+      "response_description": "Game data updates are permitted only from referees and official channels, ensuring exclusivity of data origin.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d91f874a-2572-49e2-be63-d4b17065a956",
+    "reqid": "REQ-025",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall send automatic reminder notifications, such as a reminder five minutes before a game starts and reminders for report submissions.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 78 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy automatic_reminder_notifications",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "automatic_reminder_notifications",
+      "response_description": "The system sends automatic reminders, including five minutes before a game starts and for report submissions.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a7856e2a-1270-40f9-ab83-077fada52c14",
+    "reqid": "REQ-026",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall support up to 50,000 concurrent users.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 79 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy support_50k_concurrent_users",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "support_50k_concurrent_users",
+      "response_description": "The system is capable of supporting up to 50,000 users concurrently.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "16909382-6692-4ebd-bf3a-da5b12dfb5ea",
+    "reqid": "REQ-027",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall provide response times of one to two seconds for fans and administrators, and real\u00e2\u20ac\u2018time high\u00e2\u20ac\u2018priority responses for referees.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 80 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy response_time_standard_users and response_time_high_priority_referees",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "response_time_standard_users",
+      "response_description": "Fans and administrators receive system responses within one to two seconds.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "8de70cf9-dcf9-43b0-8108-c63b0290970c",
+    "reqid": "REQ-028",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall be hosted and all storage and computing resources shall be provided by an external cloud provider.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 88 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy hosted_on_external_cloud",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "hosted_on_external_cloud",
+      "response_description": "The system is hosted with all storage and computing resources provided by an external cloud provider.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "39d5a0b7-c72d-42b1-8686-0a13b3eb17be",
+    "reqid": "REQ-029",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall support localization of language, currency, and time zone, and shall comply with local regulations.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 92 (spk_2) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy localization_support_and_regulatory_compliance",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "localization_support_and_regulatory_compliance",
+      "response_description": "The system supports localization for language, currency, and time zone and complies with applicable local regulations.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4de20d35-9404-4415-ba3b-e5369e528f25",
+    "reqid": "REQ-030",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall encrypt budget data to prevent leakage.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 93 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy budget_data_encrypted",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "budget_data_encrypted",
+      "response_description": "Budget data is encrypted to prevent unauthorized access or data leakage.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "960869fd-4406-432f-9f23-5f296f4cafae",
+    "reqid": "REQ-031",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow players to update their social network page within the portal.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 96 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy player_social_page_update",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "player_social_page_update",
+      "response_description": "Players are able to update their social network page within the portal.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4afbc3f2-630a-4287-8dcf-b418e458aacd",
+    "reqid": "REQ-032",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall require each user to have a profile that includes a username.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 117 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy user_profile_with_username",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "user_profile_with_username",
+      "response_description": "Each user has a profile that includes a username.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "313da935-4ee0-480c-ba34-1facf3b42e01",
+    "reqid": "REQ-033",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall support a workflow in which a team manager requests a new team, IFA approves the registration, and thereafter the team can manage its resources.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 119 (spk_1) | FRET confidence: medium",
+    "fulltext": "after ifa_approves_registration the system shall always satisfy team_resource_management_enabled",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "after ifa_approves_registration",
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_resource_management_enabled",
+      "response_description": "The team is able to manage its resources after registration is approved by IFA.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "55608dff-5d6f-4c41-ad8c-1f17c9443e42",
+    "reqid": "REQ-034",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall retain all past scheduling archives.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 121 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy past_scheduling_archives_retained",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "past_scheduling_archives_retained",
+      "response_description": "All past scheduling archives are retained by the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "552d0fda-8517-4b9c-b6ce-3236063a9884",
+    "reqid": "REQ-035",
+    "parent_reqid": "",
+    "project": "IFA-Sport",
+    "rationale": "The system shall allow the IFA to define leagues and seasons, appoint referees, and set budget and scheduling policies.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 121 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_league_season_management",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_league_season_management",
+      "response_description": "The IFA can define leagues and seasons, appoint referees, and set budget and scheduling policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "b1cecb21-f928-4cb1-8c61-4bda160cad35",
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a front\u00e2\u20ac\u2018facing camera that looks straight down to give an overview of the user's hands, and a foldable camera arm beneath the boom that supplies a three\u00e2\u20ac\u2018dimensional view displayed on a two\u00e2\u20ac\u2018dimensional screen.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 5 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy dual_camera_setup_provided",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "dual_camera_setup_provided",
+      "response_description": "The system provides a front-facing downward camera for hand overview and a foldable camera arm under the boom for 3D view rendering on a 2D screen.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "05b0fd18-6897-452b-b5f6-0c92d717f6d2",
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall respond to an emergency stop button press within one tenth of a second.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 29 (participant) | FRET confidence: high",
+    "fulltext": "when emergency_stop_pressed the system shall within 0.1 seconds satisfy emergency_stop_response_delivered",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "emergency_stop_pressed",
+      "timing": "within 0.1 seconds",
+      "response_var": "emergency_stop_response_delivered",
+      "response_description": "The system has responded to the emergency stop button press.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "dd89b4c6-73ec-415a-bc9e-611355e056ca",
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow predefined arm movements to be stored in files and enable the boom to be moved to a predetermined position by pressing a button on the computer.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 31 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy arm_movement_file_storage and enable boom_movement_to_preset",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "arm_movement_file_storage_and_boom_preset_movement",
+      "response_description": "Predefined arm movements can be stored in files and the boom can be moved to a predetermined position via a button press on the computer.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ca2f27c8-0c02-460f-90f8-031f731866ae",
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide assistance during a tricky manoeuvre, such as placing an object between a series of tiles.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 33 (participant) | FRET confidence: medium",
+    "fulltext": "when tricky_manoeuvre_in_progress the system shall immediately satisfy assistance_provided",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "tricky_manoeuvre_in_progress",
+      "timing": "immediately",
+      "response_var": "assistance_provided",
+      "response_description": "The system provides assistance during a complex manoeuvre, such as placing an object between tiles.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5019cb6e-1ba7-432d-92d7-ce43678cdf60",
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a Bolt Runner constraint feature that allows tightening a bolt regardless of orientation.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 35 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy bolt_runner_constraint_feature_available",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "bolt_runner_constraint_feature_available",
+      "response_description": "The Bolt Runner constraint feature is available to tighten a bolt regardless of orientation.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "0d975bbf-722f-4566-9486-004ee1c89214",
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall detect a delay of at least one millisecond and generate a notification indicating that operation should be paused for one minute.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 41 (participant) | FRET confidence: high",
+    "fulltext": "when delay_at_least_one_millisecond the system shall immediately satisfy pause_operation_notification_generated",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "delay_at_least_one_millisecond",
+      "timing": "immediately",
+      "response_var": "pause_operation_notification_generated",
+      "response_description": "A notification is generated indicating that the operation should be paused for one minute.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2f4a2ee5-f701-4fbf-bd2c-97233bc332a2",
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall break pre-programmed moves into stages, such as 20-degree increments, to allow the operator to monitor progress.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 45 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy move_stage_decomposition",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "move_stage_decomposition",
+      "response_description": "Pre-programmed moves are broken into stages (e.g., 20-degree increments) to enable operator monitoring of progress.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ce0de303-d4e3-4518-82e2-511fc060f937",
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall support high refresh rates even when operating at lower resolutions.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 61 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy high_refresh_rate_support",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "high_refresh_rate_support",
+      "response_description": "The system maintains support for high refresh rates regardless of resolution settings.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "aa0c9012-5966-4cb0-9db1-ba24388805cd",
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a ghost mode that indicates where the machine is moving.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 65 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ghost_mode_indicates_machine_movement",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ghost_mode_indicates_machine_movement",
+      "response_description": "The ghost mode visually indicates the path or position where the machine is moving.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "606d05d9-37e4-4cbe-974f-d0ec1dcf4b5c",
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow users to preprogram virtual walls that block movement into restricted areas.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 67 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy preprogrammable_virtual_walls",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "preprogrammable_virtual_walls",
+      "response_description": "Users can preprogram virtual walls to block movement into restricted areas.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a87d983e-605a-49af-8df6-da03227cc353",
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall include a camera with an integrated light to create shadows for 3D spatial perception.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 75 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy camera_with_shadow_illumination",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "camera_with_shadow_illumination",
+      "response_description": "The system includes a camera equipped with an integrated light source to produce shadows for enabling 3D spatial perception.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2c41ecf0-ff31-4812-9bcb-24e86858dd33",
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow setting force ratios on the arms to restrict heavy loads to be picked up only in specified positions.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 79 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy force_ratio_setting_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "force_ratio_setting_enabled",
+      "response_description": "It is possible to set force ratios on the arms to restrict heavy loads to only be picked up in specified positions.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  }
+]

@@ -2,7 +2,7 @@
 
 import os
 
-LLM_MODEL = "gpt-oss-120b"
+LLM_MODEL = "qwen-3-235b-a22b-instruct-2507"
 
 
 def get_llm_client():

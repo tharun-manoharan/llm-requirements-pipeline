@@ -1,0 +1,122 @@
+[
+  {
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a front\u00e2\u20ac\u2018facing camera that looks straight down to give an overview of the user's hands, and a foldable camera arm beneath the boom that supplies a three\u00e2\u20ac\u2018dimensional view displayed on a two\u00e2\u20ac\u2018dimensional screen.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 5 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy dual_camera_setup_provided",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall respond to an emergency stop button press within one tenth of a second.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 29 (participant) | FRET confidence: high",
+    "fulltext": "when emergency_stop_pressed the system shall within 0.1 seconds satisfy emergency_stop_response_delivered",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow predefined arm movements to be stored in files and enable the boom to be moved to a predetermined position by pressing a button on the computer.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 31 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy arm_movement_file_storage and enable boom_movement_to_preset",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide assistance during a tricky manoeuvre, such as placing an object between a series of tiles.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 33 (participant) | FRET confidence: medium",
+    "fulltext": "when tricky_manoeuvre_in_progress the system shall immediately satisfy assistance_provided",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a Bolt Runner constraint feature that allows tightening a bolt regardless of orientation.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 35 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy bolt_runner_constraint_feature_available",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall detect a delay of at least one millisecond and generate a notification indicating that operation should be paused for one minute.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 41 (participant) | FRET confidence: high",
+    "fulltext": "when delay_at_least_one_millisecond the system shall immediately satisfy pause_operation_notification_generated",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall break pre-programmed moves into stages, such as 20-degree increments, to allow the operator to monitor progress.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 45 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy move_stage_decomposition",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall support high refresh rates even when operating at lower resolutions.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 61 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy high_refresh_rate_support",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall provide a ghost mode that indicates where the machine is moving.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 65 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ghost_mode_indicates_machine_movement",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow users to preprogram virtual walls that block movement into restricted areas.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 67 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy preprogrammable_virtual_walls",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall include a camera with an integrated light to create shadows for 3D spatial perception.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 75 (participant) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy camera_with_shadow_illumination",
+    "status": "preferred",
+    "semantics": {}
+  },
+  {
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "Bristol-N2",
+    "rationale": "The system shall allow setting force ratios on the arms to restrict heavy loads to be picked up only in specified positions.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 79 (participant) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy force_ratio_setting_enabled",
+    "status": "preferred",
+    "semantics": {}
+  }
+]

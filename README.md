@@ -20,7 +20,7 @@ conversation.txt
        |            llm:   single semantic extraction call (stages 2+3 merged)
        v
  [4. REWRITE]      Normalise to "The system shall ..." + assign priority
-       |            naive: regex rules  |  llm: gpt-oss-120b via Cerebras
+       |            naive: regex rules  |  llm: Qwen-235B via Cerebras
        v
  [4b. DEDUP]       Remove semantically equivalent requirements (LLM mode only)
        |
@@ -29,6 +29,13 @@ conversation.txt
        |
        v
   requirements.json
+       |
+       v  (optional: --fret / --fret-only)
+ [6. FRET]         Convert to FRETish and export FRET-importable JSON
+       |            LLM decomposes each requirement into:
+       |            [scope] [condition] component shall [timing] response
+       v
+  requirements_fret.json   (importable into NASA FRET)
 ```
 
 In `--llm` mode, stages 2+3 are replaced by a single semantic extraction call
@@ -43,13 +50,20 @@ adjacent turns that describe the same underlying system behaviour.
 | Stage | Module | Naive | LLM |
 |-------|--------|-------|-----|
 | 1. Ingest | `pipeline/ingest.py` | Regex parser | - |
-| 2+3. Extract | `pipeline/extract.py` | - | gpt-oss-120b (Cerebras) |
+| 2+3. Extract | `pipeline/extract.py` | - | Qwen-235B (Cerebras) |
 | 2. Segment | `pipeline/segment.py` | Keyword matching | (replaced by extract) |
 | 3. Detect | `pipeline/detect.py` | Sentence split + classify | (replaced by extract) |
-| 4. Rewrite | `pipeline/rewrite.py` | Regex rules | gpt-oss-120b (Cerebras) |
-| 4b. Dedup | `pipeline/deduplicate.py` | - (passthrough) | gpt-oss-120b (Cerebras) |
+| 4. Rewrite | `pipeline/rewrite.py` | Regex rules | Qwen-235B (Cerebras) |
+| 4b. Dedup | `pipeline/deduplicate.py` | - (passthrough) | Qwen-235B (Cerebras) |
 | 5. Structure | `pipeline/structure.py` | ID assignment | - |
+| 6. FRET | `pipeline/fret.py` | - | Qwen-235B (Cerebras) |
 | Shared | `pipeline/llm_client.py` | - | Cerebras client |
+
+> **Note on model versions**: Evaluations v3.0–v3.5 were run with `gpt-oss-120b`
+> (Cerebras), which was retired from the Cerebras API in March 2026. The pipeline
+> now uses `qwen-3-235b-a22b-instruct-2507` (Qwen-235B). Stage 6 (FRET export)
+> uses Qwen-235B; historical extraction/rewrite results were produced with
+> gpt-oss-120b and are unchanged.
 
 ## Progress and Results
 
@@ -174,6 +188,59 @@ Evaluated against three datasets:
   GT-011 (gripper alarm) was no longer extracted. Best version overall:
   v3.5 for IFA, v3.3 for N1 and N2.
 
+### FRET Integration (Stage 6)
+
+NASA's [FRET (Formal Requirements Elicitation Tool)](https://github.com/NASA-SW-VnV/fret)
+uses a structured controlled language called **FRETish** to write requirements
+in a form that can be formally verified. FRETish grammar:
+
+```
+[SCOPE] [CONDITION] COMPONENT shall [TIMING] RESPONSE
+```
+
+Stage 6 (`pipeline/fret.py`) uses the LLM to decompose each "The system shall…"
+statement into FRETish components and exports a JSON file importable directly
+into FRET via File > Import Requirements.
+
+**FRET export results — v3.5 outputs, Qwen-235B (Cerebras), March 2026**
+
+| Dataset | Requirements | High confidence | Medium confidence | Errors |
+|---|---|---|---|---|
+| IFA | 35 | 25 (71%) | 10 (29%) | 0 |
+| Bristol N1 | 17 | 11 (65%) | 6 (35%) | 0 |
+| Bristol N2 | 12 | 6 (50%) | 6 (50%) | 0 |
+| **Total** | **64** | **42 (66%)** | **22 (34%)** | **0** |
+
+**Confidence levels:**
+- **High** — clean FRETish mapping; timing and response are unambiguous
+- **Medium** — timing or condition required inference (e.g. compound requirements
+  split across two response variables, or implicit scope); semantic meaning
+  preserved
+
+**Example conversions:**
+
+| Original statement | FRETish |
+|---|---|
+| The system shall respond to an emergency stop button press within one tenth of a second. | `when emergency_stop_pressed the system shall within 0.1 seconds satisfy emergency_stop_response_delivered` |
+| The system shall notify users when a transaction exceeds the budget limit. | `when transaction_exceeds_budget the system shall immediately satisfy user_budget_notification_sent` |
+| The system shall enforce minimum gap days between matches as defined in the policy. | `the system shall always satisfy minimum_gap_days_enforced` |
+| The system shall support schedule overrides by requiring a rationale and IFA confirmation. | `when schedule_override_requested the system shall require rationale_explanation_and_ifa_confirmation` |
+| The system shall retain all past scheduling archives. | `the system shall always satisfy past_scheduling_archives_retained` |
+
+**Findings:**
+- 100% of requirements produced valid FRETish output (no failures across 64 requirements)
+- Real-time and triggered requirements (emergency stop, event detection, override
+  workflows) map cleanly to FRETish with `when`/`within N` timing — these benefit most
+  from formalisation
+- State-based functional requirements ("The system shall always satisfy X") map
+  straightforwardly but the response variable names need manual linking to system
+  variables in FRET before formal verification is possible
+- Compound requirements (two behaviours in one statement) produce medium-confidence
+  output with two response variables joined by `and` — splitting these upstream in
+  the extraction stage would improve FRETish quality
+- Non-functional requirements (response time, concurrency, data residency) produce
+  FRETish text but may require custom variable definitions in FRET to verify
+
 ### What's next
 
 1. **Socratic-interview extraction** - The interviewer-turn filter (v3.4) caused
@@ -258,6 +325,18 @@ python -m pipeline.run --llm datasets/ifa/conversation.txt
 python -m pipeline.run --llm --trace datasets/ifa/conversation.txt
 ```
 
+**5. LLM mode + FRET export (runs full pipeline then generates FRET JSON):**
+```bash
+python -m pipeline.run --llm --fret datasets/ifa/conversation.txt
+```
+
+**6. FRET export from an existing output JSON (skips pipeline):**
+```bash
+python -m pipeline.run --fret-only results/ifa/output_v3.5_llm.json "IFA-Sport"
+# produces results/ifa/output_v3.5_llm_fret.json  (import into FRET)
+# produces results/ifa/output_v3.5_llm_fret_analysis.json  (with decomposition detail)
+```
+
 ### Running tests
 
 ```bash
@@ -311,6 +390,12 @@ All outputs are saved in `results/` - no API key needed to review them:
 | `results/bristol/evaluation_N1_v3.5_llm.md` | Bristol N1 evaluation of v3.5 |
 | `results/bristol/output_N2_v3.5_llm.json` | Bristol N2 LLM v3.5 output (12 items, gpt-oss-120b + refined NF extraction) |
 | `results/bristol/evaluation_N2_v3.5_llm.md` | Bristol N2 evaluation of v3.5 |
+| `results/ifa/output_v3.5_llm_fret.json` | IFA FRET import file (35 requirements in FRETish, Qwen-235B) |
+| `results/ifa/output_v3.5_llm_fret_analysis.json` | IFA FRET analysis (with decomposition: component, timing, response var, confidence) |
+| `results/bristol/output_N1_v3.5_llm_fret.json` | Bristol N1 FRET import file (17 requirements in FRETish) |
+| `results/bristol/output_N1_v3.5_llm_fret_analysis.json` | Bristol N1 FRET analysis |
+| `results/bristol/output_N2_v3.5_llm_fret.json` | Bristol N2 FRET import file (12 requirements in FRETish) |
+| `results/bristol/output_N2_v3.5_llm_fret_analysis.json` | Bristol N2 FRET analysis |
 
 ## Requirements
 
