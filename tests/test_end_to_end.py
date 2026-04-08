@@ -13,7 +13,7 @@ Stakeholder: Yes, send them a reset link."""
 
 
 def test_full_pipeline():
-    result = run_pipeline(EXAMPLE_CONVERSATION)
+    result, _ = run_pipeline(EXAMPLE_CONVERSATION)
     assert len(result) == 2
 
     assert result[0]["id"] == "REQ-001"
@@ -37,7 +37,7 @@ def test_golden_file():
     with open(expected_path, "r") as f:
         expected = json.load(f)
 
-    result = run_pipeline(raw)
+    result, _ = run_pipeline(raw)
     # Compare id, type, statement, source (priority depends on mode)
     assert len(result) == len(expected)
     for r, e in zip(result, expected):
@@ -48,11 +48,13 @@ def test_golden_file():
 
 
 def test_empty_input():
-    result = run_pipeline("")
+    result, dedup_log = run_pipeline("")
     assert result == []
+    assert dedup_log == []
 
 
 def test_no_requirements():
     raw = "Developer: Let's discuss the timeline.\nStakeholder: Sure, sounds good."
-    result = run_pipeline(raw)
+    result, dedup_log = run_pipeline(raw)
     assert result == []
+    assert dedup_log == []

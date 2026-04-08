@@ -4,6 +4,10 @@ Supports two modes:
   - naive: no-op (returns list unchanged)
   - llm:   single LLM batch call that identifies semantic duplicates across
            the full requirements list and returns the subset to keep
+
+Returns a tuple (filtered_list, decisions) where decisions is a list of dicts:
+  [{"removed": str, "duplicate_of": str, "confidence": "high"|"medium"|"low",
+    "reason": str}, ...]
 """
 
 import json
@@ -27,8 +31,13 @@ If equally specific, remove the one with the higher index (later in the list).
   different system actions, both should be kept.
 - When in doubt, keep both.
 
-Output: a JSON array of 0-based indices to REMOVE. \
-If no duplicates exist, output an empty array.
+Output: a JSON array of objects, one per requirement to REMOVE. Each object must have:
+  "index"        : 0-based index of the requirement to remove
+  "duplicate_of" : 0-based index of the requirement it duplicates (the one being kept)
+  "confidence"   : "high" | "medium" | "low"
+  "reason"       : one short sentence explaining why they are duplicates
+
+If no duplicates exist, output an empty array [].
 Output ONLY the JSON array — no explanation, no markdown.\
 """
 
@@ -36,7 +45,7 @@ Output ONLY the JSON array — no explanation, no markdown.\
 def deduplicate_requirements(
     rewritten: list[dict],
     mode: str = "naive",
-) -> list[dict]:
+) -> tuple[list[dict], list[dict]]:
     """Remove semantically duplicate requirements.
 
     Args:
@@ -44,10 +53,11 @@ def deduplicate_requirements(
         mode: "naive" (passthrough) or "llm" (LLM-based dedup).
 
     Returns:
-        Filtered list with duplicates removed.
+        (filtered_list, decisions) where decisions records each removal with
+        confidence and reason. decisions is empty for naive mode.
     """
     if mode != "llm" or len(rewritten) < 2:
-        return rewritten
+        return rewritten, []
 
     return _deduplicate_with_llm(rewritten)
 
@@ -59,7 +69,7 @@ def _format_requirements(rewritten: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _deduplicate_with_llm(rewritten: list[dict]) -> list[dict]:
+def _deduplicate_with_llm(rewritten: list[dict]) -> tuple[list[dict], list[dict]]:
     """Call the LLM to identify duplicate indices, then remove them."""
     from pipeline.llm_client import get_llm_client, LLM_MODEL
 
@@ -88,7 +98,7 @@ def _deduplicate_with_llm(rewritten: list[dict]) -> list[dict]:
             err_msg = str(e)
             if "tokens per day" in err_msg.lower() or "tpd" in err_msg.lower():
                 print("[daily token limit exhausted, skipping dedup]")
-                return rewritten
+                return rewritten, []
             wait = 60 * (attempt + 1)
             if attempt < 2:
                 print(
@@ -99,31 +109,48 @@ def _deduplicate_with_llm(rewritten: list[dict]) -> list[dict]:
                 time.sleep(wait)
             else:
                 print("[still failing after 3 attempts, skipping dedup]")
-                return rewritten
+                return rewritten, []
     else:
-        return rewritten
+        return rewritten, []
 
     msg = resp.choices[0].message
     content = msg.content or getattr(msg, "reasoning", None) or ""
     raw = content.strip()
-    indices_to_remove = _parse_indices(raw, max_index=len(rewritten) - 1)
+    decisions = _parse_decisions(raw, max_index=len(rewritten) - 1)
+    indices_to_remove = {d["index"] for d in decisions}
 
-    if indices_to_remove:
-        removed = [rewritten[i]["normalised"][:60] for i in indices_to_remove]
-        print(f"removing {len(indices_to_remove)} duplicate(s)")
-        for s in removed:
-            print(f"    - {s}...")
+    if decisions:
+        print(f"removing {len(decisions)} duplicate(s)")
+        for d in decisions:
+            kept = rewritten[d["duplicate_of"]]["normalised"][:50]
+            gone = rewritten[d["index"]]["normalised"][:50]
+            print(f"    [{d['confidence']}] \"{gone}...\"")
+            print(f"          => duplicate of \"{kept}...\"")
+            print(f"          reason: {d['reason']}")
     else:
         print("no duplicates found")
 
-    return [req for i, req in enumerate(rewritten) if i not in indices_to_remove]
+    dedup_log = [
+        {
+            "removed": rewritten[d["index"]]["normalised"],
+            "duplicate_of": rewritten[d["duplicate_of"]]["normalised"],
+            "confidence": d["confidence"],
+            "reason": d["reason"],
+        }
+        for d in decisions
+    ]
+
+    return [req for i, req in enumerate(rewritten) if i not in indices_to_remove], dedup_log
 
 
-def _parse_indices(raw: str, max_index: int) -> set[int]:
-    """Parse a JSON array of indices from the LLM response.
+def _parse_decisions(raw: str, max_index: int) -> list[dict]:
+    """Parse a JSON array of dedup decision objects from the LLM response.
 
-    Returns an empty set if parsing fails or indices are out of range.
+    Each object must have: index, duplicate_of, confidence, reason.
+    Returns an empty list if parsing fails or indices are out of range.
     """
+    VALID_CONFIDENCE = {"high", "medium", "low"}
+
     # Strip any markdown fences the model might add
     cleaned = raw.strip().strip("`").strip()
     if cleaned.startswith("json"):
@@ -132,18 +159,34 @@ def _parse_indices(raw: str, max_index: int) -> set[int]:
     try:
         data = json.loads(cleaned)
     except json.JSONDecodeError:
-        # Try to find a JSON array substring
         start = cleaned.find("[")
         end = cleaned.rfind("]")
         if start != -1 and end != -1 and end > start:
             try:
                 data = json.loads(cleaned[start : end + 1])
             except json.JSONDecodeError:
-                return set()
+                return []
         else:
-            return set()
+            return []
 
     if not isinstance(data, list):
-        return set()
+        return []
 
-    return {int(i) for i in data if isinstance(i, int) and 0 <= i <= max_index}
+    decisions = []
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        try:
+            idx = int(item["index"])
+            dup_of = int(item["duplicate_of"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if not (0 <= idx <= max_index and 0 <= dup_of <= max_index and idx != dup_of):
+            continue
+        confidence = str(item.get("confidence", "low")).lower()
+        if confidence not in VALID_CONFIDENCE:
+            confidence = "low"
+        reason = str(item.get("reason", "")).strip()
+        decisions.append({"index": idx, "duplicate_of": dup_of, "confidence": confidence, "reason": reason})
+
+    return decisions

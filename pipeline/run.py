@@ -15,8 +15,8 @@ from pipeline.fret import export_fret_json
 DIVIDER = "=" * 72
 
 
-def run_pipeline(raw_text: str, rewrite_mode: str = "naive") -> list[dict]:
-    """Run the full pipeline and return structured requirements."""
+def run_pipeline(raw_text: str, rewrite_mode: str = "naive") -> tuple[list[dict], list[dict]]:
+    """Run the full pipeline and return (requirements, dedup_log)."""
     turns = parse_conversation(raw_text)
 
     if rewrite_mode == "llm":
@@ -26,8 +26,8 @@ def run_pipeline(raw_text: str, rewrite_mode: str = "naive") -> list[dict]:
         candidates = detect_candidates(segmented)
 
     rewritten = rewrite_requirements(candidates, mode=rewrite_mode, turns=turns)
-    deduped = deduplicate_requirements(rewritten, mode=rewrite_mode)
-    return structure_requirements(deduped, turns)
+    deduped, dedup_log = deduplicate_requirements(rewritten, mode=rewrite_mode)
+    return structure_requirements(deduped, turns), dedup_log
 
 
 def run_pipeline_trace(raw_text: str, rewrite_mode: str = "naive") -> list[dict]:
@@ -99,7 +99,7 @@ def run_pipeline_trace(raw_text: str, rewrite_mode: str = "naive") -> list[dict]
         print("  STAGE 4b: DEDUPLICATE  (remove semantically equivalent requirements)")
         print(DIVIDER)
         print()
-        deduped = deduplicate_requirements(rewritten, mode=rewrite_mode)
+        deduped, dedup_log = deduplicate_requirements(rewritten, mode=rewrite_mode)
         removed_count = len(rewritten) - len(deduped)
         print(f"\n  {len(deduped)} requirements after deduplication ({removed_count} removed)\n")
     else:
@@ -119,12 +119,13 @@ def main():
     """Read from a file argument or stdin, run pipeline, print JSON to stdout.
 
     Usage:
-        python -m pipeline.run <file>                     Normal mode (JSON only)
-        python -m pipeline.run --trace <file>              Trace mode (every stage)
-        python -m pipeline.run --llm <file>                LLM rewrite mode
-        python -m pipeline.run --llm --trace <file>        LLM + trace
-        python -m pipeline.run --llm --fret <file>         LLM + FRET export
-        python -m pipeline.run --fret-only <output.json>   FRET export from existing output JSON
+        python -m pipeline.run <file>                              Normal mode (JSON to stdout)
+        python -m pipeline.run --trace <file>                      Trace mode (every stage)
+        python -m pipeline.run --llm <file>                        LLM rewrite mode
+        python -m pipeline.run --llm --trace <file>                LLM + trace
+        python -m pipeline.run --llm --output <out.json> <file>    LLM + save to file (dedup log saved alongside)
+        python -m pipeline.run --llm --fret <file>                 LLM + FRET export
+        python -m pipeline.run --fret-only <output.json>           FRET export from existing output JSON
     """
     flags = [a for a in sys.argv[1:] if a.startswith("-")]
     args  = [a for a in sys.argv[1:] if not a.startswith("-")]
@@ -134,6 +135,15 @@ def main():
     fret_export  = "--fret"      in flags
     fret_only    = "--fret-only" in flags
 
+    # --output <path>: write JSON to file instead of stdout
+    output_path = None
+    if "--output" in flags:
+        idx = sys.argv.index("--output")
+        if idx + 1 < len(sys.argv):
+            output_path = sys.argv[idx + 1]
+            # remove from args so it isn't treated as input file
+            args = [a for a in args if a != output_path]
+
     # --fret-only: skip pipeline, convert an existing output JSON to FRET
     if fret_only:
         if not args:
@@ -142,11 +152,11 @@ def main():
             sys.exit(1)
         input_path   = args[0]
         project_name = args[1] if len(args) > 1 else "LLM-Pipeline"
-        output_path  = input_path.replace(".json", "_fret.json")
+        fret_path    = input_path.replace(".json", "_fret.json")
         with open(input_path, "r") as f:
             requirements = json.load(f)
-        print(f"\nFRET export: {len(requirements)} requirements -> {output_path}")
-        export_fret_json(requirements, output_path, project_name=project_name)
+        print(f"\nFRET export: {len(requirements)} requirements -> {fret_path}")
+        export_fret_json(requirements, fret_path, project_name=project_name)
         return
 
     if args:
@@ -157,15 +167,29 @@ def main():
 
     if trace:
         result = run_pipeline_trace(raw, rewrite_mode=rewrite_mode)
+        dedup_log = []
     else:
-        result = run_pipeline(raw, rewrite_mode=rewrite_mode)
+        result, dedup_log = run_pipeline(raw, rewrite_mode=rewrite_mode)
+
+    if output_path:
+        import os
+        with open(output_path, "w") as f:
+            json.dump(result, f, indent=2)
+        print(f"\n  Saved {len(result)} requirements -> {output_path}")
+        if dedup_log:
+            stem = output_path.replace(".json", "")
+            dedup_log_path = f"{stem}_dedup_log.json"
+            with open(dedup_log_path, "w") as f:
+                json.dump(dedup_log, f, indent=2)
+            print(f"  Saved {len(dedup_log)} dedup decisions -> {dedup_log_path}")
+    else:
         print(json.dumps(result, indent=2))
 
     if fret_export and args:
-        output_path  = args[0].replace(".txt", "_fret.json")
+        fret_path    = (output_path or args[0]).replace(".json", "").replace(".txt", "") + "_fret.json"
         project_name = args[1] if len(args) > 1 else "LLM-Pipeline"
-        print(f"\nFRET export: {len(result)} requirements -> {output_path}")
-        export_fret_json(result, output_path, project_name=project_name)
+        print(f"\nFRET export: {len(result)} requirements -> {fret_path}")
+        export_fret_json(result, fret_path, project_name=project_name)
 
 
 if __name__ == "__main__":
