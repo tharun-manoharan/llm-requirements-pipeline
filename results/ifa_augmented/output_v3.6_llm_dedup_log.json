@@ -1,0 +1,176 @@
+[
+  {
+    "removed": "The system shall allow the IFA to monitor the budget balance and ensure proper financial management.",
+    "duplicate_of": "The system shall allow each team to manage its own budget.",
+    "confidence": "medium",
+    "reason": "Both describe IFA's financial oversight, but [0] is broader team budget management while [1] focuses on monitoring; overlap in financial oversight justifies medium-confidence duplication."
+  },
+  {
+    "removed": "The system shall allow the specification of budget policies.",
+    "duplicate_of": "The system shall allow the IFA to audit team budgets and set regulatory policies.",
+    "confidence": "high",
+    "reason": "Specifying budget policies (4) is part of the IFA's audit and policy-setting function described in (3)."
+  },
+  {
+    "removed": "The system shall allow the referee to use a mobile phone to record game events in real time.",
+    "duplicate_of": "The system shall allow the referee to insert game events in real time.",
+    "confidence": "high",
+    "reason": "Using a mobile phone to record events (7) is a specific method of the real-time game event insertion already described in (6)."
+  },
+  {
+    "removed": "The system shall allow all users to view the complete aggregated data.",
+    "duplicate_of": "The system shall allow the aggregated data to be accessible to all users.",
+    "confidence": "high",
+    "reason": "Allowing all users to view aggregated data (9) is equivalent to making aggregated data accessible to all users (13)."
+  },
+  {
+    "removed": "The system shall allow guests to view aggregated final data.",
+    "duplicate_of": "The system shall allow unregistered users to access aggregated season data such as number of red cards and goals per team.",
+    "confidence": "medium",
+    "reason": "Guests viewing final data (10) and unregistered users accessing season data (12) describe similar access for non-registered users; slight difference in scope but semantically overlapping."
+  },
+  {
+    "removed": "The system shall allow team managers and team administrators to access financial data for offline analysis.",
+    "duplicate_of": "The system shall make financial data accessible to all members within the IFA and the finance department.",
+    "confidence": "medium",
+    "reason": "Team access to financial data (14) is a subset of IFA and finance department access (15); partial overlap with different scope, but core behaviour of financial data access is duplicated."
+  },
+  {
+    "removed": "The system shall allow the insertion of budget transactions and items only by the respective teams.",
+    "duplicate_of": "The system shall restrict budget transaction entry to individual teams, with each team only able to access and modify their own data.",
+    "confidence": "high",
+    "reason": "Allowing only respective teams to insert budget transactions (17) is a restatement of restricting transaction access to individual teams (16)."
+  },
+  {
+    "removed": "The system shall allow each team to access only their own data.",
+    "duplicate_of": "The system shall restrict budget transaction entry to individual teams, with each team only able to access and modify their own data.",
+    "confidence": "high",
+    "reason": "Allowing each team to access only their own data (18) directly duplicates the restriction described in (16)."
+  },
+  {
+    "removed": "The system shall allow manual adjustment of the schedule.",
+    "duplicate_of": "The system shall allow manual adjustment of the schedule.",
+    "confidence": "high",
+    "reason": "Both [26] and [27] state the system shall allow manual adjustment of the schedule; exact duplication."
+  },
+  {
+    "removed": "The system shall allow fans to register for notifications related to specific games.",
+    "duplicate_of": "The system shall allow users to subscribe to each type of information mentioned and receive notifications accordingly.",
+    "confidence": "medium",
+    "reason": "Registering for game notifications (32) is a specific case of subscribing to information types (34); partial functional overlap."
+  },
+  {
+    "removed": "The system shall send a notification to users when a message is posted by a player such as Messi.",
+    "duplicate_of": "The system shall send push email notifications to fans when their registered favorite player posts a message.",
+    "confidence": "medium",
+    "reason": "Notifying users when a player posts a message (33) is a specific instance of the push notification system described in (31)."
+  },
+  {
+    "removed": "The system shall send a notification to users registered for a game when a player replacement is reported by the referee after the game has started.",
+    "duplicate_of": "The system shall allow users to subscribe to each type of information mentioned and receive notifications accordingly.",
+    "confidence": "high",
+    "reason": "Sending notifications for player replacements (35) is a specific case of the general subscription and notification system in (34)."
+  },
+  {
+    "removed": "The system shall provide a web-based application for teams and IFA administrators to use.",
+    "duplicate_of": "The system shall include all functionality within the application or website.",
+    "confidence": "medium",
+    "reason": "Providing a web-based application (37) is part of including all functionality in the application or website (36)."
+  },
+  {
+    "removed": "The system shall provide mobile applications for referees and fans.",
+    "duplicate_of": "The system shall include all functionality within the application or website.",
+    "confidence": "medium",
+    "reason": "Providing mobile apps (38) supports the overall goal of including all functionality in the system (36), but is a platform-specific implementation."
+  },
+  {
+    "removed": "The system shall provide a unified system with the same goal as the current separate systems.",
+    "duplicate_of": "The system shall provide different interfaces within the same system for various user roles or functions.",
+    "confidence": "medium",
+    "reason": "Providing a unified system (40) aligns with providing different interfaces for roles (39); both address system integration and role-based access."
+  },
+  {
+    "removed": "The system shall ensure that referees and official channels are the sole sources of game data within the system.",
+    "duplicate_of": "The system shall allow only referees to update game data.",
+    "confidence": "high",
+    "reason": "Ensuring referees and official channels are the sole sources of game data (43) reinforces the requirement that only referees can update game data (41)."
+  },
+  {
+    "removed": "The system shall enable the referee to receive responses immediately.",
+    "duplicate_of": "The system shall provide a response to the referee within a reasonable time frame.",
+    "confidence": "high",
+    "reason": "Requiring immediate response to referees (49) is a stronger form of providing a response within a reasonable time frame (45); same core behaviour."
+  },
+  {
+    "removed": "The system shall provide real-time updates from the referee to the main console.",
+    "duplicate_of": "The system shall allow the referee to insert game events in real time.",
+    "confidence": "medium",
+    "reason": "Providing real-time updates from referees (50) is part of inserting game events in real time (6)."
+  },
+  {
+    "removed": "The system shall enable referees to enter match events into the application in real time to ensure accountability and compliance auditing.",
+    "duplicate_of": "The system shall allow referees to enter match events into the application in real time during the match.",
+    "confidence": "high",
+    "reason": "Enabling referees to enter match events in real time (74) is identical to allowing referees to enter events during the match (77)."
+  },
+  {
+    "removed": "The system shall automatically send a notification to fans who have registered for a specific game if the date or time of that game is changed.",
+    "duplicate_of": "The system shall automatically notify any fan who has registered to follow a specific game if the schedule for that game is changed.",
+    "confidence": "high",
+    "reason": "Automatically notifying fans of game schedule changes (78) and notifying registered fans of schedule changes (79) describe the same system behaviour."
+  },
+  {
+    "removed": "The system shall implement reliable data backup mechanisms to prevent loss of financial and scheduling records.",
+    "duplicate_of": "The system shall perform daily backups of all data.",
+    "confidence": "high",
+    "reason": "Implementing reliable backup mechanisms (83) is a general form of performing daily backups (82); same intent with different phrasing."
+  },
+  {
+    "removed": "The system shall allow fans to filter upcoming fixtures by team or by date.",
+    "duplicate_of": "The system shall allow fans to filter upcoming fixtures by team or by date.",
+    "confidence": "high",
+    "reason": "Allowing fans to filter fixtures by team or date is repeated verbatim in both (85) and (87)."
+  },
+  {
+    "removed": "The system shall automatically generate the full match schedule for each league at the start of every season.",
+    "duplicate_of": "The system shall automatically generate the season schedule for each league at the start of the season.",
+    "confidence": "high",
+    "reason": "Automatically generating the full match schedule (92) is the same as generating the season schedule (91)."
+  },
+  {
+    "removed": "The system shall consider home and away rotation, minimum rest periods between fixtures, and permitted match days when generating the league schedule.",
+    "duplicate_of": "The system shall allow the IFA to set the rules governing how games are scheduled.",
+    "confidence": "medium",
+    "reason": "Considering scheduling constraints (94) supports the ability to set scheduling rules (93); closely related but not fully duplicative, though overlapping in intent."
+  },
+  {
+    "removed": "The system shall allow a new team to be registered only after the team owner has submitted the required official documents to the IFA and the IFA has approved the application.",
+    "duplicate_of": "The system shall allow team managers or owners to submit a new team registration with valid documents, which can be approved by the IFA.",
+    "confidence": "high",
+    "reason": "Requiring document submission and IFA approval for team registration (99) duplicates the process described in (65)."
+  },
+  {
+    "removed": "The system shall send a notification to fans who follow a specific player when that player scores a goal during a match.",
+    "duplicate_of": "The system shall send push email notifications to fans when their registered favorite player posts a message.",
+    "confidence": "medium",
+    "reason": "Sending goal notifications to fans (103) is a specific case of the push/email notification system for player messages (31)."
+  },
+  {
+    "removed": "The system shall allow a fan to follow a specific football club so that they receive all notifications related to that club's matches and activities.",
+    "duplicate_of": "The system shall send a notification to fans who follow a specific player when that player scores a goal during a match.",
+    "confidence": "medium",
+    "reason": "Allowing fans to follow a club (104) enables receiving notifications about that club, overlapping with goal and game notifications (103)."
+  },
+  {
+    "removed": "The system shall preserve the final league table and all match results for every completed season.",
+    "duplicate_of": "The system shall retain all past scheduling archives.",
+    "confidence": "high",
+    "reason": "Preserving final league tables and match results (106) is part of retaining past scheduling archives (66)."
+  },
+  {
+    "removed": "The system shall display the name of the assigned referee for each upcoming match.",
+    "duplicate_of": "The system shall display the venue and kick-off time for every scheduled match.",
+    "confidence": "low",
+    "reason": "Displaying referee name (112) and displaying venue/kick-off time (111) are distinct pieces of match scheduling info; low-confidence duplication due to shared context but different data."
+  }
+]

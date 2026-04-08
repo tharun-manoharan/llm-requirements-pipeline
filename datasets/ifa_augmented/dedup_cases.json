@@ -1,0 +1,265 @@
+[
+  {
+    "case_id": "DEDUP-001",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates the referee mobile-reporting requirement using different phrasing",
+    "source_turn": "Turn 129 (spk_1)",
+    "duplicate_text": "The system shall allow referees to enter match events into the application in real time during a game.",
+    "kept_requirement": "GT-007",
+    "kept_text": "The system shall allow referees to insert game events in real time using a mobile phone.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements describe the same system behaviour (referee enters game events in real time via mobile device). The surface phrasing differs ('enter match events into the application' vs 'insert game events using a mobile phone') but the semantic content is identical. A well-calibrated deduplication model should flag this with high confidence."
+  },
+  {
+    "case_id": "DEDUP-002",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: schedule-change notification for subscribed fans is a specific case already covered by the general subscription+notification requirement",
+    "source_turn": "Turn 131 (spk_1)",
+    "duplicate_text": "The system shall automatically notify fans who have registered to a game when the schedule for that game is adjusted.",
+    "kept_requirement": "GT-020",
+    "kept_text": "The system shall push notifications to fans who subscribe to specific games, players, or events.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-020 already covers push notifications to fans subscribed to specific games, which implicitly includes schedule changes. The augmented requirement explicitly calls out the schedule-change scenario, making it a more specific instance of the general requirement. A deduplication model might assign medium rather than high confidence because one could argue the specific scenario adds useful detail. However, the general requirement already subsumes it, so removal is correct."
+  },
+  {
+    "case_id": "DEDUP-003",
+    "type": "distinct_pair",
+    "description": "Pair of distinct requirements that should BOTH be kept: current standings display vs player statistics comparison",
+    "requirements": [
+      {
+        "id": "GT-046",
+        "text": "The system shall display current league standings to all users."
+      },
+      {
+        "id": "GT-047",
+        "text": "The system shall allow fans to compare player statistics side by side."
+      }
+    ],
+    "expected_action": "keep_both",
+    "rationale": "These requirements describe different system behaviours: GT-046 is about displaying aggregate team-level rankings, GT-047 is about fan-initiated comparison of individual player statistics. They are related in that both involve surfacing data to fans, but they involve different data objects (teams vs players), different interaction modes (passive display vs active comparison), and different target users implicitly (all users vs fans specifically)."
+  },
+  {
+    "case_id": "DEDUP-004",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates team budget management (GT-001) using different phrasing",
+    "source_turn": "Turn 147 (spk_1)",
+    "duplicate_text": "The system shall allow each team to independently record and manage its own financial income and expenditure.",
+    "kept_requirement": "GT-001",
+    "kept_text": "The system shall allow each team to manage its own budget (income and expenses).",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements describe the same behaviour: each team independently controls its own financial records (income and expenses). The surface phrasing differs ('independently record and manage its own financial income and expenditure' vs 'manage its own budget (income and expenses)') but the semantic content is identical."
+  },
+  {
+    "case_id": "DEDUP-005",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates automatic game scheduling (GT-013) with added specificity that does not change meaning",
+    "source_turn": "Turn 149 (spk_1)",
+    "duplicate_text": "The system shall automatically generate the full match schedule for each league at the start of every season.",
+    "kept_requirement": "GT-013",
+    "kept_text": "The system shall support automatic scheduling of games per league per season.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements express the same core behaviour: the system automatically produces a match schedule for each league each season. The duplicate adds the phrase 'at the start of every season' which is implied by 'per season' in GT-013 and does not introduce any new system behaviour."
+  },
+  {
+    "case_id": "DEDUP-006",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates IFA scheduling policy definition (GT-014) with enumerated examples already present in GT-014",
+    "source_turn": "Turn 151 (spk_1)",
+    "duplicate_text": "The system shall allow the IFA to set the rules governing how games are scheduled, including home and away rotation, the minimum rest period between fixtures, and which days matches may be played.",
+    "kept_requirement": "GT-014",
+    "kept_text": "The system shall allow the IFA to define scheduling policies and constraints (e.g. home/away rotation, minimum gap between matches, day of week).",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements grant the IFA the ability to configure scheduling rules. The duplicate uses slightly different vocabulary ('rules governing', 'minimum rest period', 'days matches may be played') but lists exactly the same constraint categories already enumerated in GT-014 (home/away rotation, minimum gap, day of week). No new behaviour is introduced."
+  },
+  {
+    "case_id": "DEDUP-007",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates two-IFA-representative schedule override requirement (GT-019) using different framing",
+    "source_turn": "Turn 153 (spk_1)",
+    "duplicate_text": "The system shall require an IFA administrator to document their reason for modifying the generated schedule, and have a different IFA administrator authorise the change.",
+    "kept_requirement": "GT-019",
+    "kept_text": "The system shall allow IFA representatives to override the automatic schedule, requiring a written rationale and confirmation by a second IFA representative.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements enforce the same two-person approval workflow for schedule overrides: the initiating administrator must provide a written reason, and a second administrator must confirm. The vocabulary differs ('document their reason' vs 'written rationale', 'authorise' vs 'confirmation') but the system behaviour is identical."
+  },
+  {
+    "case_id": "DEDUP-008",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates 50,000 concurrent user requirement (GT-025) with rephrased but equivalent wording",
+    "source_turn": "Turn 155 (spk_1)",
+    "duplicate_text": "The system shall be capable of handling a minimum of fifty thousand users connected and active at the same time without degradation.",
+    "kept_requirement": "GT-025",
+    "kept_text": "The system shall support at least 50,000 simultaneous users.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements specify the same capacity target: at least 50,000 concurrent users. The duplicate spells out the number in words and adds 'without degradation', which is an implied quality condition in any performance requirement and does not add a new constraint."
+  },
+  {
+    "case_id": "DEDUP-009",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates registration and guest-access requirement (GT-036) with equivalent phrasing",
+    "source_turn": "Turn 157 (spk_1)",
+    "duplicate_text": "The system shall require users to create an account and sign in to use the system; anyone who has not registered shall have read-only guest access only.",
+    "kept_requirement": "GT-036",
+    "kept_text": "The system shall require user registration and authentication for system access; unregistered users have guest-level access only.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements describe the same access model: registered and authenticated users get full access; unregistered visitors are limited to read-only guest access. The phrasing differs ('create an account and sign in' vs 'registration and authentication', 'read-only guest access' vs 'guest-level access') but the behaviour is identical."
+  },
+  {
+    "case_id": "DEDUP-010",
+    "type": "exact_synonym",
+    "description": "High-confidence duplicate: stakeholder restates team registration approval process (GT-037) with different but equivalent phrasing",
+    "source_turn": "Turn 159 (spk_1)",
+    "duplicate_text": "The system shall register a new team only after the team owner has submitted the required official documents to the IFA and the IFA has approved the application.",
+    "kept_requirement": "GT-037",
+    "kept_text": "The system shall support a team registration process where the team owner/manager submits documents to the IFA for approval.",
+    "expected_confidence": "high",
+    "expected_action": "remove",
+    "rationale": "Both requirements describe the same two-step team onboarding process: the team owner submits documents to the IFA, and the IFA approves before the team is registered. The duplicate makes the approval gate explicit ('only after... approved') but this is already implied by 'submits documents to the IFA for approval' in GT-037."
+  },
+  {
+    "case_id": "DEDUP-011",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: wage-cap violation alert is a specific instance of the general budget policy alert capability (GT-003)",
+    "source_turn": "Turn 161 (spk_1)",
+    "duplicate_text": "The system shall alert the IFA when a team's recorded salary expenditure exceeds the wage cap defined in the IFA budget policy.",
+    "kept_requirement": "GT-003",
+    "kept_text": "The system shall allow the IFA to specify budget policies and alert on violations.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-003 already grants the IFA the ability to define budget policies and receive alerts on any violation. A wage-cap alert is one instance of that general mechanism. The duplicate requirement does not add a new system capability — the wage cap is simply one policy the IFA would configure. However, because it names a concrete violation type not mentioned in GT-003, a model might assign medium rather than high confidence."
+  },
+  {
+    "case_id": "DEDUP-012",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: recording goal scorer and minute is a specific case of the general game-event recording capability (GT-009)",
+    "source_turn": "Turn 163 (spk_1)",
+    "duplicate_text": "The system shall record the exact minute and the identity of the scorer when a goal is logged during a match.",
+    "kept_requirement": "GT-009",
+    "kept_text": "The system shall record game events including goals, offsides, red cards, player replacements, each with a timestamp and event-specific details.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-009 already covers recording goals with a timestamp and event-specific details; the scorer's identity is an event-specific detail for a goal event. The duplicate requirement is fully subsumed by GT-009. However, because it is phrased as a standalone statement about a specific event type, a model may assign medium rather than high confidence."
+  },
+  {
+    "case_id": "DEDUP-013",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: no back-to-back same-team referee assignment is a specific instance of the general referee scheduling policy (GT-016)",
+    "source_turn": "Turn 165 (spk_1)",
+    "duplicate_text": "The system shall ensure that a referee who officiated a team's match in the immediately preceding round is not assigned to that same team's next match.",
+    "kept_requirement": "GT-016",
+    "kept_text": "The system shall enforce referee scheduling policies (e.g. same referee not assigned to same team too often, equal distribution of games among referees).",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-016 already covers the general principle that the same referee should not be assigned to the same team too often. The duplicate makes this concrete with a specific rule (no same team in consecutive rounds). This is a specific instantiation of the general policy already captured in GT-016, not a new system capability."
+  },
+  {
+    "case_id": "DEDUP-014",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: notifying a player subscriber when that player scores is a specific trigger within the general fan notification mechanism (GT-020)",
+    "source_turn": "Turn 167 (spk_1)",
+    "duplicate_text": "The system shall send a notification to fans who are subscribed to a particular player whenever that player scores a goal during a match.",
+    "kept_requirement": "GT-020",
+    "kept_text": "The system shall push notifications to fans who subscribe to specific games, players, or events.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-020 already grants fans the ability to subscribe to players and receive notifications. A goal scored by the subscribed player is one notification trigger within that general capability. The duplicate does not add a new system behaviour — it describes one specific scenario already covered by GT-020. Medium confidence because the specific trigger (goal scored) is not explicitly enumerated in GT-020."
+  },
+  {
+    "case_id": "DEDUP-015",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: following a football club to receive team notifications is a specific case of the general team subscription capability (GT-021)",
+    "source_turn": "Turn 169 (spk_1)",
+    "duplicate_text": "The system shall allow a fan to follow a specific football club so that they receive all notifications related to that club's matches and activities.",
+    "kept_requirement": "GT-021",
+    "kept_text": "The system shall allow fans to register and subscribe to specific games, teams, and players to receive notifications.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-021 already allows fans to subscribe to teams and receive notifications. Following a club is the same behaviour described from a slightly different angle ('follow' vs 'subscribe'). The duplicate adds 'all notifications related to that club's matches and activities' but this is already implied by team subscription in GT-021. Medium confidence because the phrasing is distinct enough that a model might initially treat it as a separate feature."
+  },
+  {
+    "case_id": "DEDUP-016",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: registering a newly signed player is a specific case of the general team player management capability (GT-039)",
+    "source_turn": "Turn 171 (spk_1)",
+    "duplicate_text": "The system shall allow a team administrator to register a newly signed player by entering the player's personal details and position.",
+    "kept_requirement": "GT-039",
+    "kept_text": "The system shall allow teams to manage their own players, coaches, stadium, and other resources.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-039 already grants teams the ability to manage their own players, which includes adding new ones. Registering a newly signed player is one specific operation within player management. The duplicate does not add a new capability. Medium confidence because the duplicate names a concrete workflow (onboarding a transfer) not explicitly mentioned in GT-039."
+  },
+  {
+    "case_id": "DEDUP-017",
+    "type": "near_duplicate",
+    "description": "Medium-confidence near-duplicate: preserving the final league table and match results is a specific case of the general historical data retention requirement (GT-035)",
+    "source_turn": "Turn 173 (spk_1)",
+    "duplicate_text": "The system shall preserve the final league table and all match results for every completed season.",
+    "kept_requirement": "GT-035",
+    "kept_text": "The system shall retain all historical data and past season archives.",
+    "expected_confidence": "medium",
+    "expected_action": "remove",
+    "rationale": "GT-035 already requires all historical data and past season archives to be retained, which clearly includes league tables and match results. The duplicate requirement names specific data types (league table, match results) already covered by the broader requirement. Medium confidence because a model could argue that naming specific data types provides useful clarification not present in GT-035."
+  },
+  {
+    "case_id": "DEDUP-018",
+    "type": "distinct_pair",
+    "description": "Pair of distinct requirements that should BOTH be kept: separate home/away record display vs top goal-scorer leaderboard",
+    "source_turn": "Turn 175 (spk_1)",
+    "requirements": [
+      {
+        "id": "GT-054",
+        "text": "The system shall display each team's home and away match record separately within the league standings."
+      },
+      {
+        "id": "GT-055",
+        "text": "The system shall display a top goal-scorer leaderboard for the current season."
+      }
+    ],
+    "expected_action": "keep_both",
+    "rationale": "GT-054 and GT-055 describe different system behaviours: GT-054 is a team-level breakdown of aggregate results by venue (home vs away), while GT-055 is an individual-level ranking of players by goals scored. They target different data objects (teams vs individual players), different aggregation levels, and different presentation formats. Neither subsumes the other. Both are also distinct from existing requirements: GT-054 extends GT-046 (overall standings) with a home/away split; GT-055 is a new individual ranking not covered by GT-047 (which is fan-initiated side-by-side comparison, not a leaderboard)."
+  },
+  {
+    "case_id": "DEDUP-019",
+    "type": "distinct_pair",
+    "description": "Pair of distinct requirements that should BOTH be kept: IFA date-range financial report vs team transaction document attachments",
+    "source_turn": "Turn 177 (spk_1)",
+    "requirements": [
+      {
+        "id": "GT-056",
+        "text": "The system shall allow IFA administrators to generate a financial summary report for any specified date range."
+      },
+      {
+        "id": "GT-057",
+        "text": "The system shall allow team administrators to attach supporting documents (such as invoices or contracts) to individual budget transactions."
+      }
+    ],
+    "expected_action": "keep_both",
+    "rationale": "GT-056 and GT-057 address different financial system capabilities. GT-056 is an IFA-level reporting feature (aggregate financial view across teams, filterable by date range) distinct from the real-time dashboard in GT-043. GT-057 is a team-level document management feature (attaching evidence to individual transactions) distinct from the general data export in GT-012. The two requirements involve different users (IFA administrators vs team administrators), different data granularity (aggregated reports vs individual transaction records), and different interactions (generating reports vs attaching files)."
+  },
+  {
+    "case_id": "DEDUP-020",
+    "type": "distinct_pair",
+    "description": "Pair of distinct requirements that should BOTH be kept: match venue and kick-off time display vs assigned referee name display",
+    "source_turn": "Turn 179 (spk_1)",
+    "requirements": [
+      {
+        "id": "GT-058",
+        "text": "The system shall display the venue and kick-off time for each scheduled match."
+      },
+      {
+        "id": "GT-059",
+        "text": "The system shall display the name of the assigned referee for each upcoming match."
+      }
+    ],
+    "expected_action": "keep_both",
+    "rationale": "GT-058 and GT-059 are related in that both concern publicly displayed information about upcoming matches, but they describe different data items (logistical details vs personnel assignment) and serve different user needs (knowing when and where to watch vs knowing who is officiating). Neither subsumes the other. Both are new requirements: no existing requirement specifies public display of match venue, kick-off time, or referee assignment."
+  }
+]

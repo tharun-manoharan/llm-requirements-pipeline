@@ -1,0 +1,164 @@
+[
+  {
+    "removed": "The system shall assign responsibility for managing the budget to individual teams, not solely to the IFA.",
+    "duplicate_of": "The system shall allow each team to manage its own budget.",
+    "confidence": "high",
+    "reason": "Both assign budget management responsibility to teams; [2] is less specific than [0]."
+  },
+  {
+    "removed": "The system shall allow the IFA to specify budget policies.",
+    "duplicate_of": "The system shall allow the IFA to audit team budgets and set regulatory policies.",
+    "confidence": "high",
+    "reason": "Specifying budget policies is part of auditing and setting regulatory policies; [5] is redundant with [4]."
+  },
+  {
+    "removed": "The system shall allow the aggregated data to be accessible to all users.",
+    "duplicate_of": "The system shall allow all users to view the complete aggregated data.",
+    "confidence": "high",
+    "reason": "Allowing all users to view aggregated data is the same as making aggregated data accessible to all users."
+  },
+  {
+    "removed": "The system shall allow each team to access only their own data.",
+    "duplicate_of": "The system shall restrict budget transaction entry to individual teams, with each team only able to access and modify their own data.",
+    "confidence": "high",
+    "reason": "Both restrict team data access to individual teams; [19] is less specific than [17]."
+  },
+  {
+    "removed": "The system shall allow the insertion of budget transactions and items only by the respective teams.",
+    "duplicate_of": "The system shall restrict budget transaction entry to individual teams, with each team only able to access and modify their own data.",
+    "confidence": "medium",
+    "reason": "Allowing only teams to insert transactions implies restricted access, which is covered by [17]."
+  },
+  {
+    "removed": "The system shall facilitate the definition of referee assignment policies and automatically assign referees to games based on those policies.",
+    "duplicate_of": "The system shall have the ability to define policies for scheduling games.",
+    "confidence": "medium",
+    "reason": "Defining referee assignment policies is a form of scheduling policy definition mentioned in [22]."
+  },
+  {
+    "removed": "The system shall take into account user-specified availability constraints, such as pre-planned vacations, when scheduling games.",
+    "duplicate_of": "The system shall enable referees to set their availability preferences.",
+    "confidence": "medium",
+    "reason": "User-specified availability constraints are a type of availability preference set by referees."
+  },
+  {
+    "removed": "The system shall allow automatic scheduling and override by the IFA representative.",
+    "duplicate_of": "The system shall allow manual adjustment of the schedule.",
+    "confidence": "medium",
+    "reason": "Automatic scheduling and override by IFA representative is a form of manual adjustment mentioned in [29]."
+  },
+  {
+    "removed": "The system shall allow IFA representatives to perform both the initiator and approver roles in the scheduling process.",
+    "duplicate_of": "The system shall allow the IFA representative administration role to manage budgeting, scheduling, and all related activities.",
+    "confidence": "medium",
+    "reason": "Performing initiator and approver roles in scheduling is part of managing scheduling activities covered in [64]."
+  },
+  {
+    "removed": "The system shall send a notification to users when a message is posted by a player such as Messi.",
+    "duplicate_of": "The system shall send push email notifications to fans when their favorite players post new messages.",
+    "confidence": "high",
+    "reason": "Sending notifications when a player posts a message is the same as in [33], with [35] being less general."
+  },
+  {
+    "removed": "The system shall send a notification to users who are registered for a game when a player replacement is reported by the referee after the game has started.",
+    "duplicate_of": "The system shall allow fans to register for notifications about specific games and send them notifications when related updates occur.",
+    "confidence": "high",
+    "reason": "Sending notifications to registered users about game updates duplicates the functionality in [34]."
+  },
+  {
+    "removed": "The system shall allow users to subscribe to each type of information mentioned and receive notifications accordingly.",
+    "duplicate_of": "The system shall allow fans to register for notifications about specific games and send them notifications when related updates occur.",
+    "confidence": "high",
+    "reason": "Allowing subscription to information types and receiving notifications is the same as in [34]."
+  },
+  {
+    "removed": "The system shall provide a web-based application for teams and IFA administrators to use.",
+    "duplicate_of": "The system shall support multiple interfaces for different user roles or purposes.",
+    "confidence": "medium",
+    "reason": "Providing a web-based application is a specific interface covered under supporting multiple interfaces in [41]."
+  },
+  {
+    "removed": "The system shall provide mobile applications for referees and fans to interact with the system more easily.",
+    "duplicate_of": "The system shall support multiple interfaces for different user roles or purposes.",
+    "confidence": "medium",
+    "reason": "Providing mobile apps for referees and fans is part of supporting multiple interfaces in [41]."
+  },
+  {
+    "removed": "The system shall provide a unified system with the same goal as the current separate systems.",
+    "duplicate_of": "The system shall include all functionality within the application or website.",
+    "confidence": "low",
+    "reason": "Providing a unified system is related to including all functionality, but phrasing is vague; kept as low confidence."
+  },
+  {
+    "removed": "The system shall ensure that referees and official channels are the sole sources of game data within the system.",
+    "duplicate_of": "The system shall allow only referees to update game data.",
+    "confidence": "high",
+    "reason": "Ensuring referees are the sole source of game data is equivalent to allowing only referees to update it."
+  },
+  {
+    "removed": "The system shall provide a response to the referee within a reasonable time frame.",
+    "duplicate_of": "The system shall enable real-time communication between referees and the application during games.",
+    "confidence": "medium",
+    "reason": "Providing a response within a reasonable time is implied by real-time communication in [48]."
+  },
+  {
+    "removed": "The system shall be highly responsive and prioritize referee communications over other stadium activities.",
+    "duplicate_of": "The system shall enable real-time communication between referees and the application during games.",
+    "confidence": "medium",
+    "reason": "Prioritizing referee communications supports real-time communication mentioned in [48]."
+  },
+  {
+    "removed": "The system shall enable the referee to receive responses immediately.",
+    "duplicate_of": "The system shall enable real-time communication between referees and the application during games.",
+    "confidence": "high",
+    "reason": "Immediate responses to referees are part of real-time communication in [48]."
+  },
+  {
+    "removed": "The system shall support a live recording feature, possibly including input from a side referee.",
+    "duplicate_of": "The system shall allow the referee to use a mobile phone to record game events in real time.",
+    "confidence": "medium",
+    "reason": "Live recording with side referee input is a form of real-time game event recording by referees."
+  },
+  {
+    "removed": "The system shall comply with data residency restrictions imposed by certain countries.",
+    "duplicate_of": "The system shall be adjustable to comply with local regulations and local review requirements.",
+    "confidence": "high",
+    "reason": "Complying with data residency restrictions is a specific case of complying with local regulations."
+  },
+  {
+    "removed": "The system shall support configuration of data center locations for labeling and allocation purposes.",
+    "duplicate_of": "The system shall be adjustable to comply with local regulations and local review requirements.",
+    "confidence": "medium",
+    "reason": "Configuring data center locations supports compliance with local regulations in [55]."
+  },
+  {
+    "removed": "The system shall make all data accessible to everyone except for budget data, which shall be restricted.",
+    "duplicate_of": "The system shall allow the IFA to view the entire monetary information.",
+    "confidence": "medium",
+    "reason": "Making data accessible to everyone except budget data is partially covered by IFA viewing all monetary info in [20], but access control context differs."
+  },
+  {
+    "removed": "The system shall allow the referee to update game information in real time.",
+    "duplicate_of": "The system shall allow the referee to insert game events in real time.",
+    "confidence": "high",
+    "reason": "Allowing referee to update game info in real time is the same as inserting game events in real time."
+  },
+  {
+    "removed": "The system shall allow referees to be appointed by the IFA.",
+    "duplicate_of": "The system shall allow an IFA representative to invite a referee to join the system.",
+    "confidence": "high",
+    "reason": "Appointing a referee is equivalent to inviting them to join the system."
+  },
+  {
+    "removed": "The system shall enable referees to enter match events into the application in real time to ensure accountability and compliance auditing.",
+    "duplicate_of": "The system shall allow referees to enter match events into the application in real time during the match.",
+    "confidence": "high",
+    "reason": "Entering match events in real time is the same functionality, phrased identically in both."
+  },
+  {
+    "removed": "The system shall automatically notify any fan who has registered to follow a specific game if the schedule for that game is changed.",
+    "duplicate_of": "The system shall allow fans to register for notifications about specific games and send them notifications when related updates occur.",
+    "confidence": "high",
+    "reason": "Notifying fans of schedule changes is a specific case of registered game notifications in [34]."
+  }
+]

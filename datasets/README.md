@@ -59,6 +59,7 @@ a genuine system need, and write a clean "The system shall …" statement for ea
 |---|---|---|
 | `test/` | Synthetic toy example (password reset) | 3 turns, 2 GT reqs |
 | `ifa/` | IFA sports system — requirements elicitation session | ~90 turns, 41 GT reqs |
+| `ifa_augmented/` | IFA + 54 synthetic turns targeting dedup and priority extraction | ~179 turns, 59 GT reqs; see `ifa_augmented/README.md` |
 | `bristol/` | Bristol PhD thesis — trust in space teleoperation interviews | 13 interviews (N1–N4, S1–S3, U1–U3, O1–O3) |
 
 **Bristol source**: *"The Importance of Trust in Space Teleoperation"* — University of
