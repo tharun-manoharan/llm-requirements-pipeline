@@ -1,0 +1,32 @@
+[
+  {
+    "reqid": "CTRL-001",
+    "parent_reqid": "",
+    "project": "FRET-Contradiction-Test",
+    "rationale": "The system shall record all match events with a timestamp.",
+    "comments": "Type: functional | Priority: essential | Role: control (no contradiction) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy match_event_recorded_with_timestamp",
+    "status": "essential",
+    "semantics": {}
+  },
+  {
+    "reqid": "CONTRA-001",
+    "parent_reqid": "",
+    "project": "FRET-Contradiction-Test",
+    "rationale": "The system shall allow referees to update game event data in real time.",
+    "comments": "Type: functional | Priority: essential | Role: contradiction side A (always) | FRET confidence: high | Source: IFA GT-007/GT-008",
+    "fulltext": "the system shall always satisfy referee_game_data_update_permitted",
+    "status": "essential",
+    "semantics": {}
+  },
+  {
+    "reqid": "CONTRA-002",
+    "parent_reqid": "",
+    "project": "FRET-Contradiction-Test",
+    "rationale": "The system shall never allow referees to update game event data.",
+    "comments": "Type: functional | Priority: essential | Role: contradiction side B (never) | FRET confidence: high | Synthetic: direct negation of CONTRA-001",
+    "fulltext": "the system shall never satisfy referee_game_data_update_permitted",
+    "status": "essential",
+    "semantics": {}
+  }
+]

@@ -119,12 +119,29 @@ Output:
 # Core conversion
 # ---------------------------------------------------------------------------
 
-def _call_llm(statement: str, retries: int = 3) -> dict | None:
+def _call_llm(statement: str, retries: int = 3,
+              known_vars: list[dict] | None = None) -> dict | None:
     """Ask the LLM to fretify one requirement.  Returns parsed JSON or None.
 
     Retries up to `retries` times on 429 rate-limit responses.
+
+    known_vars: list of {"response_var": ..., "response_description": ...} dicts
+    accumulated from previously processed requirements in this run.  Passed to
+    the LLM so it can reuse the same variable name when the behaviour matches.
     """
     client = get_llm_client()
+
+    user_msg = statement
+    if known_vars:
+        var_lines = "\n".join(
+            f"  - {v['response_var']}: {v['response_description']}"
+            for v in known_vars
+        )
+        user_msg = (
+            f"{statement}\n\n"
+            f"Already-assigned response variables in this requirement set "
+            f"(reuse the exact name if the behaviour matches):\n{var_lines}"
+        )
 
     for attempt in range(retries + 1):
         try:
@@ -132,7 +149,7 @@ def _call_llm(statement: str, retries: int = 3) -> dict | None:
                 model=LLM_MODEL,
                 messages=[
                     {"role": "system", "content": _SYSTEM_PROMPT},
-                    {"role": "user", "content": statement},
+                    {"role": "user", "content": user_msg},
                 ],
                 max_tokens=400,
                 temperature=0.1,
@@ -158,10 +175,10 @@ def _call_llm(statement: str, retries: int = 3) -> dict | None:
     return json.loads(raw)
 
 
-def _fretify_one(req: dict) -> dict:
+def _fretify_one(req: dict, known_vars: list[dict] | None = None) -> dict:
     """Convert a single pipeline requirement dict into a FRET requirement dict."""
     statement = req["statement"]
-    fret_data = _call_llm(statement)
+    fret_data = _call_llm(statement, known_vars=known_vars)
 
     return {
         "_id": str(uuid.uuid4()),
@@ -212,6 +229,7 @@ def fretify_requirements(
     """
     total = len(requirements)
     fret_reqs = []
+    known_vars: list[dict] = []
 
     for i, req in enumerate(requirements):
         # Inject project name so _fretify_one can read it
@@ -223,10 +241,17 @@ def fretify_requirements(
             flush=True,
         )
         try:
-            fret_req = _fretify_one(req_with_project)
+            fret_req = _fretify_one(req_with_project, known_vars=known_vars)
             confidence = fret_req["_fret_decomposition"]["parse_confidence"]
             print(f"OK [{confidence}]")
             fret_reqs.append(fret_req)
+            # Accumulate assigned vars so subsequent requirements can reuse them
+            decomp = fret_req["_fret_decomposition"]
+            if decomp.get("response_var") and decomp.get("response_description"):
+                known_vars.append({
+                    "response_var": decomp["response_var"],
+                    "response_description": decomp["response_description"],
+                })
         except Exception as e:
             err = str(e)
             if "tokens per day" in err.lower() or "tpd" in err.lower():

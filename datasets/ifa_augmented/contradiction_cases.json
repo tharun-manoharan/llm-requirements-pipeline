@@ -1,0 +1,48 @@
+[
+  {
+    "id": "CONTRA-001",
+    "type": "direct_logical_contradiction",
+    "source_turns": "180-181",
+    "requirement_a": {
+      "id": "GT-010",
+      "statement": "The system shall allow all users, including unregistered guests, to view game data and results.",
+      "source": "Turn 21 (spk_1) — original transcript"
+    },
+    "requirement_b": {
+      "id": "GT-060",
+      "statement": "The system shall never allow unregistered users to access game data or results.",
+      "source": "Turn 181 (spk_1) — augmented turn"
+    },
+    "expected_fretish_a": "the system shall always satisfy unregistered_user_game_data_access",
+    "expected_fretish_b": "the system shall never satisfy unregistered_user_game_data_access",
+    "shared_response_var": "unregistered_user_game_data_access",
+    "expected_ltl_a": "G(unregistered_user_game_data_access)",
+    "expected_ltl_b": "G(!unregistered_user_game_data_access)",
+    "fret_detectable": true,
+    "detection_mechanism": "Realizability checking — G(X) ∧ G(!X) is unsatisfiable. FRET + Kind2 reports unrealizable and highlights the conflicting pair.",
+    "rationale": "The stakeholder initially stated guests should be able to browse without logging in (Turn 21), then later corrected this in response to a legal/GDPR concern (Turn 181), stating unregistered access is never acceptable. Both requirements use the concept 'unregistered user accessing game data', so the LLM should assign the same response_var to both FRETish translations."
+  },
+  {
+    "id": "CONTRA-002",
+    "type": "direct_logical_contradiction",
+    "source_turns": "182-183",
+    "requirement_a": {
+      "id": "GT-013",
+      "statement": "The system shall automatically generate match schedules based on registered teams and IFA policies.",
+      "source": "Turn 43 (spk_1) — original transcript"
+    },
+    "requirement_b": {
+      "id": "GT-061",
+      "statement": "The system shall never automatically generate match schedules.",
+      "source": "Turn 183 (spk_1) — augmented turn"
+    },
+    "expected_fretish_a": "the system shall always satisfy automatic_match_schedule_generation",
+    "expected_fretish_b": "the system shall never satisfy automatic_match_schedule_generation",
+    "shared_response_var": "automatic_match_schedule_generation",
+    "expected_ltl_a": "G(automatic_match_schedule_generation)",
+    "expected_ltl_b": "G(!automatic_match_schedule_generation)",
+    "fret_detectable": true,
+    "detection_mechanism": "Realizability checking — G(X) ∧ G(!X) is unsatisfiable. FRET + Kind2 reports unrealizable and highlights the conflicting pair.",
+    "rationale": "The stakeholder originally asked for automatic schedule generation (Turn 43), then reversed this at the end of the session citing past problems with exceptions (Turn 183). Both requirements refer to the same behaviour ('automatically generating match schedules'), so the LLM should assign the same response_var to both FRETish translations."
+  }
+]
