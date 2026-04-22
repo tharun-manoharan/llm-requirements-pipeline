@@ -1,0 +1,2272 @@
+[
+  {
+    "_id": "75adb3b6-7b68-4e9c-bd5d-1887596178cc",
+    "reqid": "REQ-001",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow each team to manage its own budget.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 3 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_budget_management",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_budget_management",
+      "response_description": "Each team can manage its own budget independently.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "74847cbf-a82a-416e-bb47-750e994ffc6c",
+    "reqid": "REQ-002",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA to monitor the budget balance and ensure proper financial management.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 3 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_budget_monitoring_and_financial_management",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_budget_monitoring_and_financial_management",
+      "response_description": "The IFA can monitor the budget balance and ensure proper financial management.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "6167b7f7-c112-403b-8a10-7708e1c0e4f4",
+    "reqid": "REQ-003",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA to audit team budgets and set regulatory policies.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 5 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_audit_and_policy_control",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_audit_and_policy_control",
+      "response_description": "The IFA can audit team budgets and set regulatory policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "35994fc0-acd5-4939-981e-bd7561eefb92",
+    "reqid": "REQ-004",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the specification and management of budget policies within the system.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 5 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy budget_policy_specification_and_management",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "budget_policy_specification_and_management",
+      "response_description": "The system supports the creation, modification, and administration of budget policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c7033223-f26f-4410-84ad-d6c15541fb44",
+    "reqid": "REQ-005",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the financial administrator to view individual transactions.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 7 (spk_1) | FRET confidence: error",
+    "fulltext": "the system shall always satisfy req_005",
+    "status": "essential",
+    "_fret_decomposition": {
+      "parse_confidence": "error"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "58b2c68f-b715-4b45-b1c6-dc5e9add8d3a",
+    "reqid": "REQ-006",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the referee to insert game events in real time.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 17 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy real_time_game_event_insertion",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_game_event_insertion",
+      "response_description": "The referee can insert game events into the system as they occur, without delay.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fe0e605a-694b-4bfe-93f0-13a52d1445ef",
+    "reqid": "REQ-007",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow only the main referee or side referees to insert game events.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 17 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy authorised_referee_event_insertion",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "authorised_referee_event_insertion",
+      "response_description": "Only the main referee or side referees are allowed to insert game events.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "63e94227-8167-4d0b-8038-3544fa881756",
+    "reqid": "REQ-008",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow all users to view the complete aggregated data.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 21 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy complete_aggregated_data_accessible",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "complete_aggregated_data_accessible",
+      "response_description": "All users are able to view the complete aggregated data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a9958c51-9703-424c-94ac-5af6da52d720",
+    "reqid": "REQ-009",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow guests to view aggregated final data.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 21 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy guest_final_data_access",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "guest_final_data_access",
+      "response_description": "Guests are able to view aggregated final data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "eb08e790-1747-4cdf-b865-f21dd3ebc899",
+    "reqid": "REQ-010",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the aggregation and export of seasonal statistics such as red cards and goals per team for distribution to external parties such as journalists or press.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 21 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy seasonal_statistics_aggregation_and_export",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "seasonal_statistics_aggregation_and_export",
+      "response_description": "The system can aggregate and export seasonal statistics like red cards and goals per team for distribution to external parties such as journalists or press.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fb900b31-20bf-4c5b-839e-f381d4f28736",
+    "reqid": "REQ-011",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow unregistered users to access game-related data such as results, goals, and red cards.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 21 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy unregistered_user_game_data_access",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "unregistered_user_game_data_access",
+      "response_description": "Unregistered users can access game-related data including results, goals, and red cards.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "de67e3a2-be88-4a7c-aacf-59845b6a4335",
+    "reqid": "REQ-012",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow team managers and team administrators to access financial data for offline analysis.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 25 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy authorised_offline_financial_access",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "authorised_offline_financial_access",
+      "response_description": "Team managers and team administrators can access financial data for offline analysis.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ad026c38-6a3f-48bf-9b72-a340f5810d8a",
+    "reqid": "REQ-013",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall make financial data accessible to all members within the IFA and the finance department.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 26 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy financial_data_accessible_to_authorized_personnel",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "financial_data_accessible_to_authorized_personnel",
+      "response_description": "Financial data is accessible to all members within the IFA and the finance department.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "39af7ea9-4b24-4f52-ac25-29349d23e481",
+    "reqid": "REQ-014",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall restrict budget transaction entry to individual teams, with each team only able to access and modify their own data.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 27 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_budget_isolation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_budget_isolation",
+      "response_description": "Each team can only access and modify their own budget transaction data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9390faea-bfc6-4f2b-bc0b-5411e4277aec",
+    "reqid": "REQ-015",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the insertion of budget transactions and items only by the respective teams.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 29 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_authorized_budget_insertion",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_authorized_budget_insertion",
+      "response_description": "Only the respective teams can insert budget transactions and items.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d35a1b3a-2d72-40ba-b031-837327923463",
+    "reqid": "REQ-016",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA to view the entire monetary information.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 29 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_view_monetary_information",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_view_monetary_information",
+      "response_description": "The IFA is able to view all monetary information.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "656dc04f-f3e8-4704-bc69-f109c16d82f2",
+    "reqid": "REQ-017",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow alerts and requests for adjustment details but shall not perform operations on the data.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 29 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy alerts_and_adjustment_requests_allowed and not satisfy data_operations_performed",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "alerts_and_adjustment_requests_allowed_and_no_data_operations",
+      "response_description": "The system allows alerts and requests for adjustment details while prohibiting any operations on the data.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "49176daf-ff45-480c-8743-78de4251919d",
+    "reqid": "REQ-018",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall have the ability to define policies for scheduling games.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 31 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy policy_definition_for_scheduling",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "policy_definition_for_scheduling",
+      "response_description": "The system supports defining policies that govern how games are scheduled.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ea8a7661-5f1f-478f-ab82-39829c2341f4",
+    "reqid": "REQ-019",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide guidance for allocating referees to games based on defined policies.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 33 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy referee_allocation_guidance_provided",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_allocation_guidance_provided",
+      "response_description": "Guidance for allocating referees to games is provided according to defined policies.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "94e480a4-a186-44ee-a453-0907c847b21d",
+    "reqid": "REQ-020",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall ensure that the same referee is not assigned to multiple games involving the same teams.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 33 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy no_duplicate_referee_assignment_for_same_teams",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "no_duplicate_referee_assignment_for_same_teams",
+      "response_description": "The same referee is not assigned to multiple games that involve the same teams.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5247d2a9-5332-48a2-811b-64b6d0d2deed",
+    "reqid": "REQ-021",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall facilitate the definition of referee assignment policies and automatically assign referees to games based on those policies.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 35 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy referee_assignment_policies_defined and automatic_referee_assignment",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_assignment_policies_defined and automatic_referee_assignment",
+      "response_description": "Referee assignment policies are defined and referees are automatically assigned to games according to those policies.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "549dd901-8bc6-49c7-91c8-d3d944d19901",
+    "reqid": "REQ-022",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall enable referees to set their availability preferences.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 35 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy referee_availability_preferences_set",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_availability_preferences_set",
+      "response_description": "Referees can set their availability preferences in the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f18f9b22-0faa-4445-ad76-0301867ccddc",
+    "reqid": "REQ-023",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow manual adjustment of the schedule.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 41 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy manual_schedule_adjustment_allowed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "manual_schedule_adjustment_allowed",
+      "response_description": "Manual adjustment of the schedule is permitted by the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f53fcbad-4102-44b8-a9e0-61bcc6238f19",
+    "reqid": "REQ-024",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow manual override of scheduled results under certain circumstances.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 43 (spk_1) | FRET confidence: medium",
+    "fulltext": "when override_circumstances_met the system shall immediately satisfy manual_override_enabled",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "override_circumstances_met",
+      "timing": "immediately",
+      "response_var": "manual_override_enabled",
+      "response_description": "Manual override of scheduled results is permitted.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2a9f712c-4994-4e03-85c6-d0985431b63b",
+    "reqid": "REQ-025",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow automatic scheduling and override by the IFA representative.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 46 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy automatic_scheduling_with_ifa_override",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "automatic_scheduling_with_ifa_override",
+      "response_description": "The system supports automatic scheduling and allows an IFA representative to override the schedule.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "568313ea-401a-469f-8816-5cd623ec6a98",
+    "reqid": "REQ-026",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall incorporate a scheduling policy that ensures a minimum gap of twice the number of teams in days between matches for any team.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 51 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy minimum_match_gap_policy",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "minimum_match_gap_policy",
+      "response_description": "A scheduling policy is enforced such that there is a minimum gap of twice the number of teams in days between matches for any team.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "b023cede-568f-462b-a10a-84d4feb27803",
+    "reqid": "REQ-027",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall send push email notifications to fans when their registered favorite player posts a message.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 56 (spk_1) | FRET confidence: high",
+    "fulltext": "when favorite_player_posts_message the system shall immediately satisfy push_email_notification_sent_to_fans",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "favorite_player_posts_message",
+      "timing": "immediately",
+      "response_var": "push_email_notification_sent_to_fans",
+      "response_description": "A push email notification is sent to fans who have registered the player as a favorite when that player posts a message.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "22bf94a0-fa2e-4178-829e-2a638af55b90",
+    "reqid": "REQ-028",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow fans to register for specific games and receive notifications when content related to those games is posted.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 56 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy fan_game_registration_and_notification",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fan_game_registration_and_notification",
+      "response_description": "Fans can register for specific games and will receive notifications when content related to those games is posted.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "148fefc4-abf4-42ec-8e0e-525699d958be",
+    "reqid": "REQ-029",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall send a notification to users when a message is posted by a player such as Messi.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 58 (spk_1) | FRET confidence: high",
+    "fulltext": "when message_posted_by_messi the system shall immediately satisfy user_notification_sent",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "message_posted_by_messi",
+      "timing": "immediately",
+      "response_var": "user_notification_sent",
+      "response_description": "A notification has been sent to users in response to a message posted by a player such as Messi.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "8cee0e9b-6272-499c-adaf-9769a0aefae0",
+    "reqid": "REQ-030",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow users to subscribe to each type of information mentioned and receive notifications accordingly.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 64 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy user_subscription_to_information_types",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "user_subscription_to_information_types",
+      "response_description": "Users can subscribe to each type of information and will receive notifications as per their subscriptions.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ec120194-69c5-4adb-8e6a-5037c4907238",
+    "reqid": "REQ-031",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall send a notification to users registered for a game when a player replacement is reported by the referee after the game has started.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 64 (spk_1) | FRET confidence: high",
+    "fulltext": "after game_started when player_replacement_reported the system shall immediately satisfy notification_sent_to_registered_users",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "after game_started",
+      "condition_var": "player_replacement_reported",
+      "timing": "immediately",
+      "response_var": "notification_sent_to_registered_users",
+      "response_description": "A notification is sent to users who are registered for the game when a player replacement is reported by the referee after the game has started.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5b8b8afb-5cce-4341-8297-106f505b9fa4",
+    "reqid": "REQ-032",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall include all functionality within the application or website.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 66 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy functionality_included_in_app_or_website",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "functionality_included_in_app_or_website",
+      "response_description": "All required functionality is contained within the application or website.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fe1dd438-597d-4b21-a894-21a0ce1742d9",
+    "reqid": "REQ-033",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the teams, for example, and uh on the IFA administrative would work with computers in kind of a web based application.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 66 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall always satisfy web_based_admin_interface_available",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "web_based_admin_interface_available",
+      "response_description": "A web-based application interface is available for administrative tasks such as those performed by IFA teams.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "cb73c5ac-e54a-4953-a61a-92b084682678",
+    "reqid": "REQ-034",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the referee and the fans will probably have the app uh mobile applications so they can work with more easily.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 66 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall eventually satisfy mobile_app_access_for_referee_and_fans",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "eventually",
+      "response_var": "mobile_app_access_for_referee_and_fans",
+      "response_description": "Referees and fans have access to mobile applications to interact with the system more easily.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c3301c98-dfd0-417f-8d7d-de48835a272b",
+    "reqid": "REQ-035",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide different interfaces within the same system for various user roles or functions.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 68 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy role_based_interface_provision",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "role_based_interface_provision",
+      "response_description": "Different interfaces are provided for different user roles or functions within the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "34d99c88-9b6b-4998-8df4-e64dad13cbfa",
+    "reqid": "REQ-036",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide a unified system with the same goal as the current separate systems.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 68 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy unified_system_with_same_goal",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "unified_system_with_same_goal",
+      "response_description": "The system operates as a unified solution achieving the same objective as the previously separate systems.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f034a0fa-0de1-4ad0-b00a-7988cd9907e1",
+    "reqid": "REQ-037",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow only referees to update game data.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 71 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy only_referees_update_game_data",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "only_referees_update_game_data",
+      "response_description": "Only users with referee privileges are permitted to update game data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "274565d0-dd77-4256-b41f-9a491109555f",
+    "reqid": "REQ-038",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the system to enable the referees and the official channels to be the only source of channel uh, of data about the games.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 72 (spk_2) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy referees_and_official_channels_only_data_source",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referees_and_official_channels_only_data_source",
+      "response_description": "Only referees and official channels are allowed to serve as sources of data about the games.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "1bae4aee-4320-4f5b-bb55-87ffe94b2b0e",
+    "reqid": "REQ-039",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the fans are of course exposed to it.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 73 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall always satisfy fans_exposed_to_content",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fans_exposed_to_content",
+      "response_description": "Fans are exposed to the content as intended by the system.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "0914ce21-b772-4a43-b3da-51b23b019945",
+    "reqid": "REQ-040",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide all necessary game data directly, eliminating the need for stakeholders to consult external news portals.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 73 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy direct_game_data_provision",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "direct_game_data_provision",
+      "response_description": "All necessary game data is provided directly by the system, without requiring external sources.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4a7670ab-4250-4d55-8717-3aea4dff992f",
+    "reqid": "REQ-041",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow users to specify alerts, such as a reminder five minutes before the game starts.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 78 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy user_alert_configuration",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "user_alert_configuration",
+      "response_description": "Users can configure custom alerts, including reminders before the game starts.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "4036c713-6a70-4f85-ac30-f161fbc72b41",
+    "reqid": "REQ-042",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall you can get an amplification as well.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 78 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall always satisfy amplification_available",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "amplification_available",
+      "response_description": "It is possible to obtain an amplification from the system.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "e1d044b3-9f1b-41cd-85c0-e2d004ce6e4f",
+    "reqid": "REQ-043",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide a response to the referee within a reasonable time frame.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 80 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall within reasonable_time satisfy response_to_referee_provided",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "within reasonable_time",
+      "response_var": "response_to_referee_provided",
+      "response_description": "A response has been provided to the referee.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "cce36d7e-e44c-4fba-b1ce-c884756ab620",
+    "reqid": "REQ-044",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support functionality for fans, IFA administration, and team administration.",
+    "comments": "Type: non-functional | Priority: optional | Source: Turn 80 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy support_fans_ifa_admin_team_admin",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "support_fans_ifa_admin_team_admin",
+      "response_description": "The system provides functionality for fans, IFA administration, and team administration.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "0500d0f0-55bf-4434-bc52-b0fae9f67deb",
+    "reqid": "REQ-045",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall enable real-time communication with referees during games.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 80 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy real_time_referee_communication",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_referee_communication",
+      "response_description": "Real-time communication with referees is enabled during games.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "73f19312-2d75-4b6c-877b-d72eed4a5842",
+    "reqid": "REQ-046",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall be highly responsive and prioritize referee communications over other stadium activities.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 80 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy referee_communication_priority",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_communication_priority",
+      "response_description": "Referee communications are prioritized over other stadium activities.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d21c3b32-aa17-4ef0-b86f-f9728ca3ed93",
+    "reqid": "REQ-047",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the referee in the middle of the system and receive its response uh In a immediate immediately.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 82 (spk_1) | FRET confidence: medium",
+    "fulltext": "when referee_response_requested the system shall immediately satisfy referee_response_received",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "referee_response_requested",
+      "timing": "immediately",
+      "response_var": "referee_response_received",
+      "response_description": "The system receives the referee's response promptly after requesting it.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "3b1149a9-1f03-478e-852a-b4796d96f3dd",
+    "reqid": "REQ-048",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide real-time updates from the referee to the main console.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 82 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy real_time_referee_updates_received",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_referee_updates_received",
+      "response_description": "The main console receives real-time updates from the referee.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "30efe5e5-a576-402d-a54d-0eea19ce4a83",
+    "reqid": "REQ-049",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support a live recording feature, possibly capturing input from a side referee.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 85 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy live_recording_with_referee_input",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "live_recording_with_referee_input",
+      "response_description": "The system supports live recording, potentially including input from a side referee.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c0555910-3e81-4370-906e-74e1d637a9fe",
+    "reqid": "REQ-050",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the IFA is not a software company.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 87 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall always satisfy ifa_not_software_company",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_not_software_company",
+      "response_description": "The IFA is not a software company.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "21d49b3f-c638-4ca2-9b07-eda12555e965",
+    "reqid": "REQ-051",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall be fully outsourced for development and maintenance, with no in-house IT involvement required.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 87 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy no_in_house_it_involvement",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "no_in_house_it_involvement",
+      "response_description": "No involvement from in-house IT staff is required for the development or maintenance of the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "973bcbc9-19e8-4a38-815e-ff8105ea033c",
+    "reqid": "REQ-052",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall facilitate communication between the software development team and the IFA through the organization's IT Department.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 87 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy communication_facilitation_between_dev_team_and_ifa_via_it_department",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "communication_facilitation_between_dev_team_and_ifa_via_it_department",
+      "response_description": "Communication is enabled and supported between the software development team and the IFA through the organization's IT Department.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9056ce44-1adc-498e-8076-e43b268c69bc",
+    "reqid": "REQ-053",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall be fully managed by an external company, with the in-house IT department having no operational involvement, acting solely as a client.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 87 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy externally_managed_operation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "externally_managed_operation",
+      "response_description": "The system is fully operated and managed by an external company without involvement from the in-house IT department.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a6239fb3-a8e1-40b7-92e7-b8c0293ebb09",
+    "reqid": "REQ-054",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall the system is about to serve many people around the world.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 91 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy global_user_accessibility",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "global_user_accessibility",
+      "response_description": "The system is capable of serving many people around the world.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5895bc7e-6eff-4f48-88de-ab538404eb32",
+    "reqid": "REQ-055",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall be adjustable to comply with local regulations and local review requirements.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 91 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy compliance_with_local_regulations",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "compliance_with_local_regulations",
+      "response_description": "The system is adjustable to meet local regulations and review requirements.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "96d11c11-93c6-4d02-bebb-95ff4f4d59f6",
+    "reqid": "REQ-056",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall comply with data residency restrictions imposed by certain countries.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 91 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy data_residency_compliance",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "data_residency_compliance",
+      "response_description": "The system adheres to data residency requirements set by applicable countries.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d4c3bfc4-ecac-42c9-a37a-e03f8fc10e81",
+    "reqid": "REQ-057",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support configuration of data center locations for labeling and allocation purposes.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 93 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy data_center_location_configuration_supported",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "data_center_location_configuration_supported",
+      "response_description": "The system supports the configuration of data center locations for labeling and allocation purposes.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "75b51319-e3cb-4705-97dc-4362436102ec",
+    "reqid": "REQ-058",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall encrypt budget data to prevent unauthorized access or data leakage.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 93 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy encrypted_budget_data",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "encrypted_budget_data",
+      "response_description": "Budget data is encrypted to prevent unauthorized access or data leakage.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "915565dd-4b12-44dc-95d1-d1237cbcbd01",
+    "reqid": "REQ-059",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow players to update their social network page.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 96 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy player_social_page_update",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "player_social_page_update",
+      "response_description": "Players are able to update their social network page.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "308d41c7-9b99-40ee-b042-edef5a43e3a1",
+    "reqid": "REQ-060",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall manage their communication with defense.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 96 (spk_1) | FRET confidence: error",
+    "fulltext": "the system shall always satisfy req_060",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "parse_confidence": "error"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "90c5759e-9276-4ec3-bacc-ea1f3e15efb7",
+    "reqid": "REQ-061",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall assign responsibility for team management to the team administration, manager, and owner.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 99 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy responsibility_assigned_to_team_admin_manager_owner",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "responsibility_assigned_to_team_admin_manager_owner",
+      "response_description": "Responsibility for team management is assigned to the team administration, manager, and owner.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2479a82d-c38a-4d6c-ba00-2b74c6e59c49",
+    "reqid": "REQ-062",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support team registration for leagues, season setup, referee registration, and fan registration as core functionality.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 103 (spk_1) | FRET confidence: error",
+    "fulltext": "the system shall always satisfy req_062",
+    "status": "essential",
+    "_fret_decomposition": {
+      "parse_confidence": "error"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "230caa8a-2c04-4e33-922b-7050ae9fe50f",
+    "reqid": "REQ-063",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support budgeting and scheduling functionalities in the second phase.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 103 (spk_1) | FRET confidence: high",
+    "fulltext": "in the second phase the system shall always satisfy budgeting_and_scheduling_support",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "in the second phase",
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "budgeting_and_scheduling_support",
+      "response_description": "The system provides both budgeting and scheduling functionalities.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "53f61c82-1b35-4379-95a6-7c540bae48b3",
+    "reqid": "REQ-064",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the referee to update game information in real time.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 103 (spk_1) | FRET confidence: error",
+    "fulltext": "the system shall always satisfy req_064",
+    "status": "essential",
+    "_fret_decomposition": {
+      "parse_confidence": "error"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f6611d45-72d3-407f-9961-a04b20d1388a",
+    "reqid": "REQ-065",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA representative administration role to manage budgeting, scheduling, and all related activities.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 110 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_rep_admin_role_can_manage_budgeting_scheduling_and_activities",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_rep_admin_role_can_manage_budgeting_scheduling_and_activities",
+      "response_description": "The IFA representative administration role can manage budgeting, scheduling, and all related activities.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "186b595b-9206-4dba-9ce7-46714ce23d23",
+    "reqid": "REQ-066",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall define a single administrative role responsible for budget, scheduling, and activity management.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 112 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy single_admin_role_defined",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "single_admin_role_defined",
+      "response_description": "There is exactly one administrative role responsible for budget, scheduling, and activity management.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "fba6a5d3-0321-41ad-aa8b-3fbbd6bcf03a",
+    "reqid": "REQ-067",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow team managers or owners to register their team via the internet for identification purposes.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 117 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_registration_via_internet",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_registration_via_internet",
+      "response_description": "Team managers or owners can register their team over the internet for identification purposes.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ade5b33c-d55f-4fb3-82fe-4a6e7d7fcf16",
+    "reqid": "REQ-068",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall otherwise it would be just a guest.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 117 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall satisfy valid_user_authentication",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "valid_user_authentication",
+      "response_description": "The system ensures that a user is authenticated and not treated as a guest.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "49bee796-594b-44ce-bf54-5a7567880a72",
+    "reqid": "REQ-069",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow team managers or owners to submit a new team registration with valid documents, which can be approved by the IFA.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 119 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy team_registration_submission_with_valid_documents",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_registration_submission_with_valid_documents",
+      "response_description": "Team managers or owners can submit a new team registration with valid documents that may be approved by the IFA.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f3eaaaa1-5b27-45bd-9846-0e1be27ff5fc",
+    "reqid": "REQ-070",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall retain all past scheduling archives.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 121 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy past_scheduling_archives_retained",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "past_scheduling_archives_retained",
+      "response_description": "All historical scheduling data is preserved and available in the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ca8c0e05-455a-4472-aafa-bb99b1f21684",
+    "reqid": "REQ-071",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall retain team, referee, and player registration data.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 121 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy registration_data_retained",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "registration_data_retained",
+      "response_description": "Team, referee, and player registration data is retained by the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "14235f70-cbb6-40d9-8276-750731938097",
+    "reqid": "REQ-072",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA to define leagues, define seasons, appoint or register referees, and set policies for budgets and scheduling.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 121 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_admin_capabilities",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_admin_capabilities",
+      "response_description": "The IFA can define leagues, define seasons, appoint or register referees, and set policies for budgets and scheduling.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "553e2601-eb00-4df7-9053-f43fc3f4bd4d",
+    "reqid": "REQ-073",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow referees to be appointed by the IFA.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 123 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall satisfy referee_appointment_by_ifa",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": null,
+      "response_var": "referee_appointment_by_ifa",
+      "response_description": "Referees can be appointed by the IFA through the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "54b24311-5805-48ed-9e5b-613b703ceb98",
+    "reqid": "REQ-074",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the team to enter player details into the system.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 123 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy player_details_entry_allowed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "player_details_entry_allowed",
+      "response_description": "The team is permitted to enter player details into the system.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "78a88119-2b09-4475-8f8c-f9c2255f8e64",
+    "reqid": "REQ-075",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall maintain a complete audit log of every action performed by IFA administrators.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 127 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy complete_audit_log_maintained",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "complete_audit_log_maintained",
+      "response_description": "A complete audit log exists for every action performed by IFA administrators.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9572261e-bda7-4ec5-8496-1d92235255f2",
+    "reqid": "REQ-076",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall enable referees to enter match events in real time via mobile phones to ensure accountability and compliance auditing.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 127 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy real_time_match_event_entry",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_match_event_entry",
+      "response_description": "Referees can enter match events in real time using mobile phones.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "31035ab0-2ece-4ab2-968c-63d8cf47c2ed",
+    "reqid": "REQ-077",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide a financial summary dashboard for the IFA to view key budget metrics across all teams.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 127 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy financial_summary_dashboard_available",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "financial_summary_dashboard_available",
+      "response_description": "A financial summary dashboard is available for the IFA to view key budget metrics across all teams.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a9b6669d-9b70-43b2-970f-580ecc419cff",
+    "reqid": "REQ-078",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall provide a public API for journalists to pull game data programmatically in a later version.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 127 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall eventually satisfy public_api_for_game_data",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "eventually",
+      "response_var": "public_api_for_game_data",
+      "response_description": "A public API is available for journalists to programmatically access game data.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "0783f044-7feb-4631-a2c6-59a94ffc3d7c",
+    "reqid": "REQ-079",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow referees to enter match events into the application in real time during the match.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 129 (spk_1) | FRET confidence: high",
+    "fulltext": "in match_mode the system shall always satisfy real_time_match_event_entry_by_referee",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "in match_mode",
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "real_time_match_event_entry_by_referee",
+      "response_description": "Referees can enter match events into the application in real time during the match.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "f97df5a8-aa24-4376-8cf3-b9b8735390d4",
+    "reqid": "REQ-080",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall automatically notify any fan who has registered to follow a specific game if the schedule for that game is changed.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 131 (spk_1) | FRET confidence: high",
+    "fulltext": "when game_schedule_changed the system shall immediately satisfy fan_schedule_notification_sent",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "game_schedule_changed",
+      "timing": "immediately",
+      "response_var": "fan_schedule_notification_sent",
+      "response_description": "A notification has been sent to a registered fan about a change in the game schedule.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a170f3b3-935c-4d08-9205-82c6daa414b7",
+    "reqid": "REQ-081",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall display a live standings table showing current league rankings during the season.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 133 (spk_1) | FRET confidence: high",
+    "fulltext": "in season the system shall always satisfy live_standings_table_displayed",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "in season",
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "live_standings_table_displayed",
+      "response_description": "A live standings table showing the current league rankings is displayed.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "292424b1-f1e0-4f07-9fa9-9921761bc8e8",
+    "reqid": "REQ-082",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow fans to compare player statistics such as goals and appearances side by side.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 133 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy side_by_side_player_comparison",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "side_by_side_player_comparison",
+      "response_description": "Fans can compare player statistics such as goals and appearances side by side.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "6ffce91a-ae58-4e89-9a31-69bd25e82451",
+    "reqid": "REQ-083",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall perform daily backups of all data.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 135 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy daily_data_backup_performed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "daily_data_backup_performed",
+      "response_description": "A daily backup of all data has been successfully performed.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ff82de34-79cb-49ca-ba1c-010f0025c381",
+    "reqid": "REQ-084",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall require administrator accounts to use a second form of verification for accessing sensitive financial data.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 135 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy admin_two_factor_verification_for_sensitive_data",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "admin_two_factor_verification_for_sensitive_data",
+      "response_description": "Administrator accounts must use a second form of verification when accessing sensitive financial data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "21255fea-4622-4f80-8aeb-3243b3ba517a",
+    "reqid": "REQ-085",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow fans to filter upcoming fixtures by team or by date.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 139 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy filter_fixtures_by_team_or_date",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "filter_fixtures_by_team_or_date",
+      "response_description": "Fans can filter upcoming fixtures based on a specific team or a specific date.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "9debddd7-98ca-4912-a9b1-e71ce7958422",
+    "reqid": "REQ-086",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall it is not essential for day one but we would like to have it.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 139 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall eventually satisfy optional_day_one_feature",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "eventually",
+      "response_var": "optional_day_one_feature",
+      "response_description": "The system includes a feature that is not essential for day one but is desired.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "b8d5d2e6-98d6-4b16-8191-2d1d64a46e91",
+    "reqid": "REQ-087",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall it is important but probably not needed for the first release.",
+    "comments": "Type: non-functional | Priority: preferred | Source: Turn 141 (spk_1) | FRET confidence: low",
+    "fulltext": "the system shall satisfy first_release_non_critical_requirement",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": null,
+      "response_var": "first_release_non_critical_requirement",
+      "response_description": "The system satisfies a requirement that is important but not necessary for the first release.",
+      "parse_confidence": "low"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "531a9cf7-8cf7-4077-8853-aa9af581720c",
+    "reqid": "REQ-088",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall support the ability to post comments or reactions on match events, to be considered for implementation in a second phase.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 141 (spk_1) | FRET confidence: medium",
+    "fulltext": "the system shall eventually satisfy support_match_event_interactions",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "eventually",
+      "response_var": "support_match_event_interactions",
+      "response_description": "The system supports posting comments or reactions on match events.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ce95a27e-291a-434f-8586-0046ff0fda99",
+    "reqid": "REQ-089",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow fans to post comments or reactions on match events in the portal.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 143 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy fan_event_interaction_enabled",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fan_event_interaction_enabled",
+      "response_description": "Fans are able to post comments or reactions on match events through the portal.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "385c122b-4ab9-4a32-b5f9-e1be226e272c",
+    "reqid": "REQ-090",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow consideration of additional features after core functionality is implemented, if time permits.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 143 (spk_1) | FRET confidence: medium",
+    "fulltext": "after core_functionality_implemented the system shall eventually satisfy additional_features_consideration",
+    "status": "optional",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "after core_functionality_implemented",
+      "condition_var": "time_permits",
+      "timing": "eventually",
+      "response_var": "additional_features_consideration",
+      "response_description": "The system allows consideration of additional features when there is time after core functionality is implemented.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c46d6b2a-e3dd-435c-9d1e-72cd975eda54",
+    "reqid": "REQ-091",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow referees to flag disputed events for review.",
+    "comments": "Type: functional | Priority: optional | Source: Turn 144 (spk_2) | FRET confidence: error",
+    "fulltext": "the system shall always satisfy req_091",
+    "status": "optional",
+    "_fret_decomposition": {
+      "parse_confidence": "error"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "1b381a12-423e-4fd5-a8f8-50f491a921f1",
+    "reqid": "REQ-092",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow each team to independently record and manage its own financial income and expenditure.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 147 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy team_financial_management",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "team_financial_management",
+      "response_description": "Each team can independently record and manage its own financial income and expenditure.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "96ceead4-4e6c-4954-8f55-ab1c3e9bfd84",
+    "reqid": "REQ-093",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall automatically generate the season schedule for each league at the start of the season.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 148 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall immediately satisfy season_schedule_generation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "at the start of the season",
+      "condition_var": null,
+      "timing": "immediately",
+      "response_var": "season_schedule_generation",
+      "response_description": "The season schedule has been automatically generated.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "2fe8823d-de86-448e-adf2-7e4cc61c41ab",
+    "reqid": "REQ-094",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow the IFA to set scheduling rules, including home and away rotation, minimum rest periods between fixtures, and permitted match days.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 151 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_scheduling_rules_configuration",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_scheduling_rules_configuration",
+      "response_description": "The IFA can configure scheduling rules such as home and away rotation, minimum rest periods, and permitted match days.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "888cf324-52b1-4f91-a2ea-0cc0af656eb9",
+    "reqid": "REQ-095",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall record the reason for any match schedule change made by an IFA administrator and require confirmation of the change by a second administrator.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 152 (spk_2) | FRET confidence: medium",
+    "fulltext": "when match_schedule_change_by_ifa_admin the system shall always satisfy match_change_reason_recorded and require second_admin_confirmation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "match_schedule_change_by_ifa_admin",
+      "timing": "always",
+      "response_var": "match_change_reason_recorded_and_second_admin_confirmation_required",
+      "response_description": "The system records the reason for a match schedule change initiated by an IFA administrator and requires confirmation from a second administrator before proceeding.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "152fc358-7c3f-44e6-98d2-6a6dff7ad936",
+    "reqid": "REQ-096",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall be capable of handling a minimum of fifty thousand concurrent active users without performance degradation.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 155 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy fifty_thousand_concurrent_users_capacity",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fifty_thousand_concurrent_users_capacity",
+      "response_description": "The system can handle at least fifty thousand concurrent active users without performance degradation.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d1cd8940-6af7-44f3-87c1-59a2348dcdd1",
+    "reqid": "REQ-097",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall require users to have an account to perform any actions beyond read-only access, and shall grant read-only guest access to unregistered users.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 156 (spk_2) | FRET confidence: medium",
+    "fulltext": "the system shall always satisfy account_required_for_non_read_actions and satisfy guest_read_access_granted",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "account_required_for_non_read_actions",
+      "response_description": "Users must have an account to perform any actions that are not read-only.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "e059e2a9-46eb-4a9a-9c45-727fbfd088fa",
+    "reqid": "REQ-098",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall a new team shall be registered in the system only after the team owner has submitted the required official documents to the IFA and the IFA has approved the application.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 159 (spk_1) | FRET confidence: medium",
+    "fulltext": "only after team_owner_submits_documents and ifa_approves_application the system shall satisfy new_team_registered",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "only after team_owner_submits_documents and ifa_approves_application",
+      "condition_var": null,
+      "timing": null,
+      "response_var": "new_team_registered",
+      "response_description": "A new team is registered in the system.",
+      "parse_confidence": "medium"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "23416bdb-fc8f-416f-aa29-5e9c77019d18",
+    "reqid": "REQ-099",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall alert the IFA when a team's recorded salary expenditure exceeds the wage cap defined in the IFA budget policy.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 160 (spk_2) | FRET confidence: high",
+    "fulltext": "when team_salary_exceeds_wage_cap the system shall immediately satisfy ifa_alerted_on_salary_cap_breach",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "team_salary_exceeds_wage_cap",
+      "timing": "immediately",
+      "response_var": "ifa_alerted_on_salary_cap_breach",
+      "response_description": "An alert has been sent to the IFA indicating that a team's salary expenditure has exceeded the wage cap.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "215761f8-b23f-463b-82f8-15e8c3436a49",
+    "reqid": "REQ-100",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall record the exact minute and the identity of the scorer when a goal is logged during a match.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 163 (spk_1) | FRET confidence: high",
+    "fulltext": "when goal_is_logged_during_match the system shall immediately satisfy goal_scorer_and_time_recorded",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "goal_is_logged_during_match",
+      "timing": "immediately",
+      "response_var": "goal_scorer_and_time_recorded",
+      "response_description": "The identity of the scorer and the exact minute of the goal are recorded.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ce5e6a0d-ee26-425c-b275-22b247051283",
+    "reqid": "REQ-101",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall you mentioned referees should not be assigned repeatedly to the same team \u2014 does that mean no back-to-back assignments for the same team.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 164 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall never satisfy referee_assigned_consecutively_to_same_team",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "never",
+      "response_var": "referee_assigned_consecutively_to_same_team",
+      "response_description": "A referee is assigned to the same team in consecutive assignments.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "a1d4c88b-41be-4509-836e-36055297c2b1",
+    "reqid": "REQ-102",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall prevent the assignment of a referee to a team's match if that referee officiated the same team in the immediately preceding round.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 165 (spk_1) | FRET confidence: high",
+    "fulltext": "when referee_officiated_same_team_previous_round the system shall never satisfy referee_assigned_to_team_match",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "referee_officiated_same_team_previous_round",
+      "timing": "never",
+      "response_var": "referee_assigned_to_team_match",
+      "response_description": "A referee is assigned to officiate a match for a team they previously officiated in the immediately preceding round.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "1ef34bc7-cb96-4c29-8b9f-138fa13b7ec9",
+    "reqid": "REQ-103",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall send a notification to fans who follow a specific player when that player scores a goal during a match.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 167 (spk_1) | FRET confidence: high",
+    "fulltext": "when player_scores_goal the system shall immediately satisfy notification_sent_to_following_fans",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": "player_scores_goal",
+      "timing": "immediately",
+      "response_var": "notification_sent_to_following_fans",
+      "response_description": "A notification has been sent to fans who follow the player that scored a goal.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "ae9ef60e-c869-4abc-b72d-667ed0f93010",
+    "reqid": "REQ-104",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow fans to follow an entire football club to receive all notifications related to that club's matches and activities.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 168 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy fan_club_following_enabled",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "fan_club_following_enabled",
+      "response_description": "Fans can follow an entire football club to receive all notifications about its matches and activities.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "d0ff1bdf-6f70-4ed8-bf88-2c51d045053e",
+    "reqid": "REQ-105",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow a team administrator to register a newly signed player by entering the player's personal details and position.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 171 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall satisfy player_registration_by_admin",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": null,
+      "response_var": "player_registration_by_admin",
+      "response_description": "A team administrator can register a newly signed player by entering the player's personal details and position.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "13bcc708-fea6-45f5-8d4d-bdc1534800c7",
+    "reqid": "REQ-106",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall preserve the final league table and all match results for every completed season permanently.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 172 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy permanent_storage_of_completed_season_data",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "permanent_storage_of_completed_season_data",
+      "response_description": "The final league table and all match results for every completed season are preserved permanently.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "bd93013d-76e9-4c91-89c2-06f76fd49db5",
+    "reqid": "REQ-107",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall display each team's home and away match records separately within the league standings.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 175 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy separate_home_away_match_records_displayed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "separate_home_away_match_records_displayed",
+      "response_description": "The system displays each team's home and away match records separately in the league standings.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "16adb7fb-e755-4ee8-80dd-789cb05392b5",
+    "reqid": "REQ-108",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall display a top goal-scorer leaderboard for the current season.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 175 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy top_goal_scorer_leaderboard_displayed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "top_goal_scorer_leaderboard_displayed",
+      "response_description": "The top goal-scorer leaderboard for the current season is displayed.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "e7faec8c-ba66-47f9-8fa8-92db94c375e5",
+    "reqid": "REQ-109",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow IFA administrators to generate a financial summary report for any specified date range.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 176 (spk_2) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy ifa_admin_financial_summary_report_generated",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "ifa_admin_financial_summary_report_generated",
+      "response_description": "An IFA administrator can generate a financial summary report for any specified date range.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "5eafd54b-25e5-41f9-b43c-ff2bd2007861",
+    "reqid": "REQ-110",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall allow team administrators to attach supporting documents such as invoices or contracts to individual budget transactions.",
+    "comments": "Type: functional | Priority: preferred | Source: Turn 177 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy supporting_document_attachment",
+    "status": "preferred",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "supporting_document_attachment",
+      "response_description": "Team administrators can attach supporting documents like invoices or contracts to individual budget transactions.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "cf01f3f8-9f13-4f31-a2d2-448afb446aaf",
+    "reqid": "REQ-111",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall display the venue and kick-off time for every scheduled match.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 179 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy match_venue_and_kickoff_displayed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "match_venue_and_kickoff_displayed",
+      "response_description": "The venue and kick-off time are displayed for each scheduled match.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "7dd8052e-445c-4e80-a265-421d3f9f8178",
+    "reqid": "REQ-112",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall display the name of the assigned referee for each upcoming match.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 179 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall always satisfy referee_name_displayed",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "always",
+      "response_var": "referee_name_displayed",
+      "response_description": "The name of the assigned referee is displayed for each upcoming match.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "1f90d520-633a-43b9-8028-f35378c7d7da",
+    "reqid": "REQ-113",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall require unregistered users to agree to the terms of service before accessing any game data.",
+    "comments": "Type: non-functional | Priority: essential | Source: Turn 181 (spk_1) | FRET confidence: high",
+    "fulltext": "before accessing_game_data the system shall require terms_of_service_agreement_from_unregistered_users",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": "before accessing_game_data",
+      "condition_var": null,
+      "timing": null,
+      "response_var": "terms_of_service_agreement_from_unregistered_users",
+      "response_description": "Unregistered users must agree to the terms of service before they can access game data.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "e21fb812-d256-4998-915b-2144aace09de",
+    "reqid": "REQ-114",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall not allow unregistered users to access game data or results.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 181 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall never satisfy unregistered_user_game_data_access",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "never",
+      "response_var": "unregistered_user_game_data_access",
+      "response_description": "An unregistered user has accessed game data or results.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  },
+  {
+    "_id": "c1e75045-3743-44b0-90cc-e5ed28b54944",
+    "reqid": "REQ-115",
+    "parent_reqid": "",
+    "project": "LLM-Pipeline",
+    "rationale": "The system shall not generate schedules automatically; schedules shall be created manually by administrators.",
+    "comments": "Type: functional | Priority: essential | Source: Turn 183 (spk_1) | FRET confidence: high",
+    "fulltext": "the system shall never satisfy season_schedule_generation",
+    "status": "essential",
+    "_fret_decomposition": {
+      "component": "system",
+      "scope": null,
+      "condition_var": null,
+      "timing": "never",
+      "response_var": "season_schedule_generation",
+      "response_description": "The schedule has been automatically generated without administrator input.",
+      "parse_confidence": "high"
+    },
+    "semantics": {}
+  }
+]

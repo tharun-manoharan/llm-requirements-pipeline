@@ -429,5 +429,21 @@
     "statement": "The system shall display the name of the assigned referee for each upcoming match.",
     "source": "Turn 179 (spk_1)",
     "note": "Added in augmented dataset. Distinct from GT-058 (venue and timing). Keep both GT-058 and GT-059."
+  },
+  {
+    "id": "GT-060",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall never allow unregistered users to access game data or results.",
+    "source": "Turn 181 (spk_1)",
+    "note": "Added in augmented dataset. CONTRADICTS GT-010 ('allow all users including unregistered guests to view game data'). Annotated in contradiction_cases.json as CONTRA-001."
+  },
+  {
+    "id": "GT-061",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall never automatically generate match schedules.",
+    "source": "Turn 183 (spk_1)",
+    "note": "Added in augmented dataset. CONTRADICTS GT-013 ('automatically generate match schedules based on registered teams and IFA policies'). Annotated in contradiction_cases.json as CONTRA-002."
   }
 ]

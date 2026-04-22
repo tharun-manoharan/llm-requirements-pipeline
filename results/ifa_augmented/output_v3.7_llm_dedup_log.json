@@ -1,0 +1,92 @@
+[
+  {
+    "removed": "The system shall assign responsibility for managing the budget to individual teams, not solely to the IFA.",
+    "duplicate_of": "The system shall allow each team to manage its own budget.",
+    "confidence": "high",
+    "reason": "Both assign budget management responsibility to teams; [2] is less specific than [0]."
+  },
+  {
+    "removed": "The system shall allow the aggregated data to be accessible to all users.",
+    "duplicate_of": "The system shall allow all users to view the complete aggregated data.",
+    "confidence": "high",
+    "reason": "Both state that aggregated data is accessible to all users; [13] is redundant with [9]."
+  },
+  {
+    "removed": "The system shall they can only access their own data.",
+    "duplicate_of": "The system shall allow the insertion of budget transactions and items only by the respective teams.",
+    "confidence": "high",
+    "reason": "Both state that teams can only access their own data; [18] is less specific and redundant with [17]."
+  },
+  {
+    "removed": "The system shall automatically generate the full match schedule for each league at the start of every season.",
+    "duplicate_of": "The system shall automatically generate the season schedule for each league at the start of the season.",
+    "confidence": "high",
+    "reason": "Both describe automatic generation of the full match schedule at the start of the season; [100] duplicates [99]."
+  },
+  {
+    "removed": "The system shall alert the IFA when a team's recorded salary expenditure exceeds the wage cap defined in the IFA budget policy.",
+    "duplicate_of": "The system shall alert the IFA when a team's recorded salary expenditure exceeds the wage cap defined in the IFA budget policy.",
+    "confidence": "high",
+    "reason": "Both specify alerting the IFA when a team exceeds the wage cap; [110] is identical to [109]."
+  },
+  {
+    "removed": "The system shall preserve the final league table and all match results for every completed season.",
+    "duplicate_of": "The system shall preserve the final league table and all match results for every completed season permanently.",
+    "confidence": "high",
+    "reason": "Both require preserving final league tables and match results permanently; [119] duplicates [118]."
+  },
+  {
+    "removed": "The system shall allow IFA administrators to generate a financial summary report for any specified date range.",
+    "duplicate_of": "The system shall allow IFA administrators to generate a financial summary report for any specified date range.",
+    "confidence": "high",
+    "reason": "Both allow IFA administrators to generate financial summary reports for any date range; [123] duplicates [122]."
+  },
+  {
+    "removed": "The system shall allow a fan to follow a specific football club so that they receive all notifications related to that club's matches and activities.",
+    "duplicate_of": "The system shall allow fans to follow an entire football club to receive all notifications related to that club's matches and activities.",
+    "confidence": "high",
+    "reason": "Both describe fans following a club to receive related notifications; [116] is a rephrased duplicate of [115]."
+  },
+  {
+    "removed": "The system shall when an IFA administrator modifies the generated schedule, the system shall require them to document their reason for the change and have a different IFA administrator authorise it.",
+    "duplicate_of": "The system shall record the reason for any match schedule change made by an IFA administrator and require confirmation of the change by a second administrator.",
+    "confidence": "medium",
+    "reason": "Both require documenting and authorizing schedule changes by IFA administrators; [103] adds no distinct behaviour beyond [102]."
+  },
+  {
+    "removed": "The system shall implement reliable data backup mechanisms to prevent loss of financial and scheduling records.",
+    "duplicate_of": "The system shall perform daily backups of all data.",
+    "confidence": "medium",
+    "reason": "Both refer to data backup mechanisms; [88] is a general restatement of [87]'s daily backup requirement."
+  },
+  {
+    "removed": "The system shall require administrator accounts to use a second form of verification before granting access.",
+    "duplicate_of": "The system shall require administrator accounts to use a second form of verification for accessing sensitive financial data.",
+    "confidence": "high",
+    "reason": "Both require second-factor verification for administrator access to sensitive data; [90] is less specific than [89]."
+  },
+  {
+    "removed": "The system shall provide read-only guest access to users who have not registered.",
+    "duplicate_of": "The system shall require users to have an account to perform any actions beyond read-only access, and shall grant read-only guest access to unregistered users.",
+    "confidence": "high",
+    "reason": "Both provide read-only guest access to unregistered users; [107] duplicates [105]."
+  },
+  {
+    "removed": "The system shall be required to create an account and sign in to use the system.",
+    "duplicate_of": "The system shall require users to have an account to perform any actions beyond read-only access, and shall grant read-only guest access to unregistered users.",
+    "confidence": "medium",
+    "reason": "Both address user account requirements; [106] is a less complete version of [105]'s access rules."
+  },
+  {
+    "removed": "The system shall make all data accessible to everyone except for budget data, which shall be restricted.",
+    "duplicate_of": "The system shall encrypt budget data to prevent unauthorized access or data leakage.",
+    "confidence": "medium",
+    "reason": "Both address budget data restriction; [61] states access control while [62] specifies encryption as the method."
+  },
+  {
+    "removed": "The system shall alert administrators to budget violations.",
+    "duplicate_of": "The system shall alert the IFA when a team's recorded salary expenditure exceeds the wage cap defined in the IFA budget policy.",
+    "confidence": "low",
+    "reason": "Both involve budget violation alerts, but [4] is generic while [109] specifies wage cap; kept separate due to scope difference."
+  }
+]

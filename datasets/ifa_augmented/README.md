@@ -2,13 +2,13 @@
 
 **Status:** Public
 **Based on:** `datasets/ifa/` (the original IFA sports system requirements-elicitation session)
-**Purpose:** Stress-test the pipeline's deduplication stage and priority-extraction stages with concrete, annotated examples.
+**Purpose:** Stress-test the pipeline's deduplication, priority-extraction, and FRET contradiction-detection stages with concrete, annotated examples.
 
 ---
 
 ## What was changed and why
 
-The original `datasets/ifa/` transcript was **not modified**. This dataset is a copy of that transcript with **54 new dialogue turns appended** before the closing remarks (after the original Turn 125). The original 41 ground-truth requirements are unchanged; 18 new requirements (GT-042 to GT-059) are added.
+The original `datasets/ifa/` transcript was **not modified**. This dataset is a copy of that transcript with **58 new dialogue turns appended** before the closing remarks (after the original Turn 125). The original 41 ground-truth requirements are unchanged; 20 new requirements (GT-042 to GT-061) are added, including 2 requirements that intentionally contradict existing ones (GT-060, GT-061).
 
 ### Change 1 — MoSCoW priority language (Turns 126–127)
 
@@ -128,10 +128,39 @@ The original `datasets/ifa/` transcript was **not modified**. This dataset is a 
 
 | File | Description |
 |------|-------------|
-| `conversation.txt` | Augmented transcript (original IFA + 54 new turns) |
-| `expected.json` | Ground-truth requirements after correct deduplication (GT-001 to GT-059; duplicates excluded) |
+| `conversation.txt` | Augmented transcript (original IFA + 58 new turns) |
+| `expected.json` | Ground-truth requirements (GT-001 to GT-061; deduplication duplicates excluded; contradicting pairs both included) |
 | `dedup_cases.json` | Annotated deduplication test cases with expected confidence levels and actions |
+| `contradiction_cases.json` | Annotated contradiction test cases with expected FRETish translations and FRET detection mechanism |
 | `README.md` | This file |
+
+---
+
+---
+
+### Changes 26–27 — Contradiction pairs (Turns 180–183)
+
+**What:** Two exchanges in which the stakeholder reverses a position taken earlier in the original session, producing requirements that directly contradict pre-existing ground-truth requirements.
+
+**Why:** Tests the pipeline end-to-end for contradiction detection via the FRET stage. For FRET to detect a contradiction it needs two requirements where the same `response_var` appears under `always` and `never` respectively. Both contradiction pairs are designed so the concept is identical and the LLM is highly likely to assign the same `response_var` to both FRETish translations. The expected LTL pattern is `G(X) ∧ G(!X)`, which is unsatisfiable — FRET's Kind2 realizability checker will report the requirement set as unrealizable and highlight the conflicting pair.
+
+**New requirements added:**
+
+| ID | Statement | Contradicts | FRET-detectable? |
+|----|-----------|-------------|-----------------|
+| GT-060 | The system shall never allow unregistered users to access game data or results. | GT-010 | Yes — same `response_var` under `always`/`never` |
+| GT-061 | The system shall never automatically generate match schedules. | GT-013 | Yes — same `response_var` under `always`/`never` |
+
+**Documented in:** `contradiction_cases.json` as `CONTRA-001` and `CONTRA-002`.
+
+---
+
+## Contradiction test summary
+
+| Case | Contradicting GTs | Source turns | Expected FRETish A | Expected FRETish B | FRET-detectable |
+|------|-------------------|-------------|-------------------|--------------------|-----------------|
+| CONTRA-001 | GT-010 vs GT-060 | 21 vs 180–181 | `always satisfy unregistered_user_game_data_access` | `never satisfy unregistered_user_game_data_access` | Yes |
+| CONTRA-002 | GT-013 vs GT-061 | 43 vs 182–183 | `always satisfy automatic_match_schedule_generation` | `never satisfy automatic_match_schedule_generation` | Yes |
 
 ---
 
