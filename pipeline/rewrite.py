@@ -8,7 +8,7 @@ Supports two modes:
 import re
 import time
 
-from pipeline.llm_client import get_llm_client, LLM_MODEL
+from pipeline.llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Naive (regex) rewriter - kept as fallback
@@ -69,7 +69,6 @@ def _apply_rules(sentence: str) -> str:
 # LLM rewriter - Groq API (Llama 3.3 70B)
 # ---------------------------------------------------------------------------
 
-_LLM_MODEL = LLM_MODEL
 
 _SYSTEM_PROMPT = """\
 You are a requirements engineer. You will be given a sentence from a \
@@ -135,15 +134,12 @@ def _rewrite_with_llm(sentence: str, context: str = "") -> tuple[str, str] | Non
 
     Returns (priority, normalised_statement) or None if not a requirement.
     """
-    client = get_llm_client()
-
     if context:
         user_msg = f"Context:\n{context}\n\nTARGET sentence:\n{sentence}"
     else:
         user_msg = sentence
 
-    resp = client.chat.completions.create(
-        model=_LLM_MODEL,
+    resp = call_llm(
         messages=[
             {"role": "system", "content": _SYSTEM_PROMPT},
             {"role": "user", "content": user_msg},

@@ -1,23 +1,63 @@
-"""Pipeline orchestrator - chains all 5 stages and provides a CLI entry point."""
+"""Pipeline orchestrator - chains all stages and provides a CLI entry point."""
 
 import json
 import sys
 
 from pipeline.ingest import parse_conversation
-from pipeline.segment import segment_turns
-from pipeline.detect import detect_candidates
+from pipeline.naive import segment_turns, detect_candidates
 from pipeline.extract import extract_candidates_llm
 from pipeline.rewrite import rewrite_requirements
 from pipeline.deduplicate import deduplicate_requirements
-from pipeline.structure import structure_requirements
 from pipeline.fret import export_fret_json
 
 DIVIDER = "=" * 72
 
 
+def structure_requirements(rewritten: list[dict], turns: list[dict]) -> list[dict]:
+    """Assign sequential IDs and emit the final structured requirements list.
+
+    Each requirement has: id, type, priority, statement, source.
+    """
+    role_lookup = {t["turn_index"]: t["role"] for t in turns}
+    result = []
+    for i, req in enumerate(rewritten, start=1):
+        source_turn = req["source_turn"]
+        result.append({
+            "id": f"REQ-{i:03d}",
+            "type": req["req_type"],
+            "priority": req.get("priority", "preferred"),
+            "statement": req["normalised"],
+            "source": f"Turn {source_turn} ({role_lookup.get(source_turn, 'unknown')})",
+        })
+    return result
+
+
 def run_pipeline(raw_text: str, rewrite_mode: str = "naive") -> tuple[list[dict], list[dict]]:
-    """Run the full pipeline and return (requirements, dedup_log)."""
+    """Run the full pipeline and return (requirements, dedup_log).
+
+    rewrite_mode options:
+      "naive"       - keyword segmentation + regex rewriting (no LLM)
+      "llm"         - modular LLM pipeline: extract -> rewrite -> dedup
+      "merged-full" - single LLM call: extract + rewrite + dedup together
+      "merged-er"   - single LLM call: extract + rewrite; then separate dedup
+      "merged-rd"   - separate extract; then single LLM call: rewrite + dedup
+    """
     turns = parse_conversation(raw_text)
+
+    if rewrite_mode == "merged-full":
+        from pipeline.merged import run_merged_full
+        rewritten, dedup_log = run_merged_full(turns)
+        return structure_requirements(rewritten, turns), dedup_log
+
+    if rewrite_mode == "merged-er":
+        from pipeline.merged import run_merged_extract_rewrite
+        rewritten, dedup_log = run_merged_extract_rewrite(turns)
+        return structure_requirements(rewritten, turns), dedup_log
+
+    if rewrite_mode == "merged-rd":
+        from pipeline.merged import run_merged_rewrite_dedup
+        rewritten, dedup_log = run_merged_rewrite_dedup(turns)
+        return structure_requirements(rewritten, turns), dedup_log
 
     if rewrite_mode == "llm":
         candidates = extract_candidates_llm(turns)
@@ -119,32 +159,42 @@ def main():
     """Read from a file argument or stdin, run pipeline, print JSON to stdout.
 
     Usage:
-        python -m pipeline.run <file>                              Normal mode (JSON to stdout)
-        python -m pipeline.run --trace <file>                      Trace mode (every stage)
-        python -m pipeline.run --llm <file>                        LLM rewrite mode
-        python -m pipeline.run --llm --trace <file>                LLM + trace
-        python -m pipeline.run --llm --output <out.json> <file>    LLM + save to file (dedup log saved alongside)
-        python -m pipeline.run --llm --fret <file>                 LLM + FRET export
+        python -m pipeline.run <file>                              Naive mode (JSON to stdout)
+        python -m pipeline.run --trace <file>                      Naive + trace mode
+        python -m pipeline.run --llm <file>                        Modular LLM mode
+        python -m pipeline.run --llm --trace <file>                Modular LLM + trace
+        python -m pipeline.run --llm --output <out.json> <file>    Modular LLM + save to file
+        python -m pipeline.run --llm --fret <file>                 Modular LLM + FRET export
+        python -m pipeline.run --merged-full <file>                Merged: extract+rewrite+dedup in 1 call
+        python -m pipeline.run --merged-er <file>                  Merged: extract+rewrite in 1 call, sep. dedup
+        python -m pipeline.run --merged-rd <file>                  Merged: sep. extract, rewrite+dedup in 1 call
         python -m pipeline.run --fret-only <output.json>           FRET export from existing output JSON
     """
     flags = [a for a in sys.argv[1:] if a.startswith("-")]
     args  = [a for a in sys.argv[1:] if not a.startswith("-")]
 
-    trace        = "--trace"     in flags
-    rewrite_mode = "llm"         if "--llm"       in flags else "naive"
-    fret_export  = "--fret"      in flags
-    fret_only    = "--fret-only" in flags
+    trace       = "--trace"     in flags
+    fret_export = "--fret"      in flags
+    fret_only   = "--fret-only" in flags
 
-    # --output <path>: write JSON to file instead of stdout
+    if "--merged-full" in flags:
+        rewrite_mode = "merged-full"
+    elif "--merged-er" in flags:
+        rewrite_mode = "merged-er"
+    elif "--merged-rd" in flags:
+        rewrite_mode = "merged-rd"
+    elif "--llm" in flags:
+        rewrite_mode = "llm"
+    else:
+        rewrite_mode = "naive"
+
     output_path = None
     if "--output" in flags:
         idx = sys.argv.index("--output")
         if idx + 1 < len(sys.argv):
             output_path = sys.argv[idx + 1]
-            # remove from args so it isn't treated as input file
             args = [a for a in args if a != output_path]
 
-    # --fret-only: skip pipeline, convert an existing output JSON to FRET
     if fret_only:
         if not args:
             print("Usage: python -m pipeline.run --fret-only <output.json> [project_name]",

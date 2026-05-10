@@ -10,7 +10,7 @@ Output format matches detect_candidates() so stage 4 works unchanged.
 import json
 import time
 
-from pipeline.llm_client import get_llm_client, LLM_MODEL
+from pipeline.llm_client import call_llm
 
 _EXTRACT_SYSTEM_PROMPT = """\
 You are a senior requirements engineer analysing a stakeholder interview \
@@ -107,7 +107,7 @@ _INTERVIEWER_ROLES = {"interviewer", "spk_0"}
 
 
 def _parse_extraction_response(
-    response_text: str, max_turn_index: int, turns: list[dict]
+    response_text: str, max_turn_index: int, turns: list[dict] | None = None
 ) -> list[dict]:
     """Parse and validate the LLM extraction response.
 
@@ -127,8 +127,8 @@ def _parse_extraction_response(
     else:
         return []
 
-    # Build a fast turn-index → role lookup
-    role_by_index = {t["turn_index"]: t["role"].lower() for t in turns}
+    # Build a fast turn-index -> role lookup (empty when turns not provided)
+    role_by_index = {t["turn_index"]: t["role"].lower() for t in turns} if turns else {}
 
     candidates = []
     for item in items:
@@ -165,14 +165,12 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
     if not turns:
         return []
 
-    client = get_llm_client()
     user_msg = _format_turns_for_llm(turns)
     max_turn_index = max(t["turn_index"] for t in turns)
 
     print("  Sending conversation to LLM for requirement extraction...", flush=True)
 
     _call_kwargs = dict(
-        model=LLM_MODEL,
         messages=[
             {"role": "system", "content": _EXTRACT_SYSTEM_PROMPT},
             {"role": "user", "content": user_msg},
@@ -185,24 +183,22 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
     resp = None
     for attempt in range(3):
         try:
-            resp = client.chat.completions.create(**_call_kwargs)
+            resp = call_llm(**_call_kwargs)
             break
         except Exception as e:
             err_msg = str(e)
             if "tokens per day" in err_msg.lower() or "tpd" in err_msg.lower():
                 print(f"  [daily token limit exhausted - falling back to naive stages 2-3]", flush=True)
-                from pipeline.segment import segment_turns
-                from pipeline.detect import detect_candidates
+                from pipeline.naive import segment_turns, detect_candidates
                 segmented = segment_turns(turns)
                 return detect_candidates(segmented)
-            wait = 60 * (attempt + 1)  # 60s, 120s, 180s
+            wait = 60 * (attempt + 1)
             if attempt < 2:
                 print(f"  [rate limited, waiting {wait}s - attempt {attempt + 1}/3...]", flush=True)
                 time.sleep(wait)
             else:
                 print("  [still failing after 3 attempts, falling back to naive stages 2-3]", flush=True)
-                from pipeline.segment import segment_turns
-                from pipeline.detect import detect_candidates
+                from pipeline.naive import segment_turns, detect_candidates
                 segmented = segment_turns(turns)
                 return detect_candidates(segmented)
 
@@ -211,8 +207,7 @@ def extract_candidates_llm(turns: list[dict]) -> list[dict]:
 
     if not candidates:
         print("  [LLM returned 0 candidates, falling back to naive]", flush=True)
-        from pipeline.segment import segment_turns
-        from pipeline.detect import detect_candidates
+        from pipeline.naive import segment_turns, detect_candidates
         segmented = segment_turns(turns)
         return detect_candidates(segmented)
 

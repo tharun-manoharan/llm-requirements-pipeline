@@ -2,7 +2,7 @@
 
 import json
 
-from pipeline.structure import structure_requirements
+from pipeline.run import structure_requirements
 
 
 def _make_rewritten(normalised, source_turn=0, req_type="functional"):

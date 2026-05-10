@@ -71,9 +71,8 @@ def _format_requirements(rewritten: list[dict]) -> str:
 
 def _deduplicate_with_llm(rewritten: list[dict]) -> tuple[list[dict], list[dict]]:
     """Call the LLM to identify duplicate indices, then remove them."""
-    from pipeline.llm_client import get_llm_client, LLM_MODEL
+    from pipeline.llm_client import call_llm
 
-    client = get_llm_client()
     user_msg = _format_requirements(rewritten)
 
     print(
@@ -84,8 +83,7 @@ def _deduplicate_with_llm(rewritten: list[dict]) -> tuple[list[dict], list[dict]
 
     for attempt in range(3):
         try:
-            resp = client.chat.completions.create(
-                model=LLM_MODEL,
+            resp = call_llm(
                 messages=[
                     {"role": "system", "content": _DEDUP_SYSTEM_PROMPT},
                     {"role": "user", "content": user_msg},

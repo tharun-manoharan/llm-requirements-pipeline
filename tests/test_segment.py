@@ -1,6 +1,6 @@
 """Tests for Stage 2: Conversation Segmentation."""
 
-from pipeline.segment import segment_turns
+from pipeline.naive import segment_turns
 
 
 def _make_turn(text, index=0, role="stakeholder"):

@@ -1,6 +1,6 @@
 """Tests for Stage 3: Candidate Requirement Detection."""
 
-from pipeline.detect import detect_candidates
+from pipeline.naive import detect_candidates
 
 
 def _make_segmented(text, is_candidate=True, index=0, role="stakeholder"):
