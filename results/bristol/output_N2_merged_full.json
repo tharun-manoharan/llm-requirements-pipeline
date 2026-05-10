@@ -1,0 +1,72 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a teleoperated manipulator with a well-articulated boom and multiple joints to facilitate movement within a vessel.",
+    "source": "Turn 3 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a camera system with multiple cameras, including one on the front of the arm and a camera arm, to provide a 3D view on 2D screens.",
+    "source": "Turn 5 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow operators to practice and train using simulations, such as VR, before operating the actual manipulator.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a feature to prevent the manipulator from moving into certain areas or 'no-go zones' to prevent damage or accidents.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback or other warnings to the operator when the manipulator is approaching a 'no-go zone' or when the grip is too hard.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have high-definition cameras with good resolution to provide clear visibility for the operator.",
+    "source": "Turn 55 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall have a frame rate that is high enough to provide a smooth and responsive experience for the operator, even in situations with limited data bandwidth.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a feature to reduce the degrees of freedom for unknown tasks, making it easier for the operator to control the manipulator.",
+    "source": "Turn 78 (interviewer)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a feature to adjust the force ratios on the arms to reduce strain on the operator's hands when handling heavy objects.",
+    "source": "Turn 79 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall be designed to minimize delay and latency, with a constant stream of data backwards and forwards, to ensure smooth and responsive operation.",
+    "source": "Turn 41 (participant)"
+  }
+]

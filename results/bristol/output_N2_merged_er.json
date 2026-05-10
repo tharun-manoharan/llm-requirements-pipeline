@@ -1,0 +1,72 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a teleoperated manipulator with a well-articulated boom and multiple joints to facilitate movement within a vessel.",
+    "source": "Turn 3 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall incorporate a camera system with multiple cameras, including a front-facing camera and a camera arm, to provide a 3D view on 2D screens.",
+    "source": "Turn 5 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a user interface that allows operators to control the manipulator using pre-programmed moves and teach files.",
+    "source": "Turn 31 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a feature to restrict movement to specific areas, such as a 'no-go zone' or a pre-programmed wall, to prevent accidents.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback or a buzzer to alert the operator when they are over-gripping an object.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a frame rate that is high enough to ensure smooth and accurate movement of the manipulator.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a feature to adjust the force ratios on the arms to accommodate heavy objects and reduce strain on the operator's hands.",
+    "source": "Turn 79 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide a simulation environment, such as a VR simulator, to allow operators to practice and train before working with the actual system.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall provide a way to validate the design and functionality of the system, such as through testing and modeling.",
+    "source": "Turn 52 (interviewer)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall be designed to minimize delay and latency, with a goal of zero delay, to ensure accurate and safe operation.",
+    "source": "Turn 41 (participant)"
+  }
+]

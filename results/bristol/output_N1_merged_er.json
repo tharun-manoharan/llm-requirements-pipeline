@@ -1,0 +1,149 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide visual indicators on the MMI screens showing the range of motion for each joint and change colors when approaching soft limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall display temperature-related warnings on the MMI screen if motors begin to overheat during operation.",
+    "source": "Turn 21 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall not include audio alarms or haptic feedback for joint limit warnings.",
+    "source": "Turn 21 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support pre-programmed movements for large-scale transitions between tasks, such as moving along an imaginary rail or returning to a home position.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the operator to take manual control after a pre-programmed movement brings the arm close to the target location.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a ghost mode that visually predicts the final position of the boom or arm before execution to allow verification of commands.",
+    "source": "Turn 80 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall implement no-go zones in software to prevent movement into areas where damage could occur, such as near electrical connectors or junction boxes.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide audible alarms when the operator attempts to enter a defined no-go zone.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support both fixed camera views and variable viewpoints to assist with depth perception and task alignment.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow camera views to zoom in and out dynamically based on proximity to the task.",
+    "source": "Turn 56 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall support augmented reality overlays on the display to guide alignment or focus during new or complex tasks.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall prioritize image resolution over frame rate in video feedback.",
+    "source": "Turn 74 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback to the operator to indicate resistance or obstruction during movement.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have minimal latency between operator input and mechanical response.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall operate at the operator's own pace without time-sensitive requirements.",
+    "source": "Turn 35 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall model the entire operational environment in simulation to plan for worst-case scenarios.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall use computer vision to recognize different materials such as aluminium, rubber, and painted surfaces.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall use material recognition to inform no-go zones or gripping instructions based on visual identification.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall map unknown environments and identify restricted areas based on material composition.",
+    "source": "Turn 92 (interviewer)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall include robust tendon design with improved coatings or gauges to enhance durability.",
+    "source": "Turn 96 (participant)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall use a gripper design with pins and positive locking features to ensure secure grasping and build operator trust.",
+    "source": "Turn 98 (participant)"
+  }
+]

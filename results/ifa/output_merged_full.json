@@ -1,0 +1,303 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow each team to manage its own budget independently.",
+    "source": "Turn 3 (spk_1)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to monitor team budgets and audit financial transactions.",
+    "source": "Turn 3 (spk_1)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enable the IFA to define budget policies and receive alerts for policy violations.",
+    "source": "Turn 5 (spk_1)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow only team members to access their own financial data.",
+    "source": "Turn 27 (spk_1)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to view consolidated monetary information across all teams.",
+    "source": "Turn 29 (spk_1)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall prevent the IFA from modifying team budget transactions.",
+    "source": "Turn 29 (spk_1)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow referees to input game events in real time using a mobile application.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow only the main referee and side referees to input game events.",
+    "source": "Turn 17 (spk_1)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall make game-related data publicly accessible to unregistered guests.",
+    "source": "Turn 21 (spk_1)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to export game data for external use such as by journalists or analysts.",
+    "source": "Turn 22 (spk_2)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow team managers and administrators to view and analyze their team's internal data offline.",
+    "source": "Turn 25 (spk_1)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support the definition of scheduling policies for matches, including home and away games.",
+    "source": "Turn 31 (spk_1)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support constraints in scheduling such as minimum rest days between games based on the number of teams.",
+    "source": "Turn 53 (spk_1)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to define referee assignment policies, including avoiding repeated assignments between the same teams and referees.",
+    "source": "Turn 33 (spk_1)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow referees to input their availability preferences, such as vacation periods, for scheduling consideration.",
+    "source": "Turn 35 (spk_1)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow manual rescheduling of matches in exceptional circumstances such as weather disruptions.",
+    "source": "Turn 41 (spk_1)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow IFA representatives to manually override automatic scheduling results.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall require an IFA representative to provide a rationale when overriding automatic scheduling.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall require a second IFA representative to confirm any manual scheduling changes.",
+    "source": "Turn 43 (spk_1)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support a single approval level for scheduling changes, with one IFA representative initiating and another confirming.",
+    "source": "Turn 46 (spk_1)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow fans to register for push notifications about specific games, players, or events.",
+    "source": "Turn 56 (spk_1)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow fans to follow teams and players and receive updates when new content is posted.",
+    "source": "Turn 58 (spk_1)"
+  },
+  {
+    "id": "REQ-023",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide live score updates and in-game event notifications to subscribed fans.",
+    "source": "Turn 64 (spk_1)"
+  },
+  {
+    "id": "REQ-024",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall ensure that only official referee inputs are the source of in-game event data.",
+    "source": "Turn 71 (spk_1)"
+  },
+  {
+    "id": "REQ-025",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a unified backend with different interfaces for teams, IFA administrators, referees, and fans.",
+    "source": "Turn 68 (spk_1)"
+  },
+  {
+    "id": "REQ-026",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a web-based interface for teams and IFA administrators.",
+    "source": "Turn 66 (spk_1)"
+  },
+  {
+    "id": "REQ-027",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a mobile application for referees and fans.",
+    "source": "Turn 66 (spk_1)"
+  },
+  {
+    "id": "REQ-028",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall send automated reminders for policy compliance, such as budget reporting deadlines.",
+    "source": "Turn 77 (spk_0)"
+  },
+  {
+    "id": "REQ-029",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow users to set personalized alerts, such as reminders before a game starts.",
+    "source": "Turn 78 (spk_1)"
+  },
+  {
+    "id": "REQ-030",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall respond to user requests within two seconds for fans, teams, and IFA administrators.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-031",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall prioritize referee inputs during live games to ensure real-time responsiveness.",
+    "source": "Turn 80 (spk_1)"
+  },
+  {
+    "id": "REQ-032",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall support up to 50,000 concurrent users.",
+    "source": "Turn 79 (spk_2)"
+  },
+  {
+    "id": "REQ-033",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall support localization including multiple languages, currencies, and time zones.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-034",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall comply with local data regulations, including data residency requirements for specific countries.",
+    "source": "Turn 91 (spk_1)"
+  },
+  {
+    "id": "REQ-035",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall encrypt budget data to prevent unauthorized access.",
+    "source": "Turn 93 (spk_1)"
+  },
+  {
+    "id": "REQ-036",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall allow players to update their social network pages within the system to communicate with fans.",
+    "source": "Turn 96 (spk_1)"
+  },
+  {
+    "id": "REQ-037",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall require user registration for full access, with guest access limited to public game data.",
+    "source": "Turn 117 (spk_1)"
+  },
+  {
+    "id": "REQ-038",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow team managers or owners to request team registration with supporting documents, which the IFA can approve.",
+    "source": "Turn 119 (spk_1)"
+  },
+  {
+    "id": "REQ-039",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall maintain archives of past seasons' schedules and game data.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-040",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to define leagues, seasons, and policies for budgeting, scheduling, and gameplay.",
+    "source": "Turn 121 (spk_1)"
+  },
+  {
+    "id": "REQ-041",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to register and appoint referees.",
+    "source": "Turn 123 (spk_1)"
+  },
+  {
+    "id": "REQ-042",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow teams to register player information.",
+    "source": "Turn 123 (spk_1)"
+  },
+  {
+    "id": "REQ-043",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the IFA to audit player registration without direct input into the process.",
+    "source": "Turn 124 (spk_2)"
+  }
+]

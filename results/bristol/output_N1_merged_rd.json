@@ -1,0 +1,121 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall understand different materials to utilize gripping features.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a baseline configuration and support variants for project-specific requirements such as arm length, lifting capacity, and waterproofing.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a variable viewpoint to look around.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have fixed camera views for specific tasks.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have an on-screen overlay to guide the user.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have high image resolution.",
+    "source": "Turn 72 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback to the user.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a ghost mode to preview the outcome of user commands.",
+    "source": "Turn 78 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have no-go zones to prevent damage in tight environments.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide audio feedback, such as alarms, for different areas and situations.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow programming for automated movement to a point where user control is required.",
+    "source": "Turn 45 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have teach files to create programmed paths.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall be able to model the entire scene in simulation.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall predict cable management.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have minimal latency.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "non-functional",
+    "priority": "optional",
+    "statement": "The system shall have a high frame rate.",
+    "source": "Turn 72 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall provide the user with a sense of trust in its operations.",
+    "source": "Turn 98 (participant)"
+  }
+]

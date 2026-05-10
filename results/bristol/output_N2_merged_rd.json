@@ -1,0 +1,93 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a manipulator that can be used to interact with objects in a reactor.",
+    "source": "Turn 1 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a virtual reality (VR) simulator for training and testing.",
+    "source": "Turn 11 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a feature called Bolt Runner constraints to restrict movement and orientation.",
+    "source": "Turn 37 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have numerous high-definition cameras to provide multiple views of the work area.",
+    "source": "Turn 55 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have at least two main cameras and additional cameras on the wrists and external cameras for a comprehensive view.",
+    "source": "Turn 57 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "non-functional",
+    "priority": "preferred",
+    "statement": "The system shall have a high frame rate to provide a smooth and realistic view.",
+    "source": "Turn 61 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a large display screen to show images from the cameras.",
+    "source": "Turn 63 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a built-in feature to preprogram walls and restricted areas for safe operation.",
+    "source": "Turn 67 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have a warning system, such as a buzzer, to alert the operator of over-gripping or incorrect grip.",
+    "source": "Turn 69 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall be compatible with augmented reality (AR) devices, such as Microsoft HoloLens.",
+    "source": "Turn 71 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall have a camera with a light source to provide illumination and shadowing for better visualization.",
+    "source": "Turn 75 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall be able to calculate and display force ratios on the arms to assist with heavy object manipulation.",
+    "source": "Turn 79 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have emergency stops located throughout the work area for quick access in case of an emergency.",
+    "source": "Turn 29 (participant)"
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "REQ-001",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide visual indicators on the MMI screens showing the range and position of each joint to inform the operator when approaching movement limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-002",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall change the display color on the MMI screens when approaching or reaching joint movement limits.",
+    "source": "Turn 19 (participant)"
+  },
+  {
+    "id": "REQ-003",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall display motor temperature status on the MMI screens and update the display if motors begin to overheat during operation.",
+    "source": "Turn 21 (participant)"
+  },
+  {
+    "id": "REQ-004",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall enter a safe mode automatically if the operator inputs a movement command that exceeds the system's mechanical or software capabilities.",
+    "source": "Turn 15 (participant)"
+  },
+  {
+    "id": "REQ-005",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall have both soft stops in software and hard stops in hardware to prevent movement beyond safe mechanical limits.",
+    "source": "Turn 17 (participant)"
+  },
+  {
+    "id": "REQ-006",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support pre-programmed movements for repeatable tasks such as moving between tool change positions or following an established path.",
+    "source": "Turn 43 (participant)"
+  },
+  {
+    "id": "REQ-007",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall allow the operator to take manual control from a pre-programmed sequence at any point, especially during high-risk or precision tasks.",
+    "source": "Turn 46 (participant)"
+  },
+  {
+    "id": "REQ-008",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide a ghost mode that visually predicts and displays the end position of a movement before execution to allow operator verification.",
+    "source": "Turn 80 (participant)"
+  },
+  {
+    "id": "REQ-009",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support fixed camera views in addition to variable viewpoints to maintain consistent spatial reference during operation.",
+    "source": "Turn 54 (participant)"
+  },
+  {
+    "id": "REQ-010",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide variable camera viewpoints to improve depth perception and situational awareness during teleoperation.",
+    "source": "Turn 52 (participant)"
+  },
+  {
+    "id": "REQ-011",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall provide augmented reality overlays on the display to guide alignment and positioning, especially for new or complex tasks.",
+    "source": "Turn 66 (participant)"
+  },
+  {
+    "id": "REQ-012",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide high-resolution video feeds to support precision tasks such as electrical connector mating or screw alignment.",
+    "source": "Turn 72 (participant)"
+  },
+  {
+    "id": "REQ-013",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall prioritize image resolution over frame rate for teleoperation, as tasks are performed slowly and require visual clarity.",
+    "source": "Turn 74 (participant)"
+  },
+  {
+    "id": "REQ-014",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide force feedback to the operator to indicate resistance or obstruction during movement.",
+    "source": "Turn 76 (participant)"
+  },
+  {
+    "id": "REQ-015",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall implement configurable no-go zones to prevent movement into areas where damage could occur to equipment or infrastructure.",
+    "source": "Turn 84 (participant)"
+  },
+  {
+    "id": "REQ-016",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall provide audible alarms when the operator attempts to move into a defined no-go zone to prevent accidental damage.",
+    "source": "Turn 86 (participant)"
+  },
+  {
+    "id": "REQ-017",
+    "type": "non-functional",
+    "priority": "essential",
+    "statement": "The system shall have minimal latency between operator input and robotic response to support dexterous teleoperation.",
+    "source": "Turn 29 (participant)"
+  },
+  {
+    "id": "REQ-018",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall support simulation of the entire operational environment to plan for worst-case scenarios and ensure task predictability.",
+    "source": "Turn 41 (participant)"
+  },
+  {
+    "id": "REQ-019",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall incorporate computer vision to recognize and classify materials such as aluminium, rubber, and painted surfaces.",
+    "source": "Turn 89 (participant)"
+  },
+  {
+    "id": "REQ-020",
+    "type": "functional",
+    "priority": "optional",
+    "statement": "The system shall use material recognition data to inform no-go zones or gripping instructions based on surface type or object identity.",
+    "source": "Turn 91 (participant)"
+  },
+  {
+    "id": "REQ-021",
+    "type": "functional",
+    "priority": "essential",
+    "statement": "The system shall be adaptable to customer requirements with variants supporting longer arms, higher lifting capacity, or waterproofing while maintaining a common baseline design.",
+    "source": "Turn 13 (participant)"
+  },
+  {
+    "id": "REQ-022",
+    "type": "functional",
+    "priority": "preferred",
+    "statement": "The system shall use robust wrist-mounted cameras for improved visibility during tasks.",
+    "source": "Turn 11 (participant)"
+  }
+]
